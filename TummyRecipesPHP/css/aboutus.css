@@ -1,0 +1,25 @@
+#aboutus
+{
+    padding: 20px;
+    text-align: justify;
+    display: inline;
+}
+
+.aboutusimg
+{
+    width: 25%;
+}
+
+h3
+{
+    font-family: "Ink Free", Georgia, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    
+}
+
+article
+{
+    display: inline-block;
+    
+}

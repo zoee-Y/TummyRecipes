@@ -1,0 +1,54 @@
+nav
+{
+    /*background-color: #a0ced9;*/
+    background-color: white;
+    border-bottom: 2px solid #2cc1c0;
+    font-family: "Ink Free", Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+nav div
+{
+    /*background-color: #a0ced9;*/
+    background-color: white;
+}
+
+nav img
+{
+    width: 170px;
+    height: auto;
+}
+
+nav a
+{
+    /*color: #ffee93;*/
+    /*color: #fcf5c7;*/
+    color: #2cc1c0;
+}
+
+.navbar-toggler
+{
+    background-color: #2cc1c0;
+}
+
+.navbar
+{
+    overflow: hidden;
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+}
+
+body
+{
+   padding-top: 40px;
+}
+
+footer
+{
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid #2cc1c0;
+}
