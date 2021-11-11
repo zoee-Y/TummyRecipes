@@ -16,7 +16,7 @@
                     <a class="nav-link" href="aboutus.php">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Recipes</a>
+                    <a class="nav-link" href="recipe.php">Recipes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">My Cookbook</a>
