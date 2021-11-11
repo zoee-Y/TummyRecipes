@@ -1,0 +1,53 @@
+/* Use a media query to add a break point at 800px: */
+/*@media screen and (max-width: 1050px) {
+  .firsts .second .third .fourth{
+    width: 100%;  (This one comment --> The width is 100%, when the viewport is 800px or smaller) 
+  }
+}*/
+
+main 
+{
+    font-family: "Times New Roman", Helvetica, sans-serif;
+    color: black;
+}
+
+.jumbotron
+{
+    background-color: transparent;
+}
+
+.display-4
+{
+    font-family: "Ink Free", Georgia, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #F9E076;
+}
+
+h2
+{
+    font-family: "Ink Free", Georgia, Arial;
+    color: #2cc1c0;
+    padding-top: 10%;
+    padding-bottom: 1%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 1px solid #F9E076;
+    /*font-style: italic;
+    letter-spacing: 0.2em;*/
+}
+
+h3
+{
+    font-family: Georgia, Helvetica, sans-serif;
+    color: #F9E076;
+    text-align: center;
+}
+
+h4
+{
+    font-family: "Ink Free", Georgia, Arial;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
