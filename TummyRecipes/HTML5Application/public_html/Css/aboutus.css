@@ -5,6 +5,11 @@
     display: inline;
 }
 
+.aboutusimg
+{
+    width: 25%;
+}
+
 h3
 {
     font-family: "Ink Free", Georgia, Helvetica, sans-serif;
@@ -17,9 +22,4 @@ article
 {
     display: inline-block;
     
-}
-
-.aboutusimg
-{
-    width: 25%;
 }
