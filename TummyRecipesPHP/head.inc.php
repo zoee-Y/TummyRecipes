@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="Css/navbar_footer.css">
     <link rel="stylesheet" href="Css/mainpage.css">
     <link rel="stylesheet" href="Css/aboutus.css">
+    <link rel="stylesheet" href="Css/recipe.css">
 
     <!--jQuery-->
     <script defer
