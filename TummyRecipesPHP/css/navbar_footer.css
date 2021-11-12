@@ -1,6 +1,5 @@
 nav
 {
-    /*background-color: #a0ced9;*/
     background-color: white;
     border-bottom: 2px solid #2cc1c0;
     font-family: "Ink Free", Helvetica, sans-serif;
@@ -9,40 +8,29 @@ nav
 
 nav div
 {
-    /*background-color: #a0ced9;*/
     background-color: white;
 }
 
-nav img
-{
+nav a {
+    color: #2cc1c0;
+}
+
+nav img {
     width: 170px;
     height: auto;
 }
 
-nav a
-{
-    /*color: #ffee93;*/
-    /*color: #fcf5c7;*/
-    color: #2cc1c0;
+.navbar-toggler-icon {
+    background-image: url('https://mdbcdn.b-cdn.net/img/svg/hamburger1.svg?color=6a1b9a');
 }
-
-.navbar-toggler
-{
-    background-color: #2cc1c0;
-}
-
+/* sticky commented
 .navbar
 {
     overflow: hidden;
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     width: 100%;
-}
-
-body
-{
-   padding-top: 40px;
-}
+}*/
 
 footer
 {
