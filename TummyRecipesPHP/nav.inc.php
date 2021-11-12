@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <div class"nav navbar-nav navbar-right" id="navbaricons">
+    <div class="nav navbar-nav navbar-right" id="navbaricons">
         <ul class="nav navbar-nav" id="navicons">
             <li>
                 <a class="nav-item nav-link" href="#" title="Register">
