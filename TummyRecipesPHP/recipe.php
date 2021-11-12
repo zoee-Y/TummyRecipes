@@ -162,6 +162,7 @@
                 </a>
                     <p>
                        This is making me hungry while doing this at 3am
+                       <br>Jia : HAHAHAHA ZAI
                        <a class="view-more" href="#">
                            <br>View More
                        </a>
@@ -199,6 +200,9 @@
                     <p>
                        uhhh might be a problem if the length of name is diff
                        cuz the images wont be aligned.
+                       
+                       <br>JIA: actually can try putting the name at the bottom 
+                       of the image?  
                        <br> need to cite images!!
                        <a class="view-more" href="#">
                            <br>View More
