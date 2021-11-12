@@ -56,6 +56,7 @@
                                     Saute until the mushrooms release their water content and are golden brown around the edges, 
                                     about 15 minutes....
                                     <br>
+                                    <a class="view-more" href="#">View More</a>
                                 </p>
                             </div>
                         </div>
