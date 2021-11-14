@@ -26,13 +26,15 @@
                     
                 <article class="col-sm">
                 <a href="#">
-                <h3 class="text-center">Mac & Cheese</h3>
                 <figure>                                                                          
                     <img class="img-thumbnail" 
                          src="images/Mac and Cheese.jpg"
                          alt="Mac & Cheese"
                          title="Mac & Cheese"/>                         
                 </figure>
+                    
+                <h3>Mac & Cheese</h3>
+                
                 </a>
                     <p>
                         What to put here....
@@ -46,13 +48,13 @@
                     
                 <article class="col-sm">
                 <a href="#">
-                <h3 class="text-center">Carbonara</h3>
                 <figure>
                     <img class="img-thumbnail" 
                          src="images/Carbonara.jpg" 
                          alt="Carbonara"
                          title="Carbonara"/>
                 </figure>
+                <h3>Carbonara</h3>
                 </a>    
                     <p>
                         To Do:
@@ -65,14 +67,16 @@
                 </article>
                     
                 <article class="col-sm">
-                <a href="#">
-                <h3 class="text-center">Lasagna</h3>
+                <a href="#">                
                 <figure>           
                     <img class="img-thumbnail" 
                          src="images/Lasagna.jpg" 
                          alt="Lasagna"
                          title="Lasagna"/>                       
                 </figure>
+               
+                <h3>Lasagna</h3>
+              
                 </a>
                     <p>
                         Shall add the link to full recipe next time
@@ -91,13 +95,15 @@
                     
                 <article class="col-sm">
                 <a href="#">
-                <h3 class="text-center">Garlic Butter Rice</h3>
                 <figure>
                     <img class="img-thumbnail" 
                          src="images/Garlic Butter Rice.jpg" 
                          alt="Garlic Butter Rice"
                          title="Garlic Butter Rice"/>                                          
                 </figure>
+                
+                <h3>Garlic Butter Rice</h3>
+                
                 </a>
                     <p>
                        Maybe put description of the food i guess...
@@ -109,13 +115,15 @@
                     
                 <article class="col-sm">
                 <a href="#">
-                <h3 class="text-center">Shrimp Fried Rice</h3>
                 <figure>                        
                     <img class="img-thumbnail" 
                          src="images/Shrimp Fried Rice.jpg" 
                          alt="Shrimp Fried Rice"
                          title="Shrimp Fried Rice"/>                                                   
                 </figure>
+
+                <h3>Shrimp Fried Rice</h3>
+                
                 </a>
                     <p>
                        more to come i guess
@@ -127,13 +135,15 @@
                     
                 <article class="col-sm">
                 <a href="#">
-                <h3 class="text-center">Kimchi Fried<br>Rice</h3>
                 <figure>
                     <img class="img-thumbnail" 
                          src="images/Kimchi Fried Rice.jpg" 
                          alt="Kimchi Fried Rice"
                          title="Kimchi Fried Rice"/>                    
                 </figure>
+
+                <h3>Kimchi Fried Rice</h3>
+                
                 </a>
                     <p>
                        Testing to see if images resize
@@ -152,13 +162,15 @@
                     
                 <article class="col-sm">
                 <a href="#">
-                <h3 class="text-center">Filipino Chicken Adobo</h3>
                 <figure>
                     <img class="img-thumbnail" 
                          src="images/Chicken Adobo.jpg" 
                          alt="Chicken Adobo"
                          title="Chicken Adobo"/>                                                                      
                 </figure>
+
+                <h3>Chicken Adobo</h3>
+
                 </a>
                     <p>
                        This is making me hungry while doing this at 3am
@@ -171,13 +183,15 @@
                     
                 <article class="col-sm">
                 <a href="#">
-                <h3 class="text-center">Garlic Butter Chicken</h3>
                 <figure>                        
                     <img class="img-thumbnail" 
                          src="images/Garlic Butter Chicken.jpg" 
                          alt="Garlic Butter Chicken"
                          title="Garlic Butter Chicken"/>                                                  
                 </figure>
+
+                <h3>Garlic Butter Chicken</h3>
+
                 </a>
                     <p>
                        Super hungry
@@ -189,13 +203,15 @@
                     
                 <article class="col-sm">
                 <a href="#">
-                <h3 class="text-center">Mediterranean Chicken</h3>
                 <figure>                       
                     <img class="img-thumbnail" 
                          src="images/Mediterranean Chicken Skillet.jpg" 
                          alt="Mediterranean Chicken"
                          title="Mediterranean Chicken"/>
                 </figure>
+
+                <h3>Mediterranean Chicken</h3>
+
                 </a>
                     <p>
                        uhhh might be a problem if the length of name is diff
@@ -203,6 +219,7 @@
                        
                        <br>JIA: actually can try putting the name at the bottom 
                        of the image?  
+                       <br> bless thx thx
                        <br> need to cite images!!
                        <a class="view-more" href="#">
                            <br>View More
