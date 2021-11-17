@@ -10,6 +10,11 @@
     width: 25%;
 }
 
+.aboutus
+{
+    width: 100%;
+}
+
 h3
 {
     font-family: "Ink Free", Georgia, Helvetica, sans-serif;
@@ -22,4 +27,12 @@ article
 {
     display: inline-block;
     
+}
+
+.nameDisplay
+{
+    font-family: "Ink Free", Georgia, Arial;
+    font-weight: bold;
+    color: black;
+    text-align: left;
 }
