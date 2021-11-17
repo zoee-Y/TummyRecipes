@@ -30,6 +30,16 @@
                         an extreme passion for food and making them fast!
                         </p>
                     </article>
+                    <article class="col-sm">
+                        <h4>Zoe</h4>
+                        <figure>
+                            <img class="aboutusimg" src="images/sampleimg1.jpeg" alt="Zoe" name="ZoePhoto">
+                        </figure>
+                        <p>
+                        The team is made up of 5 wonderful individuals with 
+                        an extreme passion for food and making them fast!
+                        </p>
+                    </article>
                 </div>
             </section>
             <!-- Modal -->

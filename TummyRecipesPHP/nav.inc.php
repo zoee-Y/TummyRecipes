@@ -1,3 +1,6 @@
+<?php
+
+?>
 <nav class="navbar navbar-expand-sm">
     <a class="navbar-brand" href="index.php">
         <img src="images/logo2.jpg" alt="Logo1">
@@ -31,14 +34,12 @@
     <div class="nav navbar-nav navbar-right" id="navbaricons">
         <ul class="nav navbar-nav" id="navicons">
             <li>
-                <a class="nav-item nav-link" href="#" title="Register">
-                    <!-- <span class="material-icons md-48 md-light">&#xE853;</span> -->
+                <a class="nav-item nav-link" href="register.php" title="Register">
                     <span class="ri-account-circle-line ri-xl"></span>
                 </a>
             </li>
             <li>
-                <a class="nav-item nav-link" href="#" title="Login">
-                    <!-- <span class="material-icons md-48 md-light">&#xEA77;</span> -->
+                <a class="nav-item nav-link" href="login.php" title="Login">
                     <span class="ri-login-circle-line ri-xl"></span>
                 </a>
             </li>
