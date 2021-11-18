@@ -25,7 +25,7 @@
                 <div class="row">
                     
                 <article class="col-sm">
-                <a href="#">
+                    <a href="Mac and Cheese.php">
                 <figure>                                                                          
                     <img class="img-thumbnail" 
                          src="images/Mac and Cheese.jpg"
@@ -40,14 +40,14 @@
                         What to put here....
                         <br>put a link with "Press for Full Recipe"
                         <br>then it redirects to a page for the recipe?
-                        <a class="view-more" href="#">
+                        <a class="view-more" href="Mac and Cheese.php">
                             <br>View More
                         </a>
                     </p>
                 </article>
                     
                 <article class="col-sm">
-                <a href="#">
+                    <a href="Carbonara.php">
                 <figure>
                     <img class="img-thumbnail" 
                          src="images/Carbonara.jpg" 
@@ -60,14 +60,14 @@
                         To Do:
                         <br> 1)"View More" redirection link
                         <br> 2)Dropdown nav for recipe list
-                        <a class="view-more" href="#">
+                        <a class="view-more" href="Carbonara.php">
                             <br>View More
                         </a>
                     </p>
                 </article>
                     
                 <article class="col-sm">
-                <a href="#">                
+                    <a href="Lasagna.php">                
                 <figure>           
                     <img class="img-thumbnail" 
                          src="images/Lasagna.jpg" 
@@ -80,7 +80,7 @@
                 </a>
                     <p>
                         Shall add the link to full recipe next time
-                        <a class="view-more" href="#">
+                        <a class="view-more" href="Lasagna.php">
                             <br>View More
                         </a>
                     </p>
@@ -94,7 +94,7 @@
             <div class="row">
                     
                 <article class="col-sm">
-                <a href="#">
+                    <a href="Garlic Butter Rice.php">
                 <figure>
                     <img class="img-thumbnail" 
                          src="images/Garlic Butter Rice.jpg" 
@@ -107,14 +107,14 @@
                 </a>
                     <p>
                        Maybe put description of the food i guess...
-                       <a class="view-more" href="#">
+                       <a class="view-more" href="Garlic Butter Rice.php">
                            <br>View More
                        </a>
                     </p>
                 </article>
                     
                 <article class="col-sm">
-                <a href="#">
+                    <a href="Shrimp Fried Rice.php">
                 <figure>                        
                     <img class="img-thumbnail" 
                          src="images/Shrimp Fried Rice.jpg" 
@@ -127,14 +127,14 @@
                 </a>
                     <p>
                        more to come i guess
-                       <a class="view-more" href="#">
+                       <a class="view-more" href="Shrimp Fried Rice.php">
                            <br>View More
                        </a>
                     </p>
                 </article>
                     
                 <article class="col-sm">
-                <a href="#">
+                    <a href="Kimchi Fried Rice.php">
                 <figure>
                     <img class="img-thumbnail" 
                          src="images/Kimchi Fried Rice.jpg" 
@@ -147,7 +147,7 @@
                 </a>
                     <p>
                        Testing to see if images resize
-                       <a class="view-more" href="#">
+                       <a class="view-more" href="Kimchi Fried Rice.php">
                            <br>View More>
                        </a>
                     </p>
@@ -161,7 +161,7 @@
             <div class="row">
                     
                 <article class="col-sm">
-                <a href="#">
+                    <a href="Chicken Adobo.php">
                 <figure>
                     <img class="img-thumbnail" 
                          src="images/Chicken Adobo.jpg" 
@@ -175,14 +175,14 @@
                     <p>
                        This is making me hungry while doing this at 3am
                        <br>Jia : HAHAHAHA ZAI
-                       <a class="view-more" href="#">
+                       <a class="view-more" href="Chicken Adobo.php">
                            <br>View More
                        </a>
                     </p>
                 </article>
                     
                 <article class="col-sm">
-                <a href="#">
+                    <a href="Garlic Butter Chicken.php">
                 <figure>                        
                     <img class="img-thumbnail" 
                          src="images/Garlic Butter Chicken.jpg" 
@@ -195,14 +195,14 @@
                 </a>
                     <p>
                        Super hungry
-                       <a class="view-more" href="#">
+                       <a class="view-more" href="Garlic Butter Chicken.php">
                            <br>View More
                        </a>
                     </p>
                 </article>
                     
                 <article class="col-sm">
-                <a href="#">
+                    <a href="Mediterranean Chicken Skillet.php">
                 <figure>                       
                     <img class="img-thumbnail" 
                          src="images/Mediterranean Chicken Skillet.jpg" 
@@ -221,7 +221,7 @@
                        of the image?  
                        <br> bless thx thx
                        <br> need to cite images!!
-                       <a class="view-more" href="#">
+                       <a class="view-more" href="Mediterranean Chicken Skillet.php">
                            <br>View More
                        </a>
                     </p>
