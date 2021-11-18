@@ -27,106 +27,114 @@
                 <h2>Latest Recipes</h2>
                 <br>
                 <div class="row">
-                    <div class="col col-sm-3">
-                        <div class="card">
-                            <div class="first">
-                                <a class ="" href="#">
-                                    <!-- Product page -->
-                                    <img src="images/cauliflower.jpg" width="220" class="card-img-top" alt="Cauli">
-                                    <h3><br>Cauliflower Risotto </h3>
-                                </a>
-                                <p>
-                                    <b class="card-text">Ingredients: </b>
-                                    <br>
-                                    1 head cauliflower (riced coarsely), 
-                                    1 lb crimini mushrooms (sliced), 3 tbsp butter (divided), 
-                                    2 tbsp olive oil (divided), 
-                                    1 large sweet onion (diced to ½"), ...
-                                </p>
-                                <p>
-                                    <b class="card-text">Instructions: </b>
-                                    <br>
-                                    1. Rice the cauliflower. Divide the cauliflower into florets, 
-                                    then place ⅓ of the florets into the bowl of a food processor. Pulse 15-20 times, 
-                                    or until coarse rice-like grains form. Scrape the rice into a bowl and repeat with the remaining florets. 
-                                    <br><br>
-                                    2. Heat a large deep skillet or dutch oven over medium high heat; 
-                                    add 1 tbsp butter and 1 tbsp olive oil until the butter melts then foams. Add the mushrooms, 
-                                    toss to coat in the fat, and saute, tossing occasionally. 
-                                    Saute until the mushrooms release their water content and are golden brown around the edges, 
-                                    about 15 minutes....
-                                    <br>
-                                    <a class="view-more" href="#">View More</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-sm-3">
-                        <div class="card">
-                            <div class="second">
-                                <a class ="" href="">
-                                    <!-- Product page -->
-                                    <img src="https://stickershop.line-scdn.net/stickershop/v1/product/718/LINEStorePC/main.png;compress=true" width="220" class="card-img-top" alt="Cauli">
-                                    <h3><br>Title </h3>
-                                </a>
-                                <p>
-                                    <b class="card-text">Ingredients: </b>
-                                </p>
-                                <p>
-                                    <b class="card-text">Instructions: </b>
-                                    <br>
-                                    1.  
-                                    <br><br>
-                                    2. ....
-                                    <br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-sm-3">
-                        <div class="card">
-                            <div class="third">
-                                <a class ="" href="">
-                                    <!-- Product page -->
-                                    <img src="https://st1.bollywoodlife.com/wp-content/uploads/2020/09/FotoJet382.jpg" width="220" class="card-img-top" alt="Cauli">
-                                    <h3><br>Title </h3>
-                                </a>
-                                <p>
-                                    <b class="card-text">Ingredients: </b>
-                                </p>
-                                <p>
-                                    <b class="card-text">Instructions: </b>
-                                    <br>
-                                    1.  
-                                    <br><br>
-                                    2. ....
-                                    <br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-sm-3">
-                        <div class="card">
-                            <div class="fourth">
-                                <a class ="" href="">
-                                    <!-- Product page -->
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeIZJVGuWZGIjpzHLVH6SKkipEmXi_3EVuWRzQay-BNo_w5qfruBCllQqeKh-NdKW9aSY&usqp=CAU" height="270" class="card-img-top" alt="Cauli">
-                                    <h3><br>Title </h3>
-                                </a>
-                                <p>
-                                    <b class="card-text">Ingredients: </b>
-                                </p>
-                                <p>
-                                    <b class="card-text">Instructions: </b>
-                                    <br>
-                                    1.  
-                                    <br><br>
-                                    2. ....
-                                    <br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <article class="col col-sm-3"> 
+                        <a class ="" href="recipe.php">
+                            <!-- Product page -->
+                            <figure>
+                                <img src="images/cauliflower.jpg" width="250" class="img-thumbnail" alt="Cauli">
+                            </figure>
+                            <h3><br> Cauliflower Risotto </h3>
+                        </a>
+                        <p>
+                            <b>Ingredients: </b>
+                            <br>
+                            2 heads cauliflower, broken into florets, 
+                            2 tablespoons extra-virgin olive oil, 
+                            3 cloves garlic, thinly sliced 1 1/2 cups vegetable stock, 
+                            ...
+                        </p>
+                        <p>
+                            <b>Instructions: </b>
+                            <br>
+                            1. In a food processor, pulse the cauliflower florets 8 to 10 times, until it resembles small grains of rice. 
+                            <br><br>
+                            2. Heat the olive oil in a large skillet over medium heat. Add the garlic and sweat until translucent, about 4 minutes...
+                            <br>
+                            <a class="view-more" href="Food Recipes/Cauliflower.php">View More</a>
+                        </p>       
+                    </article>
+                    
+                    <article class="col col-sm-3">
+                        <a class ="" href="recipe.php">
+                            <!-- Product page -->
+                            <figure>
+                                <img src="images/Carbonara.jpg" width="250" class="img-thumbnail" alt="Carbonara">
+                            </figure>
+                            <h3><br> Carbonara </h3>
+                        </a>
+                        <p>
+                            <b>Ingredients: </b>
+                            <br>
+                            Salt, 
+                            2 large eggs and 2 large yolks (room temperature),
+                            1 ounce (about 1/3 packed cup) grated pecorino Romano, plus additional for serving, 
+                            ...
+                        </p>
+                        <p>
+                            <b>Instructions: </b>
+                            <br>
+                            1. Place a large pot of lightly salted water (no more than 1 tablespoon salt) over high heat, 
+                            and bring to a boil. Fill a large bowl with hot water for serving, and set aside.  
+                            <br><br>
+                            2. In a mixing bowl, whisk together the eggs, yolks and pecorino and Parmesan. Season with a pinch of salt and ...
+                            <br>
+                            <a class="view-more" href="Food Recipes/Carbonara.php">View More</a>
+                        </p>
+                    </article>
+                    <article class="col col-sm-3">
+                        <a class ="" href="recipe.php">
+                            <!-- Product page -->
+                            <figure>
+                                <img src="images/Chicken Adobo.jpg" width="250" class="img-thumbnail" alt="Chicken Adobo">
+                            </figure>
+                            <h3><br> Chicken Adobo </h3>
+                        </a>
+                        <p>
+                            <b>Ingredients: </b>
+                            <br>
+                            1 tablespoon (15ml) canola oil or other neutral oil,
+                            4 bone-in, skin-on chicken legs, separated into thighs and drumsticks (about 2 1/2 pounds; 1.15kg,
+                            Kosher salt, 
+                            ...
+                        </p>
+                        <p>
+                            <b>Instructions: </b>
+                            <br>
+                            1. In a heavy-bottomed pot or Dutch oven, heat oil over medium heat until shimmering. 
+                            Blot chicken dry with paper towels, then season lightly all over with salt.  
+                            <br><br>
+                            2. Working in batches if necessary, add chicken pieces to pot in a single layer, skin ...
+                            <br>
+                            <a class="view-more" href="Food Recipes/Chicken Adobo.php">View More</a>
+                        </p>
+                    </article>
+                    
+                    <article class="col col-sm-3">
+                        <a class ="" href="recipe.php">
+                            <!-- Product page -->
+                            <figure>
+                                <img src="images/Mac and Cheese.jpg" width="250" class="img-thumbnail" alt="Mac n Cheese">
+                            </figure>
+                            <h3><br> Mac & Cheese </h3>
+                        </a>
+                        <p>
+                            <b>Ingredients: </b>
+                            <br>
+                            250g / 8 oz macaroni,
+                            1 tbsp (15g) unsalted butter,
+                            2/3 cup breadcrumbs,
+                            ...
+                        </p>
+                        <p>
+                            <b>Instructions: </b>
+                            <br>
+                            1.  Bring a large pot of water to the boil. Add macaroni and cook per packet directions MINUS 1 minute.
+                            <br><br>
+                            2. Drain, return pasta to pot, add butter and toss until melted. Set aside to cool while making the sauce ...
+                            <br>
+                            <a class="view-more" href="Food Recipes/Mac and Cheese.php">View More</a>
+                        </p>
+                    </article>
                 </div>       
             </section>
             <!-- Modal -->
