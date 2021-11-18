@@ -9,16 +9,16 @@
 
     <body>
         
-    <!--Navbar-->
-    <?php
-    include "nav.inc.php";
-    ?>
-    
-    <main class="container">
+        <!--Navbar-->
+        <?php
+        include "nav.inc.php";
+        ?>
+
+        <main class="container">
             <!--4 Images-->
             <section id="Mac and Cheese">
                 <h1><b>Mac and Cheese</b></h1>
-                
+
                 <div class="col col-sm-3">
                     <div class="Mac and Cheese">
                         <a class ="">
@@ -36,7 +36,7 @@
                         <h5>- 2 cups freshly shredded cheese</h5>
                         <h5>- 1 cup freshly shredded mozzarella cheese</h5>
                         <h5>- 3/4 tsp salt</h5>
-                        
+
                         <h3><b><u>Instructions</u></b></h3>
                         <h5>1. Bring a large pot of water to the boil. Add macaroni and cook per packet directions MINUS 1 minute.</h5>
                         <h5>2. Drain, return pasta to pot, add butter and toss until melted. Set aside to cool while making the Sauce </h5>
@@ -51,6 +51,15 @@
                         <h5>11. Pour Sauce into pot with Macaroni. Stir quickly, then pour back into the skillet or a baking dish. Sprinkle with breadcrumb topping.</h5>
                         <h5>12. Bake for 25 minutes or until top is light golden. Don't bake too long otherwise you'll bake away the Sauce!</h5>
                         <h5>13. Serve immediately! Sprinkled with a bit of fresh parsley.</h5>
-                        
+
+                    </div>
                 </div>
+            </section>
+        </main>
+        
+        <?php
+        include "footer.inc.php";
+        ?>
+        
     </body>
+</html>

@@ -9,16 +9,16 @@
 
     <body>
         
-    <!--Navbar-->
-    <?php
-    include "nav.inc.php";
-    ?>
-    
-    <main class="container">
+        <!--Navbar-->
+        <?php
+        include "nav.inc.php";
+        ?>
+
+        <main class="container">
             <!--4 Images-->
             <section id="Gralic Butter Rice">
                 <h1><b>Garlic Butter Rice</b></h1>
-                
+
                 <div class="col col-sm-3">
                     <div class="Garlic Butter Rice">
                         <a class ="">
@@ -33,7 +33,7 @@
                         <h5>- 1/2 teaspoon salt</h5>
                         <h5>- 1/4 teaspoon fresh cracked black pepper</h5>
                         <h5>- 2 tablespoons fresh chopped parsley, plus extra to garnish</h5>
-                        
+
                         <h3><b><u>Instructions</u></b></h3>
                         <h5>1. Melt 2 tablespoons butter in a medium-sized pot over medium heat. Add garlic and stir until fragrant, about 1 minute.</h5>
                         <h5>2. Stir in rice to coat with the garlic butter.</h5>
@@ -43,6 +43,15 @@
                         <h5>6. Remove from heat, cover with lid and let stand 5-10 minutes, until soft.</h5>
                         <h5>7. Fluff rice with a fork. Stir through remaining butter and season with a little extra salt, pepper and dried parsley.</h5>
                         <h5>8. Garnish with some fresh chopped parsley.</h5>
-                        
+
+                    </div>
                 </div>
+            </section>
+        </main>
+        
+        <?php
+        include "footer.inc.php";
+        ?>
+        
     </body>
+</html>

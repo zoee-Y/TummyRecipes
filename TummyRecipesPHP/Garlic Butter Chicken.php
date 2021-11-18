@@ -9,16 +9,16 @@
 
     <body>
         
-    <!--Navbar-->
-    <?php
-    include "nav.inc.php";
-    ?>
-    
-    <main class="container">
+        <!--Navbar-->
+        <?php
+        include "nav.inc.php";
+        ?>
+
+        <main class="container">
             <!--4 Images-->
             <section id="Gralic Butter Chicken">
                 <h1><b>Garlic Butter Chicken</b></h1>
-                
+
                 <div class="col col-sm-3">
                     <div class="Garlic Butter Chicken">
                         <a class ="">
@@ -31,7 +31,7 @@
                         <h5>- 6 cloves garlic , minced</h5>
                         <h5>- 1 tablespoon fresh rosemary leaves</h5>
                         <h5>- 1/2 cup Shredded Cheese </h5>
-                        
+
                         <h3><b><u>Instructions</u></b></h3>
                         <h5>1. Preheat oven to 375F.</h5>
                         <h5>2. Lightly grease a baking dish with a pat of butter.</h5>
@@ -44,5 +44,14 @@
                         <h5>9. Sprinkle with cheese and cook for an additional 3 minutes, or until cheese is melted.</h5>
                         <h5>10. Remove from oven and let stand a couple minutes.</h5>
                         <h5>11. Transfer chicken to serving plates; spoon a little bit of the garlic butter sauce over the chicken and serve.</h5>
+                    </div>
                 </div>
+            </section>
+        </main>
+        
+        <?php
+        include "footer.inc.php";
+        ?>
+        
     </body>
+</html>
