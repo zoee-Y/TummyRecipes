@@ -50,7 +50,7 @@
                             <br><br>
                             2. Heat the olive oil in a large skillet over medium heat. Add the garlic and sweat until translucent, about 4 minutes...
                             <br>
-                            <a class="view-more" href="Food Recipes/Cauliflower.php">View More</a>
+                            <a class="view-more" href="Cauliflower.php">View More</a>
                         </p>       
                     </article>
                     
@@ -78,7 +78,7 @@
                             <br><br>
                             2. In a mixing bowl, whisk together the eggs, yolks and pecorino and Parmesan. Season with a pinch of salt and ...
                             <br>
-                            <a class="view-more" href="Food Recipes/Carbonara.php">View More</a>
+                            <a class="view-more" href="Carbonara.php">View More</a>
                         </p>
                     </article>
                     <article class="col col-sm-3">
@@ -105,7 +105,7 @@
                             <br><br>
                             2. Working in batches if necessary, add chicken pieces to pot in a single layer, skin ...
                             <br>
-                            <a class="view-more" href="Food Recipes/Chicken Adobo.php">View More</a>
+                            <a class="view-more" href="Chicken Adobo.php">View More</a>
                         </p>
                     </article>
                     
@@ -132,7 +132,7 @@
                             <br><br>
                             2. Drain, return pasta to pot, add butter and toss until melted. Set aside to cool while making the sauce ...
                             <br>
-                            <a class="view-more" href="Food Recipes/Mac and Cheese.php">View More</a>
+                            <a class="view-more" href="Mac and Cheese.php">View More</a>
                         </p>
                     </article>
                 </div>       
