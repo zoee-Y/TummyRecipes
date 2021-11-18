@@ -7,12 +7,23 @@
 
 .aboutusimg
 {
-    width: 25%;
+    width: 50%;
 }
 
 .aboutus
 {
-    width: 100%;
+    width: 30%;
+}
+
+.teaminfo
+{
+    text-align: left;
+}
+
+figcaption 
+{
+    font-family: "Ink Free", Georgia, Arial;
+    font-weight: bold;
 }
 
 h3
