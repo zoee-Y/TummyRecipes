@@ -107,6 +107,8 @@
                 </a>
                     <p>
                        Maybe put description of the food i guess...
+                       <br>Jia: I think put like food description at the bottom will do?
+                       <br>Jia: Let me know if youre okay with that,, if you okay with that then i will proceed to do itt!
                        <a class="view-more" href="Garlic Butter Rice.php">
                            <br>View More
                        </a>
@@ -148,7 +150,7 @@
                     <p>
                        Testing to see if images resize
                        <a class="view-more" href="Kimchi Fried Rice.php">
-                           <br>View More>
+                           <br>View More
                        </a>
                     </p>
                 </article>
