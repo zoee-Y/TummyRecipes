@@ -32,6 +32,31 @@ nav img {
     width: 100%;
 }*/
 
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.2;
+}
+
+.fa-instagram {
+  background: url("https://media.istockphoto.com/photos/abstract-blurred-gradient-bright-mesh-banner-background-textureblue-picture-id1330343437?b=1&k=20&m=1330343437&s=170667a&w=0&h=YjzU_nIGLF_kDGue7V6O0tT6boe3zSHc3tp9CJ_CIRg=");
+  background-size: 50px 50px;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
 footer
 {
     font-size: 12px;
