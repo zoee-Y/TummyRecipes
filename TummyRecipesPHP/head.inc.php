@@ -11,6 +11,9 @@
     <!-- Remixicon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" 
            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -18,10 +21,10 @@
            crossorigin="anonymous">
             
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="Css/navbar_footer.css">
-    <link rel="stylesheet" href="Css/mainpage.css">
-    <link rel="stylesheet" href="Css/aboutus.css">
-    <link rel="stylesheet" href="Css/recipe.css">
+    <link rel="stylesheet" href="css/navbar_footer.css">
+    <link rel="stylesheet" href="css/mainpage.css">
+    <link rel="stylesheet" href="css/aboutus.css">
+    <link rel="stylesheet" href="css/recipe.css">
 
     <!--jQuery-->
     <script defer
