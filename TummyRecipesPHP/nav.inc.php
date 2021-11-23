@@ -29,6 +29,11 @@
                 </li>
             </ul>
         </div>
+        
+        <?php
+        include "searchbar.inc.php";
+        ?>
+        
     </div>
 
     <div class="nav navbar-nav navbar-right" id="navbaricons">
