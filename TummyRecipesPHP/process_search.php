@@ -20,7 +20,7 @@
                     $k = trim($_GET['search']);
 
                     // create a DB query and words string
-                    $query_string = "SELECT * FROM tummy_recipes WHERE ";
+                    $query_string = "SELECT * FROM tummy_recipes_recipes WHERE ";
                     $display_words = "";
                     
                     // seperate each of the keywords
@@ -36,7 +36,6 @@
                     $config = parse_ini_file('../../private/db-config.ini');
                     $conn = new mysqli($config['servername'], $config['username'], 
                             $config['password'], $config['dbname']);
-                    
                     
                     // Prepare the statement:
                     $query = mysqli_query($conn, $query_string);
@@ -54,12 +53,10 @@
                         echo '<table class="search">';
 
                         // display all the search results to the user
-                        while ($row = mysqli_fetch_assoc($query))
+                        while ($row = $result_count->fetch_assoc())
                         {
                             echo '<tr>
-                                <td>title</td>
-                                <td>blurb</td>
-                                <td>url</td>
+                                <td><h2>'.$row['rTitle'].'</h2></td>
                             </tr>';
                         }
                         
@@ -67,6 +64,8 @@
                     }
                     else
                         echo "No results found. Please search something else.";
+                    
+                    $conn->close();
                 }
                 else
                     echo 'Please Type In Something To Search..';
