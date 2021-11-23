@@ -16,8 +16,10 @@
                 // Check to see if the keywords were provided
                 if (isset($_GET['search']) && $_GET['search'])
                 {
-                    // save the keywords from the URL
+                    // sanitize and save the keywords from the URL
                     $k = trim($_GET['search']);
+                    $k = stripslashes($_GET['search']);
+                    $k = htmlspecialchars($_GET['search']);
 
                     // create a DB query and words string
                     $query_string = "SELECT * FROM tummy_recipes_recipes WHERE ";
