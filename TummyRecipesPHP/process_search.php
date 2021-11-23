@@ -21,12 +21,14 @@
 
                     // create a DB query and words string
                     $query_string = "SELECT * FROM tummy_recipes WHERE ";
-
+                    $display_words = "";
+                    
                     // seperate each of the keywords
                     $keywords = explode(' ', $k);
                     foreach($keywords as $word)
                     {
                         $query_string .= " keywords LIKE '%".$word."%' OR ";
+                        $display_words .= $word." ";
                     }
                     $query_string = substr($query_string, 0, strlen($query_string) - 3);
 
@@ -35,34 +37,36 @@
                     $conn = new mysqli($config['servername'], $config['username'], 
                             $config['password'], $config['dbname']);
                     
-                    // Check connection
-                    if ($conn->connect_error)
+                    
+                    // Prepare the statement:
+                    $query = mysqli_query($conn, $query_string);
+
+                    // Bind & execute the query statement:
+                    $result_count = mysqli_num_rows($query);
+
+                    // check to see if any results were returned
+                    if ($result_count > 0)
                     {
-                        $errorMsg = "Connection failed: " . $conn->connect_error;
-                        $success = false;
+                        // display search result count to user
+                        echo '<div class="right"><b><u>'.$result_count.'</u></b></div>';
+                        echo 'Your search for <i>'.$display_words.'</i> <hr /><br />';
+                        
+                        echo '<table class="search">';
+
+                        // display all the search results to the user
+                        while ($row = mysqli_fetch_assoc($query))
+                        {
+                            echo '<tr>
+                                <td>title</td>
+                                <td>blurb</td>
+                                <td>url</td>
+                            </tr>';
+                        }
+                        
+                        echo '</table>';
                     }
                     else
-                    {
-                        // Prepare the statement:
-                        $query = mysqli_query($conn, $query_string);
-
-                        // Bind & execute the query statement:
-                        $result_count = mysqli_num_rows($query);
-                        
-                        // check to see if any results were returned
-                        if ($result_count > 0)
-                        {
-                            // display search result count to user
-                            echo '<div class="right"><b><u>'.$result_count.'</u></b></div>';
-                            
-                            // display all the search results to the user
-                        }
-                        else
-                            echo "No results found. Please search something else.";
-                        $stmt->close();
-                    }
-
-                    $conn->close();
+                        echo "No results found. Please search something else.";
                 }
                 else
                     echo 'Please Type In Something To Search..';
