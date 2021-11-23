@@ -15,7 +15,8 @@
         
         <!--Header-->
         <header class="jumbotron text-center">    
-            <h1 class="display-4">Recipes</h1>                
+            <h1 class="display-4">Recipes</h1>
+            <h4>This is where we share our secrets!</h4>
         </header>
         
         <!--Food recipes -->

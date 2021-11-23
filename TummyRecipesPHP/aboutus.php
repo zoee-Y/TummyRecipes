@@ -35,11 +35,11 @@
                     <article class="row-sm">
                         <h4 class="nameDisplay">Zoe</h4>
                         <figure>
-                            <img class="aboutus" src="images/sampleimg1.jpeg" alt="Zoe" name="ZoeIMG">
+                            <img class="aboutus" src="https://static.vecteezy.com/system/resources/previews/001/936/408/non_2x/japanese-chef-cartoon-with-cute-sushi-art-illustration-vector.jpg" alt="Zoe" name="ZoeIMG">
                             <figcaption>The food enthusiast!</figcaption>
                         </figure>
                         <p class="teaminfo">
-                            No quit persona that will do anything in her power<br>
+                            No quit persona that will do anything in her power  <br>
                             to give us good food!
                         </p>
                     </article>
@@ -50,14 +50,14 @@
                             <figcaption>The tummy tumbler!</figcaption>
                         </figure>
                         <p class="teaminfo">
-                            Always on the lookout for the best Mee Soto around.<br>
+                            Always on the lookout for the best Mee Soto around. <br>
                             Not gonna quit until he finds the best!
                         </p>
                     </article>
                     <article class="row-sm">
                         <h4 class="nameDisplay">JiaXin</h4>
                         <figure>
-                            <img class="aboutus" src="images/sampleimg1.jpeg" alt="JiaXin" name="JiaXinIMG">
+                            <img class="aboutus" src="https://static.vecteezy.com/system/resources/previews/001/936/473/non_2x/beautiful-chef-girl-holding-an-empty-plate-cartoon-illustration-vector.jpg" alt="JiaXin" name="JiaXinIMG">
                             <figcaption>The Cooking Mama!</figcaption>
                         </figure>
                         <p class="teaminfo">
@@ -68,20 +68,20 @@
                     <article class="row-sm">
                         <h4 class="nameDisplay">Jeriel</h4>
                         <figure>
-                            <img class="aboutus" src="images/sampleimg1.jpeg" alt="Jeriel" name="JerielIMG">
+                            <img class="aboutus" src="https://static.vecteezy.com/system/resources/previews/002/861/713/non_2x/cute-chef-boy-serving-food-illustration-kawaii-cartoon-character-vector.jpg" alt="Jeriel" name="JerielIMG">
                             <figcaption>The Cookie Monster!</figcaption>
                         </figure>
                         <p class="teaminfo">
                             You got bakes?<br>
                             He's our cookie connoisseur.<br>
                             Do not be intimidate by his inner cookie demon.<br>
-                            Just hand him a nice piece of baked cookie, and he'll be subdued.
+                            Just hand him a nice piece of baked cookie, and he'll be subdued.   
                         </p>
                     </article>
                     <article class="row-sm">
                         <h4 class="nameDisplay">YuXun</h4>
                         <figure>
-                            <img class="aboutus" src="images/sampleimg1.jpeg" alt="YuXun" name="YuXunIMG">
+                            <img class="aboutus" src="https://thumbs.dreamstime.com/b/male-chef-vector-illustration-cartoon-character-put-cook-hat-uniform-136342745.jpg" alt="YuXun" name="YuXunIMG">
                             <figcaption>The Sweet Tooth!</figcaption>
                         </figure>
                         <p class="teaminfo">
