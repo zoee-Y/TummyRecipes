@@ -22,7 +22,7 @@
                     $k = htmlspecialchars($_GET['search']);
 
                     // create a DB query and words string
-                    $query_string = "SELECT * FROM tummy_recipes_recipes WHERE ";
+                    $query_string = "SELECT * FROM tummy_recipes_search WHERE ";
                     $display_words = "";
                     
                     // seperate each of the keywords
@@ -55,11 +55,14 @@
                         echo '<table class="search">';
 
                         // display all the search results to the user
-                        while ($row = $result_count->fetch_assoc())
+                        while ($row = mysqli_fetch_assoc($query))
                         {
                             echo '<tr>
-                                <td><h2>'.$row['rTitle'].'</h2></td>
-                            </tr>';
+                                <td><h2><a href="'.$row['url'].'">'.$row['title'].'</a></h2></td>
+                                </tr>
+                                <tr>
+                                <td>'.$row['description'].'</td>
+                                </tr>';
                         }
                         
                         echo '</table>';
