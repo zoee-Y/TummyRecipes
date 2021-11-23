@@ -32,6 +32,58 @@ nav img {
     width: 100%;
 }*/
 
+.collapse navbar-collapse .search-container
+{
+    float: right;
+}
+
+collapse navbar-collapse input[type=text]
+{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.collapse navbar-collapse .search-container button
+{
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.collapse navbar-collapse .search-container button:hover
+{
+    background: #ccc;
+}
+
+@media screen and (max-width: 600px)
+{
+    .collapse navbar-collapse .search-container
+    {
+        float: none;
+    }
+    .collapse navbar-collapse input[type=text], .collapse navbar-collapse .search-container button
+    {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    
+    .collapse navbar-collapse input[type=text]
+    {
+        border: 1px solid #ccc;
+    }
+}
+
 .fa {
   padding: 10px;
   font-size: 30px;

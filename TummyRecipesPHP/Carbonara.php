@@ -54,6 +54,10 @@
         </main>
         
         <?php
+        include "Comment.php";
+        ?>
+        
+        <?php
         include "footer.inc.php";
         ?>
         
