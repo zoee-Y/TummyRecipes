@@ -49,7 +49,7 @@
                     if ($result_count > 0)
                     {
                         // display search result count to user
-                        echo '<div class="right"><b><u>'.$result_count.'</u></b> results found</div>';
+                        echo '<br /><div class="right"><b><u>'.$result_count.'</u></b> results found</div>';
                         echo 'Your search for <i>'.$display_words.'</i> <hr /><br />';
                         
                         echo '<table class="search">';
