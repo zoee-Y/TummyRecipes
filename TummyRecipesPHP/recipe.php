@@ -37,14 +37,12 @@
                 <h3>Mac & Cheese</h3>
                 
                 </a>
-                    <p>
-                        What to put here....
-                        <br>put a link with "Press for Full Recipe"
-                        <br>then it redirects to a page for the recipe?
+                    <p> Description
+                       
                         <a class="view-more" href="Mac and Cheese.php">
                             <br>View More
                         </a>
-                    </p>
+                </p>
                 </article>
                     
                 <article class="col-sm">
@@ -58,9 +56,7 @@
                 <h3>Carbonara</h3>
                 </a>    
                     <p>
-                        To Do:
-                        <br> 1)"View More" redirection link
-                        <br> 2)Dropdown nav for recipe list
+
                         <a class="view-more" href="Carbonara.php">
                             <br>View More
                         </a>
