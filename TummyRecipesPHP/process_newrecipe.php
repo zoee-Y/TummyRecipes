@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Registration Results</title>
+        <title>New Recipe Status</title>
         <?php
         include "head.inc.php";
         ?>
@@ -82,7 +82,15 @@
         }
         
         if ($success) {
-            //saveMemberToDB();
+            saveRecipeToDB();
+            
+            // for future reference, getting elements from unserialized array
+            /*print_r($ingredients);
+            $uns = unserialize($ingredients);
+            for ($i = 0; $i < count($uns); $i++) {
+                echo "<p>$uns[$i]</p>";
+            }*/
+            
             echo "<main class='container'>";
             echo "<div id='processOutputContainer'>";
             echo "<h2>Successfully created new recipe!</h2>";
@@ -115,43 +123,35 @@
         ?>
         
         <?php
-         /*
-         * Helper function to write the member data to the DB
-         */
-        /*
-        function saveMemberToDB()
-        {
-          global $fname, $lname, $email, $pwd_hashed, $errorMsg, $success;
+        /*         * Helper function to write the member data to the DB */
 
-          // Create database connection.
-          $config = parse_ini_file('../../private/db-config.ini');
-          $conn = new mysqli($config['servername'], $config['username'],
-          $config['password'], $config['dbname']);
+        function saveRecipeToDB() {
+            global $rTitle, $hours, $minutes, $ingredients, $steps, $errorMsg, $success;
+            // Create database connection.
+            $config = parse_ini_file('../../private/db-config.ini');
+            $conn = new mysqli($config['servername'], $config['username'],
+                    $config['password'], $config['dbname']);
 
-          // Check connection
-          if ($conn->connect_error)
-          {
-          $errorMsg = "Connection failed: " . $conn->connect_error;
-          $success = false;
-          }
-          else
-          {
-          // Prepare the statement:
-          $stmt = $conn->prepare("INSERT INTO world_of_pets_members (fname, lname, email, password) VALUES (?, ?, ?, ?)");
-
-          // Bind & execute the query statement:
-          $stmt->bind_param("ssss", $fname, $lname, $email, $pwd_hashed);
-          if (!$stmt->execute())
-          {
-          $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
-          $success = false;
-          }
-          $stmt->close();
-          }
-
-          $conn->close();
-        } */
-        
+            // Check connection
+            if ($conn->connect_error) {
+                $errorMsg = "Connection failed: " . $conn->connect_error;
+                $success = false;
+            } else {
+                //using test email
+                $email = "zoe@gmail.com";
+                
+                // Prepare the statement:
+                $stmt = $conn->prepare("INSERT INTO tummy_recipes_recipes (email, rTitle, hours, minutes, ingredients, steps) VALUES (?, ?, ?, ?, ?, ?)");
+                // Bind & execute the query statement:
+                $stmt->bind_param("ssiiss", $email, $rTitle, $hours, $minutes, $ingredients, $steps); //not adding img yet
+                if (!$stmt->execute()) {
+                    $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+                    $success = false;
+                }
+                $stmt->close();
+            }
+            $conn->close();
+        }
         ?>
     </body>
 </html>
