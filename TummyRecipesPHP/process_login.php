@@ -69,7 +69,7 @@ function authenticateUser()
     else
     {
         // Prepare the statement:
-        $stmt = $conn->prepare("SELECT * FROM world_of_pets_members WHERE email=?");
+        $stmt = $conn->prepare("SELECT * FROM tummy_recipes_members WHERE email=?");
         
         // Bind & execute the query statement:
         $stmt->bind_param("s", $email);

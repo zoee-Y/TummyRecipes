@@ -97,7 +97,7 @@ function saveMemberToDB()
     else
     {
         // Prepare the statement:
-        $stmt = $conn->prepare("INSERT INTO world_of_pets_members (fname, lname, email, password) VALUES (?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO tummy_recipes_members (fname, lname, email, password) VALUES (?, ?, ?, ?)");
         
         // Bind & execute the query statement:
         $stmt->bind_param("ssss", $fname, $lname, $email, $pwd_hashed);
