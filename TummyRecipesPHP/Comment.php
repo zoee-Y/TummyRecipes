@@ -1,15 +1,16 @@
 
 <?php
 include "Timezone.php";
-include "dbh.inc.php";
-include "Comment_function.php"
+//include "dbh.inc.php";
+//include "Comment_function.php";
 ?>
 
 <link rel='stylesheet' type='text/css' href='css/Comment.css'>
 
 
 
-<form method='POST' action=".setComments($conn).">
+
+<form method='post' action="Commenting_function.php">
  <!--To be added in afterwards 
 <form> -->
     <input type='hidden' name='uid' value='Anonymous'>
@@ -17,9 +18,5 @@ include "Comment_function.php"
     <textarea name='message'></textarea><br>
     <button name='submit' type='commentSubmit'>Comment</button>
 </form>
-
-
-<!--The function below is to get comments from the database 
- getComments($conn); -->
 
 
