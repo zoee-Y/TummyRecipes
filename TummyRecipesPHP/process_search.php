@@ -60,8 +60,8 @@ function sanitize_search($input)
                     if ($result_count > 0)
                     {
                         // display search result count to user
-                        echo '<br /><div class="right"><b><u>'.$result_count.'</u></b> results found</div>';
-                        echo 'Your search for <i>'.$display_words.'</i> <hr /><br />';
+                        echo '<h2>Search Results For <b><i>'.$display_words.'</i></b></h2>';
+                        echo 'We found <b><u>'.$result_count.'</u></b> items related to your search. <br />';
                         
                         echo '<table class="search">';
 
@@ -79,12 +79,12 @@ function sanitize_search($input)
                         echo '</table>';
                     }
                     else
-                        echo "No results found. Please search something else.";
+                        echo "<h2>No results found. Please search something else.</h2>";
                     
                     $conn->close();
                 }
                 else
-                    echo 'Please Type In Something To Search..';
+                    echo '<h2>Please Type In Something To Search..</h2>';
             ?>
         </main>
         <br>
