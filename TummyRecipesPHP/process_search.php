@@ -1,3 +1,16 @@
+<?php
+
+ // Helper function that checks input for malicious or unwanted content.
+function sanitize_search($input)
+{
+    $input = trim($input);
+    $input = stripslashes($input);
+    $input = htmlspecialchars($input);
+    return $input;
+}
+
+?>
+
 <html>
     <head>
         <title>Search Results</title>
@@ -17,9 +30,7 @@
                 if (isset($_GET['search']) && $_GET['search'])
                 {
                     // sanitize and save the keywords from the URL
-                    $k = trim($_GET['search']);
-                    $k = stripslashes($_GET['search']);
-                    $k = htmlspecialchars($_GET['search']);
+                    $k = sanitize_search($_GET["search"]);
 
                     // create a DB query and words string
                     $query_string = "SELECT * FROM tummy_recipes_search WHERE ";
