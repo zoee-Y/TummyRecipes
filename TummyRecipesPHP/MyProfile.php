@@ -11,7 +11,7 @@
         
         <!--Navbar-->
         <?php
-        include "nav.inc.php";
+        include "session.inc.php";
         ?>
         
         <!--Header-->
