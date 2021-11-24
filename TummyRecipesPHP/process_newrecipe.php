@@ -13,6 +13,7 @@
         <?php
         $rTitle = $ingredients = $steps = $errorMsg = "";
         $hours = $minutes = 0;
+        $imgThumbnail = null;
         $success = true;
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -74,6 +75,29 @@
                     $success = false;
                 }
             }
+            
+            if (empty($_FILES["imgThumbnail"]["name"])) {
+                echo "<p>imgThumbnail filename is empty and imgThumbnail set to null</p>";
+                $imgThumbnail = null;
+            }
+            else {
+                echo "<p>imgThumbnail filename NOT empty</p>";
+
+                $temp = explode(".", $_FILES["imgThumbnail"]["name"]);
+                $extension = end($temp);
+                
+                $allowedTypes = array("JPG","PNG","JPEG");
+                if ((($_FILES["imgThumbnail"]["type"] == "image/gif") || ($_FILES["imgThumbnail"]["type"] == "image/jpeg") || ($_FILES["imgThumbnail"]["type"] == "image/jpg") || ($_FILES["imgThumbnail"]["type"] == "image/pjpeg") || ($_FILES["imgThumbnail"]["type"] == "image/x-png") || ($_FILES["imgThumbnail"]["type"] == "image/png"))
+                        && ($_FILES["imgThumbnail"]["size"] < 20000)
+                        && in_array($extension, $allowedTypes)){
+                    $image = $_FILES["imgThumbnail"]["tmp_name"];
+                    $imgThumbnail = addslashes(file_get_contents($image));
+                }
+                else {
+                    $errorMsg .= "Invalid file type";
+                    $success = false;
+                }
+            }
         } else {
             echo "<h2>This page is not meant to run directly.</h2>";
             echo "<p>You can register at the link below:</p>";
@@ -90,6 +114,8 @@
             for ($i = 0; $i < count($uns); $i++) {
                 echo "<p>$uns[$i]</p>";
             }*/
+            
+            //echo "<p>imgThumbnail: $imgThumbnail</p>";
             
             echo "<main class='container'>";
             echo "<div id='processOutputContainer'>";
@@ -126,7 +152,7 @@
         /*         * Helper function to write the member data to the DB */
 
         function saveRecipeToDB() {
-            global $rTitle, $hours, $minutes, $ingredients, $steps, $errorMsg, $success;
+            global $rTitle, $hours, $minutes, $ingredients, $steps, $imgThumbnail, $errorMsg, $success;
             // Create database connection.
             $config = parse_ini_file('../../private/db-config.ini');
             $conn = new mysqli($config['servername'], $config['username'],
@@ -141,16 +167,52 @@
                 $email = "zoe@gmail.com";
                 
                 // Prepare the statement:
-                $stmt = $conn->prepare("INSERT INTO tummy_recipes_recipes (email, rTitle, hours, minutes, ingredients, steps) VALUES (?, ?, ?, ?, ?, ?)");
-                // Bind & execute the query statement:
-                $stmt->bind_param("ssiiss", $email, $rTitle, $hours, $minutes, $ingredients, $steps); //not adding img yet
+                //check if imgThumbnail is null, then add the other columns only
+                /*if (imgThumbnail == null) {
+                    echo "<p>imgThumbnail null</p>";
+                    $stmt = $conn->prepare("INSERT INTO tummy_recipes_recipes (email, rTitle, hours, minutes, ingredients, steps) VALUES (?, ?, ?, ?, ?, ?)");
+                    // Bind & execute the query statement:
+                    $stmt->bind_param("ssiiss", $email, $rTitle, $hours, $minutes, $ingredients, $steps); //not adding img yet  
+                }
+                else {
+                    echo "<p>imgThumbnail not null</p>";
+                    $stmt = $conn->prepare("INSERT INTO tummy_recipes_recipes (email, rTitle, hours, minutes, ingredients, steps, imgThumbnail) VALUES (?, ?, ?, ?, ?, ?, ?)");
+                    $null = NULL;
+                    $stmt->bind_param("ssiissb", $email, $rTitle, $hours, $minutes, $ingredients, $steps, $null); //not adding img yet
+                    $stmt->send_long_data(6, $imgThumbnail);
+                }*/
+                
+                $stmt = $conn->prepare("INSERT INTO tummy_recipes_recipes (email, rTitle, hours, minutes, ingredients, steps, imgThumbnail) VALUES (?, ?, ?, ?, ?, ?, ?)");
+                $null = NULL;
+                $stmt->bind_param("ssiissb", $email, $rTitle, $hours, $minutes, $ingredients, $steps, $null); //not adding img yet
+                $stmt->send_long_data(6, $imgThumbnail);
+                
                 if (!$stmt->execute()) {
                     $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
                     $success = false;
                 }
+                else {
+                    echo "<p>stmt executed!</p>";
+                }
                 $stmt->close();
             }
             $conn->close();
+            echo "<p>connection closed</p>";
+            
+            $imgresult = $conn->query("SELECT imgThumbnail FROM tummy_recipes_recipes ORDER BY recipe_id DESC");
+            
+            if($result->num_rows > 0){
+                echo "<div class='gallery'>";
+            
+                while($row = $result->fetch_assoc()){
+                    echo '<img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row["image"]); ?> />';
+                }
+                echo "</div>";
+            }
+            else{
+                echo "<p>Image(s) not found...</p>";
+            }
+            
         }
         ?>
     </body>

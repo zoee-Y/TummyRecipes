@@ -20,7 +20,7 @@
         <main class="container">
             <h1>Create new recipe</h1>
             
-            <form action="process_newrecipe.php" method="post">
+            <form action="process_newrecipe.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="rTitle">Recipe Title:</label>
                     <input class="form-control" type="text" id="rTitle" name="rTitle" required placeholder="Enter recipe title">
@@ -45,6 +45,10 @@
                 <div class="form-group">
                     <label for="step">Steps: (separated by enter/return key)</label>
                     <textarea class="form-control" type="text" id="steps" name="steps" required placeholder="1. Add flour to mixing bowl ..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="imgThumbnail">Upload a thumbnail for your recipe:</label>
+                    <input type="file" id="imgThumbnail" name="imgThumbnail">
                 </div>
                 <div class="form-group">
                     <button class="btn btn-info" type="submit">Submit</button>
