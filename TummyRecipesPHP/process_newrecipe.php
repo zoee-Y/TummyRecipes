@@ -84,7 +84,10 @@
                 echo "<p>imgThumbnail filename NOT empty</p>";
 
                 $temp = explode(".", $_FILES["imgThumbnail"]["name"]);
-                $extension = end($temp);
+                $extension = strtoupper(end($temp));
+                
+                $imgType = $_FILES["imgThumbnail"]["type"];
+                echo "<p>$imgType, $extension</p>";
                 
                 $allowedTypes = array("JPG","PNG","JPEG");
                 if ((($_FILES["imgThumbnail"]["type"] == "image/gif") || ($_FILES["imgThumbnail"]["type"] == "image/jpeg") || ($_FILES["imgThumbnail"]["type"] == "image/jpg") || ($_FILES["imgThumbnail"]["type"] == "image/pjpeg") || ($_FILES["imgThumbnail"]["type"] == "image/x-png") || ($_FILES["imgThumbnail"]["type"] == "image/png"))
