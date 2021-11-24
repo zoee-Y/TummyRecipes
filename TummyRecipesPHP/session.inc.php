@@ -16,13 +16,13 @@
         <div class="background">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="aboutus.php">About</a>
+                    <a class="nav-link" href="aboutusSession.php">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recipe.php">Recipes</a>
+                    <a class="nav-link" href="recipeSession.php">Recipes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="MyCookbook.php">My Cookbook</a>
+                    <a class="nav-link" href="MyCookbookSession.php">My Cookbook</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="MyProfile.php">My Profile</a>

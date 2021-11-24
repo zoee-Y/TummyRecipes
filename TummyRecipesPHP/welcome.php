@@ -28,7 +28,7 @@
                 <br>
                 <div class="row">
                     <article class="col col-sm-3"> 
-                        <a class ="" href="recipe.php">
+                        <a class ="" href="recipeSession.php">
                             <!-- Product page -->
                             <figure>
                                 <img src="images/cauliflower.jpg" width="250" class="img-thumbnail" alt="Cauli">
