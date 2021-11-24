@@ -133,7 +133,7 @@ function createSession()
     </head>
     <body>
         <?php
-        include "nav.inc.php";
+        include "session.inc.php";
         ?>
         <main class="container">
             <br>
