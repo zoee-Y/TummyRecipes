@@ -22,10 +22,10 @@
                     <a class="nav-link" href="recipe.php">Recipes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">My Cookbook</a>
+                    <a class="nav-link" href="MyCookbook.php">My Cookbook</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">My Profile</a>
+                    <a class="nav-link" href="MyProfile.php">My Profile</a>
                 </li>
             </ul>
         </div>

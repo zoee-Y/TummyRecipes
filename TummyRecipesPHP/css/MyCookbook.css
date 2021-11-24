@@ -1,0 +1,17 @@
+h6
+{
+    font-family: Georgia, Helvetica, sans-serif;
+    color: #F9E076;
+}
+
+div.card{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+img.card-img-top{
+    width:150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
