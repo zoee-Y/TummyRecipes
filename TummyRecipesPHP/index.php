@@ -28,13 +28,11 @@
                 <br>
                 <div class="row">
                     <article class="col col-sm-3"> 
-                        <a class ="" href="recipe.php">
-                            <!-- Product page -->
-                            <figure>
-                                <img src="images/cauliflower.jpg" width="250" class="img-thumbnail" alt="Cauli">
-                            </figure>
-                            <h3><br> Cauliflower Risotto </h3>
-                        </a>
+                        <!-- Product page -->
+                        <figure>
+                            <img src="images/cauliflower.jpg" width="250" class="img-thumbnail" alt="Cauli">
+                        </figure>
+                        <h3><br> Cauliflower Risotto </h3>
                         <p>
                             <b>Ingredients: </b>
                             <br>
@@ -49,19 +47,19 @@
                             1. In a food processor, pulse the cauliflower florets 8 to 10 times, until it resembles small grains of rice. 
                             <br><br>
                             2. Heat the olive oil in a large skillet over medium heat. Add the garlic and sweat until translucent, about 4 minutes...
+                            <br><br>
+                            For existing users, <a href="login.php">Log In</a> to view more.
                             <br>
-                            <a class="view-more" href="Cauliflower.php">View More</a>
+                            For new users, <a href="register.php">Register</a> to view more.
                         </p>       
                     </article>
                     
                     <article class="col col-sm-3">
-                        <a class ="" href="recipe.php">
-                            <!-- Product page -->
-                            <figure>
-                                <img src="images/Carbonara.jpg" width="250" class="img-thumbnail" alt="Carbonara">
-                            </figure>
-                            <h3><br> Carbonara </h3>
-                        </a>
+                        <!-- Product page -->
+                        <figure>
+                            <img src="images/Carbonara.jpg" width="250" class="img-thumbnail" alt="Carbonara">
+                        </figure>
+                        <h3><br> Carbonara </h3>
                         <p>
                             <b>Ingredients: </b>
                             <br>
@@ -77,18 +75,18 @@
                             and bring to a boil. Fill a large bowl with hot water for serving, and set aside.  
                             <br><br>
                             2. In a mixing bowl, whisk together the eggs, yolks and pecorino and Parmesan. Season with a pinch of salt and ...
+                            <br><br>
+                            For existing users, <a href="login.php">Log In</a> to view more.
                             <br>
-                            <a class="view-more" href="Carbonara.php">View More</a>
+                            For new users, <a href="register.php">Register</a> to view more.
                         </p>
                     </article>
                     <article class="col col-sm-3">
-                        <a class ="" href="recipe.php">
-                            <!-- Product page -->
-                            <figure>
-                                <img src="images/Chicken Adobo.jpg" width="250" class="img-thumbnail" alt="Chicken Adobo">
-                            </figure>
-                            <h3><br> Chicken Adobo </h3>
-                        </a>
+                        <!-- Product page -->
+                        <figure>
+                            <img src="images/Chicken Adobo.jpg" width="250" class="img-thumbnail" alt="Chicken Adobo">
+                        </figure>
+                        <h3><br> Chicken Adobo </h3>
                         <p>
                             <b>Ingredients: </b>
                             <br>
@@ -104,19 +102,19 @@
                             Blot chicken dry with paper towels, then season lightly all over with salt.  
                             <br><br>
                             2. Working in batches if necessary, add chicken pieces to pot in a single layer, skin ...
+                            <br><br>
+                            For existing users, <a href="login.php">Log In</a> to view more.
                             <br>
-                            <a class="view-more" href="Chicken Adobo.php">View More</a>
+                            For new users, <a href="register.php">Register</a> to view more.
                         </p>
                     </article>
                     
                     <article class="col col-sm-3">
-                        <a class ="" href="recipe.php">
-                            <!-- Product page -->
-                            <figure>
-                                <img src="images/Mac and Cheese.jpg" width="250" class="img-thumbnail" alt="Mac n Cheese">
-                            </figure>
-                            <h3><br> Mac & Cheese </h3>
-                        </a>
+                        <!-- Product page -->
+                        <figure>
+                            <img src="images/Mac and Cheese.jpg" width="250" class="img-thumbnail" alt="Mac n Cheese">
+                        </figure>
+                        <h3><br> Mac & Cheese </h3>
                         <p>
                             <b>Ingredients: </b>
                             <br>
@@ -131,13 +129,14 @@
                             1.  Bring a large pot of water to the boil. Add macaroni and cook per packet directions MINUS 1 minute.
                             <br><br>
                             2. Drain, return pasta to pot, add butter and toss until melted. Set aside to cool while making the sauce ...
+                            <br><br>
+                            For existing users, <a href="login.php">Log In</a> to view more.
                             <br>
-                            <a class="view-more" href="Mac and Cheese.php">View More</a>
+                            For new users, <a href="register.php">Register</a> to view more.
                         </p>
                     </article>
                 </div>       
             </section>
-            <!-- Modal -->
             <br>
         </main> 
         

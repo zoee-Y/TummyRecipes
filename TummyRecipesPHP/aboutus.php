@@ -21,11 +21,13 @@
                 <div class="row">
                     <!-- Introduction Of The Company -->
                     <article class="col-sm">
-                        <h3>The Tummy Team</h3>
+                        <h3 class="about"><br>The Tummy Team</h3>
+                        <br><br>
                         <figure>
-                            <img class="aboutusimg" src="images/sampleimg1.jpeg" alt="AboutUs" name="TheTeam">
+                            <img class="aboutusimg" src="images/sampleimg1.jpeg" 
+                                 alt="AboutUs" name="TheTeam">
                         </figure>
-                        <p>
+                        <p style="font-size: 20px;">
                             The team is made up of 5 wonderful individuals with
                             an extreme passion for food and making them fast!
                         </p>

@@ -8,10 +8,9 @@
     ?>
     
     <body>
-        
         <!--Navbar-->
         <?php
-        include "session.inc.php";
+        include "nav.inc.php";
         ?>
         
         <!--Header-->
@@ -21,42 +20,15 @@
         </header>
         
         <main> 
-        <div class="container">
-            <div class="row profile">
-		<div class="card">
-                    <div class="profile-sidebar">
-                        <!-- SIDEBAR USERPIC -->
-                        <figure>                                                                          
-                            <img class="profilepic" 
-                             src="images/profile pic.jpg"
-                             />                         
-                        </figure>
-                        <!-- END SIDEBAR USERPIC -->
-                        <!-- SIDEBAR USER TITLE -->
-                        <div class="profile-usertitle">
-                                <div class="user-name">
-                                        Name
-                                </div>
-                                <div class="user-email">
-                                        Email
-                                </div>
-                                <div class="user-description">
-                                        Short Description
-                                </div>
-                        </div>
-                        <!-- END SIDEBAR USER TITLE -->
-                        <a class="edit-profile" href="">
-                            <br>Edit Profile
-                        </a>
-                    </div>
-		</div>
-            </div>
-	</div>
-   
+            <div class="cookbooksession">
+                 <h4 style="font-family: Times New Roman, Helvetica, sans-serif;"> Please 
+                     <a class="login" href="login.php">login</a> to view your profile!</h4>
+                 <h4 style="font-family: Times New Roman, Helvetica, sans-serif;"> For new users, you can 
+                     <a class="signup" href="register.php">sign up</a> to join us!</h4>
+            </div> 
         </main>   
         
-        
-     <!--Footer-->
+        <!--Footer-->
         <?php
         include "footer.inc.php";
         ?>

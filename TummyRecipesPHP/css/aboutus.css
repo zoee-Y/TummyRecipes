@@ -19,10 +19,10 @@
     border-radius: 50%;
 }
 
-.teaminfo
+/*.teaminfo
 {
     text-align: justify;
-}
+}*/
 
 figcaption 
 {
@@ -30,23 +30,23 @@ figcaption
     font-weight: bold;
 }
 
-h3
+.about
 {
-    font-family: "Ink Free", Georgia, Helvetica, sans-serif;
+    font-family: "Ink Free", Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
-    
+    font-size: 30px;
 }
 
-article
+/*article
 {
     display: inline-block;
-}
+}*/
 
 .nameDisplay
 {
     font-family: "Ink Free", Georgia, Arial;
     font-weight: bold;
-    color: black;
-    text-align: left;
+    color: #F9E076;
+    text-align: center;
 }

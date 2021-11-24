@@ -52,3 +52,7 @@ h4
     color: black;
     text-align: center;
 }
+
+#pasta p{
+    text-align: justify;
+}
