@@ -6,98 +6,26 @@
     <?php
     include "head.inc.php";
     ?>
-    
     <body>
-        
         <!--Navbar-->
         <?php
         include "nav.inc.php";
         ?>
-        
         <!--Header-->
         <header class="jumbotron text-center">    
             <h1 class="display-4">My Cookbook</h1>
             <h4>This is where you save our secrets!</h4>
         </header>
         
-        <main> 
-        
-            <div class="container">
-            <div class="row justify-content-around">
-            <div class="card">     
-                <article class="col-sm">
-                    <a href="Mac and Cheese.php">
-                <figure>                                                                          
-                    <img class="card-img-top" 
-                         src="images/Mac and Cheese.jpg"
-                         alt="Mac & Cheese"
-                         title="Mac & Cheese"/>                         
-                </figure>
-                    
-                <h6>Mac & Cheese</h6>
-                
-                </a>
-                    <p> Description
-                       
-                        <a class="view-more" href="Mac and Cheese.php">
-                            <br>View More
-                        </a>
-                </p>
-                </article>
-            </div>
-              
-            
-            <div class="card"> 
-            <article class="col-sm">
-                    <a href="Shrimp Fried Rice.php">
-                <figure>                        
-                    <img class="card-img-top" 
-                         src="images/Shrimp Fried Rice.jpg" 
-                         alt="Shrimp Fried Rice"
-                         title="Shrimp Fried Rice"/>                                                   
-                </figure>
-
-                <h6>Shrimp Fried Rice</h6>
-                
-                </a>
-                    <p>
-                       more to come i guess
-                       <a class="view-more" href="Shrimp Fried Rice.php">
-                           <br>View More
-                       </a>
-                    </p>
-                </article>
-            </div>
-                
-                
-                <div class="card"> 
-                <article class="col-sm">
-                    <a href="Garlic Butter Chicken.php">
-                <figure>                        
-                    <img class="card-img-top" 
-                         src="images/Garlic Butter Chicken.jpg" 
-                         alt="Garlic Butter Chicken"
-                         title="Garlic Butter Chicken"/>                                                  
-                </figure>
-
-                <h6>Garlic Butter Chicken</h6>
-
-                </a>
-                    <p>
-                       Super hungry
-                       <a class="view-more" href="Garlic Butter Chicken.php">
-                           <br>View More
-                       </a>
-                    </p>
-                </article>
-                </div>
-            </div>
+        <main>
+             <div class="cookbooksession">
+                 <h4 style="font-family: Times New Roman, Helvetica, sans-serif;"> Please 
+                     <a class="login" href="login.php">login</a> to view your cookbook!</h4>
+                 <h4 style="font-family: Times New Roman, Helvetica, sans-serif;"> For new users, you can 
+                     <a class="signup" href="register.php">sign up</a> to join us!</h4>
             </div> 
-            
         </main>   
-        
-        
-     <!--Footer-->
+        <!--Footer-->
         <?php
         include "footer.inc.php";
         ?>

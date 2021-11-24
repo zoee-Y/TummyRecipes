@@ -137,7 +137,6 @@
                     </article>
                 </div>       
             </section>
-            <!-- Modal -->
             <br>
         </main> 
         

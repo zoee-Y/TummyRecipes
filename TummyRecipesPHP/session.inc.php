@@ -25,7 +25,7 @@
                     <a class="nav-link" href="MyCookbookSession.php">My Cookbook</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="MyProfile.php">My Profile</a>
+                    <a class="nav-link" href="MyProfileSession.php">My Profile</a>
                 </li>
             </ul>
         </div>
