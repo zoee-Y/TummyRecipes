@@ -23,7 +23,7 @@
                 <div id="modal-content1">
                     <span class="close close1">&times;</span>
                     <p style="color:black;"><b>Do you want to share your secrets with us?</b></p>
-                    <p style="color:black;"><br><b>We are more than welcome help you release your secrets!</b></p>
+                    <p style="color:black;"><br><b>We are more than welcome to help you release your secrets!</b></p>
                     <p style="color:black;"><br><b>But first, let us login!
                             <br> Shall we?</b></p>
                     <a href="login.php">
