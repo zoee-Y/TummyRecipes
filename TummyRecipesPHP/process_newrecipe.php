@@ -9,9 +9,9 @@
         <?php
         include "nav.inc.php";
         ?>
-
+        
         <?php
-        error_reporting(E_ALL);
+        //error_reporting(E_ALL);
         $rTitle = $ingredients = $steps = $errorMsg = "";
         $hours = $minutes = 0;
         $imgThumbnail = NULL;
@@ -107,25 +107,33 @@
                     /*$filetype = explode("/",$_FILES['imgThumbnail']['type']);
                     $filetype = $filetype[0];*/
                     
-                    $dir = $_SERVER["DOCUMENT_ROOT"] . "/uploads/";
-                    //$dir = "./uploads/";
-                    echo "<p>$dir</p>"; //dir is shown
-                    $f = $_FILES["imgThumbnail"];
-                    $filename = sanitize_input($f["name"]);
-                    echo "<p>$filename</p>"; //sanitized filename is fine
                     
-                    $imgThumbnail = $dir . basename($filename); //originally fileDir instead of imgThumbnail
-                    echo "<p>$filename | | $imgThumbnail</p>";
-                    $tmpname = $f["tmp_name"];
+                    define ('SITE_ROOT', realpath(dirname(__FILE__)));
+                    
+                    echo SITE_ROOT;
+                    
+                    //$dir = "./uploads/";
+                    //echo "<p>$dir</p>"; //dir is shown
+                    $courseFile = $_FILES["imgThumbnail"];
+                    $sanitizedFileName = sanitize_input($courseFile["name"]);
+                    //$target_dir = $_SERVER["DOCUMENT_ROOT"] . "/uploads/";
+                    $target_dir = SITE_ROOT . "/images/";
+                    //echo "<p>$filename</p>"; //sanitized filename is fine
+
+                    
+                    $target_file = $target_dir . basename($sanitizedFileName); //originally fileDir instead of imgThumbnail
+                    //echo "<p>$filename | | $imgThumbnail</p>";
+                    //$tmpname = $f["tmp_name"];
                     //echo "<p>$tmpname</p>";
                     
-                    if (!move_uploaded_file($f['tmp_name'], $imgThumbnail)) {
-                        $errorMsg .= "<img src='$imgThumbnail'/> <p>$imgThumbnail, Failed to move uploaded file.</p>";
+                    if (!move_uploaded_file($courseFile['tmp_name'], $target_file)) {
+                        $errorMsg .= "Failed to move uploaded file.</p>";
                         $success = false;
                     }
                     //$imgThumbnail = $fileDir;
                     //echo "<p>$imgThumbnail</p>";
-                    
+                    $imgThumbnail = $target_file;
+                    echo "<p>moved uploaded file?</p>";
    
                 }
                 else {
@@ -152,6 +160,7 @@
             
             echo "<p>imgThumbnail: $imgThumbnail</p>";
             
+            /*
             $imgresult = $conn->query("SELECT * FROM tummy_recipes_recipes ORDER BY recipe_id DESC");
             
             $imgresult->execute();
@@ -169,7 +178,7 @@
             else{
                 echo "<p>Image(s) not found...</p>";
             }
-            
+            */
             echo "<main class='container'>";
             echo "<div id='processOutputContainer'>";
             echo "<h2>Successfully created new recipe!</h2>";
