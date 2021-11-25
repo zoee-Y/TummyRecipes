@@ -47,8 +47,10 @@
                                  title="Mac & Cheese"/>                         
                         </figure>
                         <h3>Mac & Cheese</h3>
-                        <br>
-                        <p> Description         
+                        <p style="text-align: justify;"><br> Macaroni and cheese 
+                            is a pasta dish made with cooked macaroni 
+                            and a cheese sauce, usually cheddar. 
+                            Other ingredients, such as breadcrumbs<br>...         
                             <a class="view-more" href="login.php">
                                 <br>Login to View
                             </a>
@@ -63,8 +65,10 @@
                                  title="Carbonara"/>
                         </figure>
                         <h3>Carbonara</h3>
-                        <br>
-                        <p> Description         
+                        <p style="text-align: justify;"><br>Carbonara is a pasta 
+                            dish prepared with eggs, hard cheese, cured pork, 
+                            and black pepper that originated in Rome. 
+                            In the middle of the twentieth century<br>...
                                 <a class="view-more" href="login.php">
                                     <br>Login to View
                                 </a>
@@ -79,9 +83,11 @@
                                  title="Lasagna"/>                       
                         </figure>
                         <h3>Lasagna</h3>
-                        <br>
-                        <p>
-                            Shall add the link to full recipe next time
+                        <p style="text-align: justify;"><br>Lasagna is a form of 
+                            pasta made of very wide, flat sheets that is possibly 
+                            one of the oldest. Alternatively, either phrase can 
+                            refer to an Italian dish consisting of stacked layers 
+                            of lasagna alternating with fillings such as ragù <br>...
                             <a class="view-more" href="login.php">
                                 <br>Login to View
                             </a>
@@ -101,15 +107,16 @@
                                  title="Garlic Butter Rice"/>                                          
                         </figure>
                         <h3>Garlic Butter Rice</h3>
-                        <br>
-                        <p>
-                           Maybe put description of the food i guess...
+                        <p style="text-align: justify;"><br>This easy Garlic Fried Rice 
+                            with Garlic Chips, which is garlicky and buttery, is a 
+                            classic recipe that has been cooked many 
+                            times over the years. This rice dish is simple to make<br>... 
                            <a class="view-more" href="login.php">
                                 <br>Login to View
                             </a>
                         </p>
                     </article>
-
+                    
                     <article class="col-sm">
                         <figure>                        
                             <img class="img-thumbnail" 
@@ -118,9 +125,10 @@
                                  title="Shrimp Fried Rice"/>                                                   
                         </figure>
                         <h3>Shrimp Fried Rice</h3>
-                        <br>
-                        <p>
-                           more to come i guess
+                        <p style="text-align: justify;"><br>In Chinese takeaway restaurants, 
+                            shrimp fried rice is always one of the most popular fried rice meals. 
+                            Fried rice is typically dark brown in color, due to a combination of dark 
+                            and light soy sauce and <br>...
                            <a class="view-more" href="login.php">
                                 <br>Login to View
                             </a>
@@ -134,11 +142,11 @@
                                  alt="Kimchi Fried Rice"
                                  title="Kimchi Fried Rice"/>                    
                         </figure>
-
                         <h3>Kimchi Fried Rice</h3>
-                        <br>
-                        <p>
-                           Testing to see if images resize
+                        <p style="text-align: justify;"><br>Kimchi fried rice is 
+                            a form of Korean Fried Rice that is made almost entirely 
+                            with kimchi. A variety of meat and/or vegetables are 
+                            frequently added to give it more texture and <br>...
                            <a class="view-more" href="login.php">
                                 <br>Login to View
                             </a>
@@ -158,9 +166,11 @@
                                  title="Chicken Adobo"/>                                                                      
                         </figure>
                         <h3>Chicken Adobo</h3>
-                        <br>
-                        <p>
-                           This is making me hungry while doing this at 3am
+                        <p style="text-align: justify;"><br>Chicken Adobo is a 
+                            Filipino meal cooked by braising chicken legs 
+                            (thighs and/or drumsticks) in a vinegar, soy sauce, 
+                            garlic, and black pepper sauce. It's tangy, salty, 
+                            garlicky, sweet, and <br>...
                            <a class="view-more" href="login.php">
                                 <br>Login to View
                             </a>                    
@@ -175,9 +185,11 @@
                                  title="Garlic Butter Chicken"/>                                                  
                         </figure>
                         <h3>Garlic Butter Chicken</h3>
-                        <br>
-                        <p>
-                           Super hungry
+                        <p style="text-align: justify;"><br>This warm garlic butter 
+                            chicken breast recipe will become a top choice if you're 
+                            looking for a quick and simple 15-minute chicken dinner. 
+                            It's done in a single skillet, 
+                            which makes cleaning a breeze <br>...
                            <a class="view-more" href="login.php">
                                 <br>Login to View
                             </a>
@@ -192,8 +204,9 @@
                                  title="Mediterranean Chicken"/>
                         </figure>
                         <h3>Mediterranean Chicken</h3>
-                        <br>
-                        <p>
+                        <p style="text-align: justify;"><br>This Mediterranean chicken is made 
+                            with sun-dried tomatoes, capers, roasted artichoke hearts, which is served 
+                            with a creamy lemon sauce. They are quite simple to make <br>...
                            <a class="view-more" href="login.php">
                                 <br>Login to View
                             </a>
