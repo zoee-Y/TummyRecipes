@@ -35,15 +35,47 @@
                             <!-- END SIDEBAR USERPIC -->
                             <!-- SIDEBAR USER TITLE -->
                             <div class="profile-usertitle">
-                                <div class="user-name">
-                                        Name:
-                                </div>
-                                <div class="user-email">
-                                        Email:
-                                </div>
-                                <div class="user-description">
-                                        Description:
-                                </div>
+                                <?php
+                                    // Connecting to the DB
+                                    $config = parse_ini_file('../../private/db-config.ini');
+                                    $conn = new mysqli($config['servername'], $config['username'], 
+                                    $config['password'], $config['dbname']);
+                                    
+                                    if ($conn->connect_error)
+                                    {
+                                        die("Connection failed: " . $conn->connect_error);
+                                    }
+                                    
+                                    // Create The DB Query
+                                    $query_profile = "SELECT profilename, profileemail, profiledesc FROM tummy_recipes_profile WHERE profileId = 1";
+                                    
+                                    // Prepare the Query
+                                    $pquery = $conn->query($query_profile);
+                                    
+                                    if ($pquery->num_rows > 0)
+                                    {
+                                        echo '<table class="profile">';
+                                        
+                                        while ($row = $pquery->fetch_assoc())
+                                        {
+                                            // Display the User's details
+                                            echo '<tr>
+                                            <td><h7>Name: '.$row['profilename'].'</h7></td>
+                                            </tr>
+                                            <tr>
+                                            <td><h7>Email: '.$row['profileemail'].'</h7></td>
+                                            </tr>
+                                            <tr>
+                                            <td><h7>Description: '.$row['profiledesc'].'</h7></td>
+                                            </tr>';
+                                        }
+                                        echo '</table>';
+                                    }
+                                    else
+                                        echo 'Profile Empty.';
+                                    
+                                    $conn->close();
+                                ?>
                             </div>
                             <!-- END SIDEBAR USER TITLE -->
                             <a class="edit-profile" href="MyProfileInfo.php">
