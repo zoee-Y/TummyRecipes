@@ -118,9 +118,14 @@
                             </figure>
                             <h3>Garlic Butter Rice</h3>
                         </a>
-                        <p style="text-align: justify;"><br>
+                        <p style="text-align: justify;"><br>This easy Garlic Fried Rice with Garlic Chips, 
+                            which is garlicky and buttery, is a classic recipe that has been cooked many 
+                            times over the years. This fried rice goes perfectly with a tasty side dish 
+                            like juicy grilled prawns. This rice dish is simple to make, quick to cook, 
+                            and extremely tasty and delicious.
                             <br><br>
-                            
+                            It is a great home-cooked supper with a salad and meat, seafood, or other protein 
+                            dishes on the side to keep us well and going on those long study evenings.
                            <a class="view-more" href="Garlic Butter Rice.php">
                                <br>Press me for Recipes!
                            </a>
@@ -162,8 +167,15 @@
                             </figure>
                             <h3>Kimchi Fried Rice</h3>
                         </a>
-                        <p><br>
-                           Testing to see if images resize
+                        <p style="text-align: justify;"><br>Kimchi fried rice is a form of Korean 
+                            Fried Rice that is made almost entirely with kimchi. A variety of meat and/or 
+                            vegetables are frequently added to give it more texture and flavor.
+                            <br><br>
+                            Bacon and mushrooms are commonly used in kimchi fried rice (particularly 
+                            enoki mushrooms). The bacon adds a lovely smokey taste to the meal, 
+                            while the enoki mushrooms add a nice crunch. Along with Kimchi jjigae (Kimchi stew) 
+                            and Kimchi Pancake, kimchi fried rice is one of the most popular methods to utilize 
+                            up old ripened kimchi.
                            <a class="view-more" href="Kimchi Fried Rice.php">
                                <br>Press me for Recipes!
                            </a>
@@ -185,9 +197,11 @@
                             </figure>
                             <h3>Chicken Adobo</h3>
                         </a>
-                        <p><br>
-                           This is making me hungry while doing this at 3am
-                           <br>Jia : HAHAHAHA ZAI
+                        <p style="text-align: justify;"><br>Chicken Adobo is a Filipino meal cooked 
+                            by braising chicken legs (thighs and/or drumsticks) in a vinegar, soy sauce, 
+                            garlic, and black pepper sauce. It's tangy, salty, garlicky, sweet, and spicy 
+                            all at the same time. The chicken is carefully cooked in the sauce, resulting in a 
+                            delicious and tender dish.
                            <a class="view-more" href="Chicken Adobo.php">
                                <br>Press me for Recipes!
                            </a>
@@ -204,8 +218,13 @@
                             </figure>
                             <h3>Garlic Butter Chicken</h3>
                         </a>
-                        <p><br>
-                           Super hungry
+                        <p style="text-align: justify;"><br>This warm garlic butter chicken 
+                            breast recipe will become a top choice if you're looking for a quick 
+                            and simple 15-minute chicken dinner. It's done in a single skillet, 
+                            which makes cleaning a breeze.
+                            <br><br>
+                            The chicken is pan-fried on the stovetop and is extremely soft, 
+                            juicy, rich, and buttery in flavor, with lots of garlic to round off the flavor.
                            <a class="view-more" href="Garlic Butter Chicken.php">
                                <br>Press me for Recipes!
                            </a>
@@ -222,14 +241,15 @@
                             </figure>
                             <h3>Mediterranean Chicken</h3>
                         </a>
-                        <p><br>
-                           uhhh might be a problem if the length of name is diff
-                           cuz the images wont be aligned.
-
-                           <br>JIA: actually can try putting the name at the bottom 
-                           of the image?  
-                           <br> bless thx thx
-                           <br> need to cite images!!
+                        <p style="text-align: justify;"><br>This Mediterranean chicken is made 
+                            with sun-dried tomatoes, capers, roasted artichoke hearts, which is served 
+                            with a creamy lemon sauce. 
+                            They are quite simple to make, taking only 30 minutes from start to finish. 
+                            Cooked in one skillet, tender and juicy chicken with a lot of flavor.
+                            <br><br>
+                            With a side of rice or spaghetti, this is the ideal healthy chicken dinner 
+                            meal for the whole family. This Mediterranean-style chicken breast recipe 
+                            will become one of your go-to chicken recipes for midweek dinners.
                            <a class="view-more" href="Mediterranean Chicken Skillet.php">
                                <br>Press me for Recipes!
                            </a>
