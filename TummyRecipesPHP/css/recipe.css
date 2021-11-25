@@ -56,3 +56,92 @@ h4
 #pasta p{
     text-align: justify;
 }
+
+.button {
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #F9E076;
+}
+
+.button1:hover {
+    background-color: #F9E076;
+    color: #2cc1c0;
+}
+
+.btn{
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button2 {
+    border-radius: 20px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #2cc1c0;
+    font-family: "Times New Roman", Helvetica, sans-serif; 
+}
+
+.button2:hover {
+    background-color: #2cc1c0;
+    color: #F9E076;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+#modal-content1 {
+    background: url(https://media.istockphoto.com/illustrations/baking-or-cooking-background-with-kitchen-utensils-flour-and-eggs-illustration-id1202928296?k=20&m=1202928296&s=170667a&w=0&h=0QJjXVNIC3yJzw2H3BR9kUNYukByOyS8iGY2x_TY_70=)
+    center center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}

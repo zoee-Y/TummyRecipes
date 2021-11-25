@@ -18,9 +18,22 @@
             <br>
             <h1 class="display-4">Recipes</h1>
             <h4>This is where we share our secrets!</h4>
+            <h5> Share your <button class="button button1">secret</button> with us!</h5>
+            <div class="modal modal1">
+                <div id="modal-content1">
+                    <span class="close close1">&times;</span>
+                    <p style="color:black;"><b>Do you want to share your secrets with us?</b></p>
+                    <p style="color:black;"><br><b>We are more than welcome help you release your secrets!</b></p>
+                    <p style="color:black;"><br><b>But first, let us login!
+                            <br> Shall we?</b></p>
+                    <a href="login.php">
+                        <button class="btn button2">Log In</button>
+                    </a>
+                </div>
+            </div>
         </header>
         
-        <!--Food recipes -->
+        <!--Food recipes -->    
         <main class="container">
             <section id="Pasta">
                 <h2>Pasta</h2>
