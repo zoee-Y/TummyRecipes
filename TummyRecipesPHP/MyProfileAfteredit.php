@@ -36,10 +36,10 @@
                             <!-- SIDEBAR USER TITLE -->
                             <div class="profile-usertitle">
                                 <div class="user-name">
-                                        Name:
+                                        Name: testing
                                 </div>
                                 <div class="user-email">
-                                        Email:
+                                        Email: 
                                 </div>
                                 <div class="user-description">
                                         Description:
