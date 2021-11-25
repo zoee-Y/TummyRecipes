@@ -21,3 +21,9 @@ img.card-img-top{
     text-align: center;
     color: black; 
 }
+img.profilepic{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+

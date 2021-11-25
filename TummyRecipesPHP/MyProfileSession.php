@@ -23,8 +23,7 @@
         
         <main> 
             <div class="container">
-                <div class="row profile">
-                    <div class="card">
+                <div class="row-profile">
                         <div class="profile-sidebar">
                             <!-- SIDEBAR USERPIC -->
                             <figure>                                                                          
@@ -82,7 +81,6 @@
                                 <br>Edit Profile
                             </a>
                         </div>
-                    </div>
                 </div>
             </div>
         </main>   
