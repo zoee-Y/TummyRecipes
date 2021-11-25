@@ -9,9 +9,9 @@
 
     <body>
         
-        <!--Navbar-->
+        <!-- Session Navbar-->
         <?php
-        include "nav.inc.php";
+        include "session.inc.php";
         ?>
 
         <main class="container">

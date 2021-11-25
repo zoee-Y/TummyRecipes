@@ -11,14 +11,14 @@
     ?>
     
     <body>
-        <!--Navbar-->
+        <!-- Session Navbar-->
         <?php
-        include "nav.inc.php";
+        include "session.inc.php";
         ?>
                
         <!--Main Content-->
         <main class="container">
-            <h1>Create new recipe</h1>
+            <h1 class="display-4">Create New Recipe</h1>
             
             <form action="process_newrecipe.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
