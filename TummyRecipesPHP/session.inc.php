@@ -31,7 +31,7 @@
         </div>
         
         <?php
-        include "searchbar.inc.php";
+        include "session_searchbar.inc.php";
         ?>
         
     </div>
