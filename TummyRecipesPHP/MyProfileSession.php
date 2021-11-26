@@ -77,7 +77,7 @@
                                 ?>
                             </div>
                             <!-- END SIDEBAR USER TITLE -->
-                            <a class="edit-profile" href="MyProfileInfo.php">
+                            <a class="edit-profile" href="MyProfileinfo.php">
                                 <br>Edit Profile
                             </a>
                         </div>
