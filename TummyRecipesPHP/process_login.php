@@ -140,6 +140,7 @@ function createSession()
             <?php
             if ($success)
             {
+                createSession();
                 echo "<h2>Login successful!</h2>";
                 echo "<h4>Welcome back, ", $fname . " " . $lname . ".</h4>";
                 echo "<a href='welcome.php' class='btn btn-success'>Return to Home</a>";
