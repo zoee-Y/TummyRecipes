@@ -93,7 +93,7 @@ function authenticateUser()
             }
             else
             {
-                $_SESSION["userid"] = $row["member_id"];
+                $_SESSION["member"] = $row["member_id"];
                 $_SESSION["user"] = $row;
             }
         }
@@ -115,7 +115,7 @@ function createSession()
     session_start();
     
     // if user is already logged in then redirect user to welcome page
-    if (isset($_SESSION["userid"]) && $_SESSION["userid"] === true)
+    if (isset($_SESSION["member"]) && $_SESSION["member"] === true)
     {
         header("location: welcome.php");
         exit;
@@ -140,6 +140,7 @@ function createSession()
             <?php
             if ($success)
             {
+                session_start();
                 echo "<h2>Login successful!</h2>";
                 echo "<h4>Welcome back, ", $fname . " " . $lname . ".</h4>";
                 echo "<a href='welcome.php' class='btn btn-success'>Return to Home</a>";

@@ -23,8 +23,7 @@
         
         <main> 
             <div class="container">
-                <div class="row profile">
-                    <div class="card">
+                <div class="row-profile">
                         <div class="profile-sidebar">
                             <!-- SIDEBAR USERPIC -->
                             <figure>                                                                          
@@ -78,11 +77,10 @@
                                 ?>
                             </div>
                             <!-- END SIDEBAR USER TITLE -->
-                            <a class="edit-profile" href="MyProfileInfo.php">
+                            <a class="edit-profile" href="MyProfileinfo.php">
                                 <br>Edit Profile
                             </a>
                         </div>
-                    </div>
                 </div>
             </div>
         </main>   

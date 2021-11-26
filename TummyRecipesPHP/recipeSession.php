@@ -28,7 +28,7 @@
             <section id="Pasta">
                 <h2>Pasta</h2>
                 <div class="row">   
-                    <article class="col-sm">
+                    <article id="macandcheese" class="col-sm">
                         <a href="Mac and Cheese.php">
                         <figure>                                                                          
                             <img class="img-thumbnail" 
@@ -52,7 +52,7 @@
                         </p>
                     </article>
 
-                    <article class="col-sm">
+                    <article id="carbonara" class="col-sm">
                         <a href="Carbonara.php">
                             <figure>
                                 <img class="img-thumbnail" 
@@ -77,7 +77,7 @@
                         </p>
                     </article>
 
-                    <article class="col-sm">
+                    <article id="lasagna" class="col-sm">
                         <a href="Lasagna.php">                
                             <figure>           
                                 <img class="img-thumbnail" 
@@ -108,7 +108,7 @@
             <section id="Rice">
                 <h2>Rice</h2>
                 <div class="row">
-                    <article class="col-sm">
+                    <article id="garlic butter rice" class="col-sm">
                         <a href="Garlic Butter Rice.php">
                             <figure>
                                 <img class="img-thumbnail" 
@@ -132,7 +132,7 @@
                         </p>
                     </article>
 
-                    <article class="col-sm">
+                    <article id="shrimpfriedrice" class="col-sm">
                         <a href="Shrimp Fried Rice.php">
                             <figure>                        
                                 <img class="img-thumbnail" 
@@ -157,7 +157,7 @@
                         </p>
                     </article>
 
-                    <article class="col-sm">
+                    <article id="kimchifriedrice" class="col-sm">
                         <a href="Kimchi Fried Rice.php">
                             <figure>
                                 <img class="img-thumbnail" 
@@ -187,7 +187,7 @@
             <section id="Chicken">
                 <h2>Chicken</h2>
                 <div class="row">
-                    <article class="col-sm">
+                    <article id="chickenadobo" class="col-sm">
                         <a href="Chicken Adobo.php">
                             <figure>
                                 <img class="img-thumbnail" 
@@ -208,7 +208,7 @@
                         </p>
                     </article>
 
-                    <article class="col-sm">
+                    <article id="garlicbutterchicken" class="col-sm">
                         <a href="Garlic Butter Chicken.php">
                             <figure>                        
                                 <img class="img-thumbnail" 
@@ -231,7 +231,7 @@
                         </p>
                     </article>
 
-                    <article class="col-sm">
+                    <article id="mediterraneanchicken" class="col-sm">
                         <a href="Mediterranean Chicken Skillet.php">
                             <figure>                       
                                 <img class="img-thumbnail" 

@@ -37,10 +37,9 @@
                                 <h6>Mac & Cheese</h6>
 
                             </a>
-                            <p> Description
-
+                         
                                 <a class="view-more" href="Mac and Cheese.php">
-                                    <br>View More
+                                    <br>Press me for Recipes!
                                 </a>
                             </p>
                         </article>
@@ -60,10 +59,9 @@
                                 <h6>Shrimp Fried Rice</h6>
 
                             </a>
-                            <p>
-                               more to come i guess
+                            
                                <a class="view-more" href="Shrimp Fried Rice.php">
-                                   <br>View More
+                                   <br>Press me for Recipes!
                                </a>
                             </p>
                         </article>
@@ -83,10 +81,9 @@
                                 <h6>Garlic Butter Chicken</h6>
 
                             </a>
-                            <p>
-                               Super hungry
+                               
                                <a class="view-more" href="Garlic Butter Chicken.php">
-                                   <br>View More
+                                   <br>Press me for Recipes!
                                </a>
                             </p>
                         </article>
