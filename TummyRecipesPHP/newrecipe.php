@@ -34,7 +34,10 @@
                 $success = false;
             } else {
                 echo "no connection error";
-                $result =  $conn->query("SELECT * FROM tummy_recipes_recipes");
+                //view in normal (asc) order
+                //$result =  $conn->query("SELECT * FROM tummy_recipes_recipes");
+                //view in descending recipe_id order (newest first)
+                $result =  $conn->query("SELECT * FROM tummy_recipes_recipes ORDER BY recipe_id DESC");
                 echo "<p>$result->num_rows</p>";
             }
             

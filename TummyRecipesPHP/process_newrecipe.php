@@ -106,7 +106,8 @@
                         && (in_array($extension, $allowedExts))) {
                         //echo "<p>FILE ALLOWED</p>";
                         
-                        $filename = sanitize_input($_FILES["imgThumbnail"]["name"]);
+                        $formatfilename = trim(addslashes($_FILES["imgThumbnail"]["name"]));
+                        $filename = preg_replace("/\s+/", "_", $formatfilename);
                         
                         $directory = "images/";
 
