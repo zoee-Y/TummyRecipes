@@ -92,10 +92,11 @@
                     echo "<p>$imgType,$extension</p>";
                     echo "<p>$extension VS $allowedExts[0], $allowedExts[1], $allowedExts[2]</p>";
                     echo in_array($extension, $allowedExts)."<br>";
+                    echo $_FILES["imgThumbnail"]["size"];
                 */
                 
                 $allowedExts = array("jpg","png","jpeg");
-                if ($_FILES["imgThumbnail"]["size"] < 20000) {
+                if ($_FILES["imgThumbnail"]["size"] <= 2000000) {
                     if (($imgType == "image/gif") || ($imgType == "image/jpeg") || ($imgType == "image/jpg") || ($imgType == "image/pjpeg") || ($imgType == "image/x-png") || ($imgType == "image/png")
                         && (in_array($extension, $allowedExts))) {
                         //echo "<p>FILE ALLOWED</p>";
