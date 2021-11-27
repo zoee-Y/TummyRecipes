@@ -46,7 +46,14 @@
                 <br>
                 <br>
             </div>
+            <?php
+            include "Display_Comment_Cauliflower.php";
+            ?>
         </main>
+        
+        <?php
+        include "Comment_Cauliflower.php";
+        ?>
         
         <?php
         include "footer.inc.php";
