@@ -57,10 +57,9 @@
                                     
                                     if ($pquery->num_rows > 0)
                                     {
-                                        // echo '<table class="profile">';
                                         while ($row = $pquery->fetch_assoc())
                                         {
-                                            if (isset($_SESSION["email"]))
+                                            if (isset($_SESSION["member"]))
                                             {
                                                 // Display the User's details
                                                 echo '<h7>Name: '.$row['fname'].' '.$row['lname'].'</h7>';
@@ -72,16 +71,16 @@
                                             }
                                             
                                         }
-                                        // echo '</table>';
                                     }
                                     else 
+                                    {
                                         echo "<h7>Name: </h7>";
                                         echo "<br>";
                                         echo "<h7>Email: </h7>";
                                         echo "<br>";
                                         echo "<h7>Description: </h7>";
                                         echo '<br>';
-                                    
+                                    }
                                     $conn->close();
                                 ?>
                             </div>

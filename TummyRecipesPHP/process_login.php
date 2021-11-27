@@ -73,7 +73,6 @@ function authenticateUser() {
                 $errorMsg = "Email not found or password doesn't match...";
                 $success = false;
             } else {
-                // echo "<p>else block</p>";
                 global $fname, $lname, $email, $pwd_hashed, $errorMsg, $success;
 
                 // start session
@@ -83,7 +82,7 @@ function authenticateUser() {
                 $_SESSION["loggedIn"] = true;
                 $_SESSION["member"] = $row["member_id"];
                 $_SESSION["user"] = $row;
-
+                
                 //echo $_SESSION["loggedIn"] . " | " . $_SESSION["email"] . " | " . $_SESSION["member"];
                 
             }
