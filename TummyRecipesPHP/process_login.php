@@ -96,25 +96,6 @@ function authenticateUser() {
     $conn->close();
 }
 
-/*function createSession() {
-    echo "<p>createSession called</p>";
-    global $fname, $lname, $email, $pwd_hashed, $errorMsg, $success;
-
-    // start session
-    session_start();
-
-    $_SESSION["email"] = $email;
-    $_SESSION["loggedIn"] = true;
-
-    echo $_SESSION["loggedIn"] . " | " . $_SESSION["email"] . " | " . $_SESSION["member"];
-
-    // if user is already logged in then redirect user to welcome page
-    if (isset($_SESSION["member"]) && $_SESSION["loggedIn"] === true) {
-        echo "went into if loop";
-        header("location: welcome.php");
-        exit;
-    }
-}*/
 ?>
 
 <html>
@@ -134,7 +115,8 @@ function authenticateUser() {
             if ($success) {
                 echo "<h2>Login successful!</h2>";
                 echo "<h4>Welcome back, ", $fname . " " . $lname . ".</h4>";
-                echo "<a href='index.php' class='btn btn-success'>Return to Home</a>";
+                header('Refresh: 1.5; URL = index.php');
+                // echo "<a href='index.php' class='btn btn-success'>Return to Home</a>";
             } else {
                 echo "<h2>Oops!</h2>";
                 echo "<h4>The following errors were detected:</h4>";

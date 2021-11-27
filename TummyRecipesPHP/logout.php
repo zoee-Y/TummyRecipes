@@ -1,6 +1,6 @@
 <?php
-    $fname = $lname = $email = "";
-    header('Refresh: 2; URL = login.php');
+$fname = $lname = $email = "";
+header('Refresh: 1.5; URL = login.php');
 ?>
 
 <html>
@@ -22,7 +22,7 @@
                 session_destroy();
                 
                 echo "<h2>Logged Out successful!</h2>";
-                echo "<h4>Goodbye!! Come Visit Again Soon!</h4>";
+                echo "<h4>Goodbye! Come back soon!</h4>";
                 echo "<a href='index.php' class='btn btn-success'>Return to Home</a>";
             ?>
         </main>
