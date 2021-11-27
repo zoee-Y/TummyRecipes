@@ -18,8 +18,9 @@
             <br>
             <?php
                 session_start();
-                unset($_SESSION["username"]);
-                unset($_SESSION["password"]);
+                session_unset();
+                session_destroy();
+                
                 echo "<h2>Logged Out successful!</h2>";
                 echo "<h4>Goodbye!! Come Visit Again Soon!</h4>";
                 echo "<a href='index.php' class='btn btn-success'>Return to Home</a>";

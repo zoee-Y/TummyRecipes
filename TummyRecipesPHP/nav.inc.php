@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
 ?>
 <nav class="navbar navbar-expand-sm">
     <a class="navbar-brand" href="index.php">
@@ -21,12 +21,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="recipe.php">Recipes</a>
                 </li>
+                <?php if ($_SESSION["loggedIn"] === true) { ?>
                 <li class="nav-item">
                     <a class="nav-link" href="MyCookbook.php">My Cookbook</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="MyProfile.php">My Profile</a>
                 </li>
+                <?php } ?>
             </ul>
         </div>
         
@@ -38,16 +40,25 @@
 
     <div class="nav navbar-nav navbar-right" id="navbaricons">
         <ul class="nav navbar-nav" id="navicons">
-            <li>
-                <a class="nav-item nav-link" href="register.php" title="Register">
-                    <span class="ri-account-circle-line ri-xl"></span>
+            <?php
+            if ($_SESSION["loggedIn"] === true) { ?>
+                <a class="nav-item nav-link" href="logout.php" title="Logout">
+                    <span class="ri-logout-circle-line ri-xl"></span>
                 </a>
-            </li>
-            <li>
-                <a class="nav-item nav-link" href="login.php" title="Login">
-                    <span class="ri-login-circle-line ri-xl"></span>
-                </a>
-            </li>
+            <?php            
+            }
+            else { ?>
+                <li>
+                    <a class="nav-item nav-link" href="register.php" title="Register">
+                        <span class="ri-account-circle-line ri-xl"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="login.php" title="Login">
+                        <span class="ri-login-circle-line ri-xl"></span>
+                    </a>
+                </li>
+            <?php } ?>
         </ul>
     </div>
 </nav>

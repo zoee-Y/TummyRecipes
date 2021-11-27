@@ -1,4 +1,12 @@
 <?php
+// if user is already logged in then redirect user to welcome page
+if ($_SESSION["loggedIn"] === true) {
+    header("Location: ./index.php");
+    exit;
+}
+?>
+
+<?php
 include "head.inc.php";
 ?>
 <body>

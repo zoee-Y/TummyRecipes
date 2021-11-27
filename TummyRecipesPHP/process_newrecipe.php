@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <html>
     <head>
         <title>New Recipe Status</title>
@@ -187,7 +191,7 @@
                 $success = false;
             } else {
                 //using test email
-                $email = "zoe@gmail.com";
+                $email = $_SESSION["email"];
                 
                 $stmt = $conn->prepare("INSERT INTO tummy_recipes_recipes (email, rTitle, hours, minutes, ingredients, steps, imgThumbnail) VALUES (?, ?, ?, ?, ?, ?, ?)");
                 $stmt->bind_param("ssiisss", $email, $rTitle, $hours, $minutes, $ingredients, $steps, $imgThumbnail); //not adding img yet

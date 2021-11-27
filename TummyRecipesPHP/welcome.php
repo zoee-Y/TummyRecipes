@@ -10,7 +10,7 @@
     <body>
         <!--Session Navbar-->
         <?php
-        include "session.inc.php";
+        include "nav.inc.php";
         ?>
         
         <!--Header-->
