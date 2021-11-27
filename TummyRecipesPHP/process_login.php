@@ -73,7 +73,7 @@ function authenticateUser() {
                 $errorMsg = "Email not found or password doesn't match...";
                 $success = false;
             } else {
-                echo "<p>else block</p>";
+                // echo "<p>else block</p>";
                 global $fname, $lname, $email, $pwd_hashed, $errorMsg, $success;
 
                 // start session

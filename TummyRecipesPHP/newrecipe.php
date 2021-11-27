@@ -7,6 +7,9 @@
 <html lang="en">
     
     <!-- Head -->
+    <?php
+    include "head.inc.php";
+    ?>
     
     <title>Create New Recipe</title>
     
@@ -18,7 +21,7 @@
     <script defer src="js/newrecipe.js"></script>
     
     <body>
-        <!-- Session Navbar-->
+        <!-- Navbar-->
         <?php
         include "nav.inc.php";
         ?>

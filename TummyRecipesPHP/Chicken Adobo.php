@@ -1,17 +1,21 @@
+<?php
+    session_start();
+?>
+
 <!doctype html>
 
 <html lang="en">
-      <!-- Head -->
+    
+    <!-- Head -->
     <?php
     include "head.inc.php";
     ?>
-     
 
     <body>
         
-        <!-- Session Navbar-->
+        <!-- Navbar-->
         <?php
-        include "session.inc.php";
+        include "nav.inc.php";
         ?>
 
         <main class="container">

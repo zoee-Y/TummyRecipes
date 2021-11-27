@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -8,9 +12,10 @@
     ?>
     
     <body>
-        <!-- Session Navbar-->
+        
+        <!-- Navbar-->
         <?php
-        include "session.inc.php";
+        include "nav.inc.php";
         ?>
         
         <!--Header-->
