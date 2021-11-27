@@ -78,66 +78,48 @@
             }
             
             if (empty($_FILES["imgThumbnail"]["name"])) {
-                echo "<p>imgThumbnail filename is empty and imgThumbnail set to null</p>";
+                //echo "<p>imgThumbnail filename is empty and imgThumbnail set to null</p>";
                 $imgThumbnail = NULL;
             }
             else {
-                echo "<p>imgThumbnail filename NOT empty</p>";
+                //echo "<p>imgThumbnail filename NOT empty</p>";
 
                 $temp = explode(".", $_FILES["imgThumbnail"]["name"]);
-                $extension = strtoupper(end($temp));
+                $extension = strtolower(end($temp));
                 
                 $imgType = $_FILES["imgThumbnail"]["type"];
-                echo "<p>$imgType, $extension</p>";
+                /*
+                    echo "<p>$imgType,$extension</p>";
+                    echo "<p>$extension VS $allowedExts[0], $allowedExts[1], $allowedExts[2]</p>";
+                    echo in_array($extension, $allowedExts)."<br>";
+                */
                 
-                $allowedTypes = array("JPG","PNG","JPEG");
-                if ((($_FILES["imgThumbnail"]["type"] == "image/gif") || ($_FILES["imgThumbnail"]["type"] == "image/jpeg") || ($_FILES["imgThumbnail"]["type"] == "image/jpg") || ($_FILES["imgThumbnail"]["type"] == "image/pjpeg") || ($_FILES["imgThumbnail"]["type"] == "image/x-png") || ($_FILES["imgThumbnail"]["type"] == "image/png"))
-                        && ($_FILES["imgThumbnail"]["size"] < 20000)
-                        && in_array($extension, $allowedTypes)){
-                    /*
-                    //$image = $_FILES["imgThumbnail"]["tmp_name"];
-                    //$imgThumbnail = addslashes(file_get_contents($image));
-                    if (!move_uploaded_file($_FILES['imgThumbnail']['tmp_name'], sprintf('./uploads/%s.%s', sha1_file($_FILES['imgThumbnail']['tmp_name']),$ext))) {
-                        $errorMsg .= "Failed to move uploaded file.";
-                        $success = false;
-                    }*/
-                    
-                    echo "<p>FILE ALLOWED</p>";
-                    
-                    /*$filetype = explode("/",$_FILES['imgThumbnail']['type']);
-                    $filetype = $filetype[0];*/
-                    
-                    
-                    define ('SITE_ROOT', realpath(dirname(__FILE__)));
-                    
-                    echo SITE_ROOT;
-                    
-                    //$dir = "./uploads/";
-                    //echo "<p>$dir</p>"; //dir is shown
-                    $courseFile = $_FILES["imgThumbnail"];
-                    $sanitizedFileName = sanitize_input($courseFile["name"]);
-                    //$target_dir = $_SERVER["DOCUMENT_ROOT"] . "/uploads/";
-                    $target_dir = SITE_ROOT . "/images/";
-                    //echo "<p>$filename</p>"; //sanitized filename is fine
+                $allowedExts = array("jpg","png","jpeg");
+                if ($_FILES["imgThumbnail"]["size"] < 20000) {
+                    if (($imgType == "image/gif") || ($imgType == "image/jpeg") || ($imgType == "image/jpg") || ($imgType == "image/pjpeg") || ($imgType == "image/x-png") || ($imgType == "image/png")
+                        && (in_array($extension, $allowedExts))) {
+                        //echo "<p>FILE ALLOWED</p>";
 
-                    
-                    $target_file = $target_dir . basename($sanitizedFileName); //originally fileDir instead of imgThumbnail
-                    //echo "<p>$filename | | $imgThumbnail</p>";
-                    //$tmpname = $f["tmp_name"];
-                    //echo "<p>$tmpname</p>";
-                    
-                    if (!move_uploaded_file($courseFile['tmp_name'], $target_file)) {
-                        $errorMsg .= "Failed to move uploaded file.</p>";
+                        define ('SITE_ROOT', realpath(dirname(__FILE__)));
+                        
+                        $filename = sanitize_input($_FILES["imgThumbnail"]["name"]);
+                        
+                        $directory = "images/";
+
+                        $imgThumbnail = $directory . basename($filename);
+
+                        if (!move_uploaded_file($_FILES["imgThumbnail"]["tmp_name"], $imgThumbnail)) {
+                            $errorMsg .= "Failed to move uploaded file.</p>";
+                            $success = false;
+                        }
+
+                    }
+                    else {
+                        $errorMsg .= "Wrong file format";
                         $success = false;
                     }
-                    //$imgThumbnail = $fileDir;
-                    //echo "<p>$imgThumbnail</p>";
-                    $imgThumbnail = $target_file;
-                    echo "<p>moved uploaded file?</p>";
-   
-                }
-                else {
-                    $errorMsg .= "Invalid file type";
+                } else {
+                    $errorMsg .= "File size exceeded";
                     $success = false;
                 }
             }
@@ -151,34 +133,8 @@
         if ($success) {
             saveRecipeToDB();
             
-            // for future reference, getting elements from unserialized array
-            /*print_r($ingredients);
-            $uns = unserialize($ingredients);
-            for ($i = 0; $i < count($uns); $i++) {
-                echo "<p>$uns[$i]</p>";
-            }*/
+            //echo "<p>imgThumbnail: $imgThumbnail</p>";
             
-            echo "<p>imgThumbnail: $imgThumbnail</p>";
-            
-            /*
-            $imgresult = $conn->query("SELECT * FROM tummy_recipes_recipes ORDER BY recipe_id DESC");
-            
-            $imgresult->execute();
-            
-            $result = $imgresult->get_result();
-            
-            
-            if($result->num_rows > 0){
-                $row = $result->fetch_assoc();
-                $displayUrl = str_replace("/var/www/html", ".", $row["imgThumbnail"]);
-                echo "<div>";
-                echo "<img src='". $displayUrl ."' />";
-                echo "</div>";
-            }
-            else{
-                echo "<p>Image(s) not found...</p>";
-            }
-            */
             echo "<main class='container'>";
             echo "<div id='processOutputContainer'>";
             echo "<h2>Successfully created new recipe!</h2>";
@@ -228,22 +184,6 @@
                 //using test email
                 $email = "zoe@gmail.com";
                 
-                // Prepare the statement:
-                //check if imgThumbnail is null, then add the other columns only
-                /*if (imgThumbnail == null) {
-                    echo "<p>imgThumbnail null</p>";
-                    $stmt = $conn->prepare("INSERT INTO tummy_recipes_recipes (email, rTitle, hours, minutes, ingredients, steps) VALUES (?, ?, ?, ?, ?, ?)");
-                    // Bind & execute the query statement:
-                    $stmt->bind_param("ssiiss", $email, $rTitle, $hours, $minutes, $ingredients, $steps); //not adding img yet  
-                }
-                else {
-                    echo "<p>imgThumbnail not null</p>";
-                    $stmt = $conn->prepare("INSERT INTO tummy_recipes_recipes (email, rTitle, hours, minutes, ingredients, steps, imgThumbnail) VALUES (?, ?, ?, ?, ?, ?, ?)");
-                    $null = NULL;
-                    $stmt->bind_param("ssiissb", $email, $rTitle, $hours, $minutes, $ingredients, $steps, $null); //not adding img yet
-                    $stmt->send_long_data(6, $imgThumbnail);
-                }*/
-                
                 $stmt = $conn->prepare("INSERT INTO tummy_recipes_recipes (email, rTitle, hours, minutes, ingredients, steps, imgThumbnail) VALUES (?, ?, ?, ?, ?, ?, ?)");
                 $stmt->bind_param("ssiisss", $email, $rTitle, $hours, $minutes, $ingredients, $steps, $imgThumbnail); //not adding img yet
                 
@@ -251,15 +191,15 @@
                     $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
                     $success = false;
                 }
-                else {
+                /*else {
                     echo "<p>stmt executed!</p>";
-                }
+                }*/
                 $stmt->close();
             }
             $conn->close();
-            echo $imgThumbnail;
+            //echo $imgThumbnail;
             
-            echo "<p>connection closed</p>";            
+            //echo "<p>connection closed</p>";            
         }
         ?>
     </body>

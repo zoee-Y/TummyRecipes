@@ -18,7 +18,39 @@
                
         <!--Main Content-->
         <main class="container">
-            <h1 class="display-4">Create New Recipe</h1>
+            <h1 class="display-4">Create New Recipe</h1>            
+            <?php
+            /*
+            $config = parse_ini_file('../../private/db-config.ini');
+            $conn = new mysqli($config['servername'], $config['username'],
+                    $config['password'], $config['dbname']);
+
+            // Check connection
+            if ($conn->connect_error) {
+                echo "Connection failed: " . $conn->connect_error;
+                $success = false;
+            } else {
+                echo "no connection error";
+                $result =  $conn->query("SELECT * FROM tummy_recipes_recipes");
+                echo "<p>$result->num_rows</p>";
+            }
+            
+            while ($row = $result->fetch_assoc()) {
+                echo "<div>";
+                echo "<img src='" . $row['imgThumbnail'] . "' >";
+                echo "<p>".$row['imgThumbnail']."</p>";
+                echo "</div>";
+            }
+            */
+            
+            // for future reference, getting elements from unserialized array (ingredients and steps
+            /*print_r($ingredients);
+            $uns = unserialize($ingredients);
+            for ($i = 0; $i < count($uns); $i++) {
+                echo "<p>$uns[$i]</p>";
+            }*/
+            
+            ?>
             
             <form action="process_newrecipe.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
@@ -47,7 +79,7 @@
                     <textarea class="form-control" type="text" id="steps" name="steps" required placeholder="1. Add flour to mixing bowl ..."></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="imgThumbnail">Upload a thumbnail for your recipe:</label>
+                    <label for="imgThumbnail">Upload a thumbnail for your recipe:<br></label>
                     <input type="file" id="imgThumbnail" name="imgThumbnail">
                 </div>
                 <div class="form-group">
