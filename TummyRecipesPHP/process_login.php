@@ -38,7 +38,7 @@ function sanitize_input($data) {
     return $data;
 }
 
-// Helper function that a
+// Helper function that authenticates the user logging in
 function authenticateUser() {
     global $fname, $lname, $email, $pwd_hashed, $errorMsg, $success;
 
