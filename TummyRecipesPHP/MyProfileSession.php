@@ -50,7 +50,7 @@
                                     }
                                     
                                     // Create The DB Query
-                                    $query_profile = "SELECT fname, lname, description, email FROM tummy_recipes_members WHERE member_id ";
+                                    $query_profile = "SELECT fname, lname, description, email FROM tummy_recipes_members WHERE member_id = '{$_SESSION['member']}' ";
                                                                        
                                     // Prepare the Query
                                     $pquery = $conn->query($query_profile);
