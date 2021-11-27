@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    session_start();  
 ?>
 
 <!DOCTYPE html>
@@ -50,32 +50,37 @@
                                     }
                                     
                                     // Create The DB Query
-                                    $query_profile = "SELECT fname, lname, email FROM tummy_recipes_members WHERE member_id = ";
-                                    
+                                    $query_profile = "SELECT fname, lname, description, email FROM tummy_recipes_members WHERE member_id ";
+                                                                       
                                     // Prepare the Query
                                     $pquery = $conn->query($query_profile);
                                     
                                     if ($pquery->num_rows > 0)
                                     {
-                                        echo '<table class="profile">';
-                                        
+                                        // echo '<table class="profile">';
                                         while ($row = $pquery->fetch_assoc())
                                         {
-                                            // Display the User's details
-                                            echo '<tr>
-                                            <td><h7>Name: '.$row['fname'].' '.$row['lname'].'</h7></td>
-                                            </tr>
-                                            <tr>
-                                            <td><h7>Email: '.$row['email'].'</h7></td>
-                                            </tr>
-                                            <tr>
-                                            <td><h7>Description: '.$row['profiledesc'].'</h7></td>
-                                            </tr>';
+                                            if (isset($_SESSION["email"]))
+                                            {
+                                                // Display the User's details
+                                                echo '<h7>Name: '.$row['fname'].' '.$row['lname'].'</h7>';
+                                                echo '<br>';
+                                                echo '<h7>Email: '.$row['email'].'</h7>';
+                                                echo '<br>';
+                                                echo '<h7>Description: '.$row['description'].'</h7>';
+                                                echo '<br>';
+                                            }
+                                            
                                         }
-                                        echo '</table>';
+                                        // echo '</table>';
                                     }
-                                    else
-                                        echo 'Profile Empty.';
+                                    else 
+                                        echo "<h7>Name: </h7>";
+                                        echo "<br>";
+                                        echo "<h7>Email: </h7>";
+                                        echo "<br>";
+                                        echo "<h7>Description: </h7>";
+                                        echo '<br>';
                                     
                                     $conn->close();
                                 ?>
