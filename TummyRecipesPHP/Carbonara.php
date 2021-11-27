@@ -57,12 +57,18 @@
                 <br>
                 <br>
             </div>
+            <?php
+            include "Display_Comment_Carbonara.php";
+            ?>
+            
         </main>
         
         
         <?php
-        include "Comment.php";
+        include "Comment_Carbonara.php";
         ?>
+        
+        
         
         <?php
         include "footer.inc.php";
