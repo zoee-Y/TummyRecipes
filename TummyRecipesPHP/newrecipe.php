@@ -10,6 +10,9 @@
     include "head.inc.php";
     ?>
     
+    <link rel="stylesheet" href="css/newrecipe.css"/>
+    <script defer src="js/newrecipe.js"></script>
+    
     <body>
         <!-- Session Navbar-->
         <?php
@@ -62,11 +65,11 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
                             <label for="hours">Hours:</label>
-                            <input class="form-control" type="number" id="hours" name="hours" required value="0">
+                            <input class="form-control" type="number" id="hours" max="24" name="hours" required value="0">
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <label for="minutes">Minutes:</label>
-                            <input class="form-control" type="number" id="minutes" name="minutes" required value="0">
+                            <input class="form-control" type="number" id="minutes" max="59" name="minutes" required value="0">
                             </div>
                     </div>
                 </div>
@@ -83,7 +86,7 @@
                     <input type="file" id="imgThumbnail" name="imgThumbnail">
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-info" type="submit">Submit</button>
+                    <button class="btn btn-info" type="submit" id="submitBtn">Submit</button>
                 </div>
             </form>
             

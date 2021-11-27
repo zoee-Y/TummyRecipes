@@ -67,7 +67,12 @@
             else if ($_POST["hours"] == 0 and $_POST["minutes"] == 0) {
                 $errorMsg .= "Time taken must be at least 1 minute.<br>";
                 $success = false;
-            } else {
+            }
+            else if ($_POST["hours"] > 24 or $_POST["minutes"] > 59) {
+                $errorMsg .= "Invalid number for hours or minutes.<br>";
+                $success = false;
+            }
+            else {
                 if (is_numeric($_POST["hours"]) and is_numeric($_POST["minutes"])) {
                     $hours = $_POST["hours"];
                     $minutes = $_POST["minutes"];
@@ -100,8 +105,6 @@
                     if (($imgType == "image/gif") || ($imgType == "image/jpeg") || ($imgType == "image/jpg") || ($imgType == "image/pjpeg") || ($imgType == "image/x-png") || ($imgType == "image/png")
                         && (in_array($extension, $allowedExts))) {
                         //echo "<p>FILE ALLOWED</p>";
-
-                        define ('SITE_ROOT', realpath(dirname(__FILE__)));
                         
                         $filename = sanitize_input($_FILES["imgThumbnail"]["name"]);
                         
