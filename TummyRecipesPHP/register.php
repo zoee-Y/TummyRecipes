@@ -24,6 +24,11 @@ include "head.inc.php";
                            name="lname" placeholder="Enter last name" required>
                 </div>
                 <div class="form-group">
+                    <label for="description">Short Bio:</label>
+                    <input class="form-control" type="text" id="description" maxlength="200"
+                           name="description" placeholder="Enter Short Bio">
+                </div>
+                <div class="form-group">
                     <label for="email">Email:</label>
                     <input class="form-control" type="email" id="email" 
                            name="email" placeholder="Enter email" required>

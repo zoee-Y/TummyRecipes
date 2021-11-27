@@ -1,5 +1,5 @@
 <?php
-$fname = $lname = $email = $errorMsg = "";
+$fname = $lname = $description = $email = $errorMsg = "";
 $success = true;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -19,6 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     else
     {
         $lname = sanitize_input($_POST["lname"]);
+    }
+    
+    // Short Bio
+    if (!empty($_POST["description"]))
+    {
+        $description = sanitize_input($_POST["description"]);
     }
     
     // Email
@@ -81,7 +87,7 @@ function sanitize_input($data)
 */
 function saveMemberToDB()
 {
-    global $fname, $lname, $email, $pwd_hashed, $errorMsg, $success;
+    global $fname, $lname, $description, $email, $pwd_hashed, $errorMsg, $success;
     
     // Create database connection.
     $config = parse_ini_file('../../private/db-config.ini');
@@ -97,10 +103,10 @@ function saveMemberToDB()
     else
     {
         // Prepare the statement:
-        $stmt = $conn->prepare("INSERT INTO tummy_recipes_members (fname, lname, email, password) VALUES (?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO tummy_recipes_members (fname, lname, description, email, password) VALUES (?, ?, ?, ?, ?)");
         
         // Bind & execute the query statement:
-        $stmt->bind_param("ssss", $fname, $lname, $email, $pwd_hashed);
+        $stmt->bind_param("sssss", $fname, $lname, $description, $email, $pwd_hashed);
         if (!$stmt->execute())
         {
             $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;

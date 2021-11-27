@@ -50,7 +50,7 @@
                                     }
                                     
                                     // Create The DB Query
-                                    $query_profile = "SELECT profilename, profileemail, profiledesc FROM tummy_recipes_profile WHERE profileId = 1";
+                                    $query_profile = "SELECT fname, lname, email FROM tummy_recipes_members WHERE member_id = ";
                                     
                                     // Prepare the Query
                                     $pquery = $conn->query($query_profile);
@@ -63,10 +63,10 @@
                                         {
                                             // Display the User's details
                                             echo '<tr>
-                                            <td><h7>Name: '.$row['profilename'].'</h7></td>
+                                            <td><h7>Name: '.$row['fname'].' '.$row['lname'].'</h7></td>
                                             </tr>
                                             <tr>
-                                            <td><h7>Email: '.$row['profileemail'].'</h7></td>
+                                            <td><h7>Email: '.$row['email'].'</h7></td>
                                             </tr>
                                             <tr>
                                             <td><h7>Description: '.$row['profiledesc'].'</h7></td>
