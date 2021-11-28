@@ -21,7 +21,7 @@
             <?php
             if ($_SESSION["loggedIn"] === true) { ?>
                 <h5> Share your <a href="newrecipe.php">
-                    <button class="button newrecipe">secret</button></a> with us!</h5>
+                    <button class="button button1">secret</button></a> with us!</h5>
             <?php }
             else { ?>
             <h5> Share your <button class="button button1">secret</button> with us!</h5>

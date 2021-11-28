@@ -8,6 +8,7 @@
         <?php
         include "head.inc.php";
         ?>
+        <link rel="stylesheet" href="css/process_newrecipe.css">
     </head>
     <body>
         <?php

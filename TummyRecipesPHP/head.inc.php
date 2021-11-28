@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="css/mainpage.css">
     <link rel="stylesheet" href="css/aboutus.css">
     <link rel="stylesheet" href="css/recipe.css">
-    <link rel="stylesheet" href="css/process_output.css">
     <link rel="stylesheet" href="css/Cookbookandprofile.css">
     
     <!--jQuery-->

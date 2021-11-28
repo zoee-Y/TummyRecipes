@@ -19,15 +19,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="aboutus.php">About</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recipe.php">Recipes</a>
+                </li>
                 <?php
                 if (isset($_SESSION["loggedIn"]))
                 {
-                    echo '<li class="nav-item"><a class="nav-link" href="recipeSession.php">Recipes</a></li>';
                     echo '<li class="nav-item"><a class="nav-link" href="MyCookbookSession.php">My Cookbook</a></li>';
                     echo '<li class="nav-item"><a class="nav-link" href="MyProfileSession.php">My Profile</a></li>';
                 }
-                else
-                    echo '<li class="nav-item"><a class="nav-link" href="recipe.php">Recipes</a></li>';
                 ?>
             </ul>
         </div>
