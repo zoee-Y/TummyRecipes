@@ -119,7 +119,6 @@ function authenticateUser() {
                 echo "<h2>Login successful!</h2>";
                 echo "<h4>Welcome back, ", $fname . " " . $lname . ".</h4>";
                 header('Refresh: 1.5; URL = index.php');
-                // echo "<a href='index.php' class='btn btn-success'>Return to Home</a>";
             } else {
                 echo "<h2>Oops!</h2>";
                 echo "<h4>The following errors were detected:</h4>";

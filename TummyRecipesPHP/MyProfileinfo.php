@@ -2,60 +2,55 @@
     session_start();
 ?>
 
-<!DOCTYPE html>
-
-<html lang="en">
-    
-    <!-- Head -->
+<!-- Head -->
+<?php
+include "head.inc.php";
+?>
+<body>
+    <!-- Navbar -->
     <?php
-    include "head.inc.php";
+    include "nav.inc.php";
     ?>
-    
-    <body>
-        
-        <!--Navbar-->
-        <?php
-        include "nav.inc.php";
-        ?>
-        
-        <!--Header-->
-        <header class="jumbotron text-center">
-            <br>
-            <h1 class="display-4">My Profile</h1>
-            <h4>This is where you keep your secrets!</h4>
-        </header>
-        
-        <main> 
+    <!-- Update Profile Form -->
+    <main class="container"> 
+        <h1 class="display-4">Profile Update</h1>
+        <p>
+        <h7>Don't want to update? Go back to
+            <a href="MyProfileSession.php">My Profile</a>.</h7>
+        </p>
+        <form action="process_profileupdate.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fname">Update First Name:</label>
+                <input class="form-control" type="text" id="fname" 
+                       name="fname" placeholder="Update first name">
+            </div>
+            <div class="form-group">
+                <label for="lname">Update Last Name:</label>
+                <input class="form-control" type="text" id="lname" 
+                       name="lname" placeholder="Update last name" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Update Bio:</label>
+                <input class="form-control" type="text" id="description" maxlength="200"
+                       name="description" placeholder="Update Bio">
+            </div>
+            <div class="form-group">
+                <label for="pphoto">Update Profile Photo:</label>
+                <input type="file" id="pphoto"
+                       name="pphoto" placeholder="Update Profile Photo">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-secondary" type="reset">Reset</button>
+            </div>
+            </form>
+        </div>
+        </div>
+    </main>   
 
-            </div>
-                <form action="" method="">
-                <div class="form-group">
-                    <label for="pwd">Name:</label>
-                    <input class="form-control" type="Name" id="name" 
-                           name="name" placeholder="Enter name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input class="form-control" type="email" id="email" 
-                           name="email" placeholder="Enter email" required>
-                </div>
-                <div class="form-group">
-                    <label for="pwd">Description:</label>
-                    <input class="form-control" type="description" id="description" 
-                           name="description" placeholder="Short description" required>
-                </div>
-                <div class="form-group">
-                    <input class="btn btn-primary" type="submit" name="submit" 
-                           value="Submit" href="MyProfileSession.php"></input>
-                </div>
-                </form>
-            </div>
-            </div>
-        </main>   
-        
-        <!--Footer-->
-        <?php
-        include "footer.inc.php";
-        ?>
-    </body>
+    <!--Footer-->
+    <?php
+    include "footer.inc.php";
+    ?>
+</body>
 </html>

@@ -89,7 +89,7 @@
                             </div>
                             <!-- END SIDEBAR USER TITLE -->
                             <a class="edit-profile" href="MyProfileinfo.php">
-                                <br>Edit Profile
+                                <br><h7>Edit Profile</h7>
                             </a>
                         </div>
                 </div>
