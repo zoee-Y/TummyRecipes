@@ -55,7 +55,7 @@
                                             {
                                                 if ($row['pphoto'] == true)
                                                 {
-                                                    echo "<h7><img src='".$row['pphoto']."' alt='profilephoto' height='200px' width='200px'/></h7>";
+                                                    echo "<h7><img src='".$row['pphoto']."' alt='profilephoto' height='200px' width='230px'/></h7>";
                                                     echo '<br>';
                                                 }
                                                 else
