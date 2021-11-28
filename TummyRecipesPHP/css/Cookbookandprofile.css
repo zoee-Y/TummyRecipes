@@ -7,8 +7,8 @@ h6
 
 div.card{
     border-style: solid;
-    border-color: black;
-    border-width: 1px;
+    border-color: #2cc1c0;
+    border-width: 1.5px;
 }
 
 img.card-img-top{

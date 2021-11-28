@@ -15,7 +15,7 @@
         
         <!--Navbar-->
         <?php
-        include "nav.inc.php";
+            include "nav.inc.php";
         ?>
         
         <!--Header-->
@@ -71,7 +71,6 @@
                         </article>
                     </div>
 
-
                     <div class="card"> 
                         <article class="col-sm">
                             <a href="Garlic Butter Chicken.php">
@@ -100,7 +99,8 @@
         
      <!--Footer-->
         <?php
-        include "footer.inc.php";
+            echo '<br><br>';
+            include "footer.inc.php";
         ?>
     </body>
 </html>

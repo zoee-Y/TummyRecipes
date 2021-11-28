@@ -48,13 +48,13 @@
                         <p>
                             <b>Instructions: </b>
                             <br>
-                            1. In a food processor, pulse the cauliflower florets 8 to 10 times, until it resembles small grains of rice. 
+                            1. In a food processor, pulse the cauliflower florets 8 to 10 times, 
+                            until it resembles small grains of rice. 
                             <br><br>
-                            2. Heat the olive oil in a large skillet over medium heat. Add the garlic and sweat until translucent, about 4 minutes...
+                            2. Heat the olive oil in a large skillet over medium heat. 
+                            Add the garlic and sweat until translucent, about 4 minutes ...
                             <br><br>
-                            For existing users, <a href="login.php">Log In</a> to view more.
-                            <br>
-                            For new users, <a href="register.php">Register</a> to view more.
+                            <a class="view-more" href="Cauliflower.php">Click Me to View More</a>
                         </p>       
                     </article>
                     
@@ -75,14 +75,14 @@
                         <p>
                             <b>Instructions: </b>
                             <br>
-                            1. Place a large pot of lightly salted water (no more than 1 tablespoon salt) over high heat, 
+                            1. Place a large pot of lightly salted water 
+                            (no more than 1 tablespoon salt) over high heat, 
                             and bring to a boil. Fill a large bowl with hot water for serving, and set aside.  
                             <br><br>
-                            2. In a mixing bowl, whisk together the eggs, yolks and pecorino and Parmesan. Season with a pinch of salt and ...
+                            2. In a mixing bowl, whisk together the eggs, yolks and 
+                            pecorino and Parmesan. Season with a pinch of salt and ...
                             <br><br>
-                            For existing users, <a href="login.php">Log In</a> to view more.
-                            <br>
-                            For new users, <a href="register.php">Register</a> to view more.
+                            <a class="view-more" href="Carbonara.php">Click Me to View More</a>
                         </p>
                     </article>
                     <article class="col col-sm-3">
@@ -95,8 +95,8 @@
                             <b>Ingredients: </b>
                             <br>
                             1 tablespoon (15ml) canola oil or other neutral oil,
-                            4 bone-in, skin-on chicken legs, separated into thighs and drumsticks (about 2 1/2 pounds; 1.15kg,
-                            Kosher salt, 
+                            4 bone-in, skin-on chicken legs, separated into thighs 
+                            and drumsticks (about 2 1/2 pounds; 1.15kg, Kosher salt, 
                             ...
                         </p>
                         <p>
@@ -107,9 +107,7 @@
                             <br><br>
                             2. Working in batches if necessary, add chicken pieces to pot in a single layer, skin ...
                             <br><br>
-                            For existing users, <a href="login.php">Log In</a> to view more.
-                            <br>
-                            For new users, <a href="register.php">Register</a> to view more.
+                            <a class="view-more" href="Chicken Adobo.php">Click Me to View More</a>
                         </p>
                     </article>
                     
@@ -134,9 +132,7 @@
                             <br><br>
                             2. Drain, return pasta to pot, add butter and toss until melted. Set aside to cool while making the sauce ...
                             <br><br>
-                            For existing users, <a href="login.php">Log In</a> to view more.
-                            <br>
-                            For new users, <a href="register.php">Register</a> to view more.
+                            <a class="view-more" href="Mac and Cheese.php">Click Me to View More</a>
                         </p>
                     </article>
                 </div>       
