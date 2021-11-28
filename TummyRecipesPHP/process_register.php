@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                 $photoDirectory = "images/";
 
                 $pphoto = $photoDirectory . basename($photoFilename);
-
+                
                 if (!move_uploaded_file($_FILES["pphoto"]["tmp_name"], $pphoto)) 
                 {
                     $errorMsg .= "Failed to move uploaded file.</p>";
@@ -181,6 +181,7 @@ function saveMemberToDB()
             if ($success)
             {
                 saveMemberToDB();
+                echo $pphoto;
                 echo "<h2>Your registration is successful!</h2>";
                 echo "<h4>Thank you for signing up. ", $fname . " " . $lname . ".</h4>";
                 echo "<a href='login.php' class='btn btn-success'>Log-in</a>";

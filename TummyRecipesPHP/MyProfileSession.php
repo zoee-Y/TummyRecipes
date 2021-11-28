@@ -29,12 +29,13 @@
             <div class="container">
                 <div class="row-profile">
                         <div class="profile-sidebar">
-                            <!-- SIDEBAR USERPIC -->
-                            <figure>                                                                          
+                            <!-- SIDEBAR USERPIC: Temporarily comment to test db image -->
+                            <!--<figure>                                                                          
                                 <img class="profilepic" 
                                  src="images/profile pic.jpg"
                                  />                         
                             </figure>
+                            -->
                             <!-- END SIDEBAR USERPIC -->
                             <!-- SIDEBAR USER TITLE -->
                             <div class="profile-usertitle">
@@ -62,7 +63,7 @@
                                             if (isset($_SESSION["member"]))
                                             {
                                                 // Display the User's details
-                                                echo ''.$row['pphoto'].'';
+                                                echo '<img src="images/'.$row['pphoto'].'" height="200px" width="200px"/>';
                                                 echo '<br>';
                                                 echo '<h7>Name: '.$row['fname'].' '.$row['lname'].'</h7>';
                                                 echo '<br>';
