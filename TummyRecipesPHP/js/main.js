@@ -1,5 +1,5 @@
 var modalparent = document.getElementsByClassName("modal1");
-var btnmodal = document.getElementsByClassName("button");
+var btnmodal = document.getElementsByClassName("button1");
 var closespan = document.getElementsByClassName("close1");
 
 function setDataIndex() {
