@@ -29,6 +29,11 @@ include "head.inc.php";
                            name="description" placeholder="Enter Short Bio">
                 </div>
                 <div class="form-group">
+                    <label for="pphoto">Upload a Profile Photo:</label>
+                    <input type="file" id="pphoto"
+                           name="pphoto" placeholder="Upload a Profile Photo">
+                </div>
+                <div class="form-group">
                     <label for="email">Email:</label>
                     <input class="form-control" type="email" id="email" 
                            name="email" placeholder="Enter email" required>

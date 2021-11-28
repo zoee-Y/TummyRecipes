@@ -62,6 +62,8 @@
                                             if (isset($_SESSION["member"]))
                                             {
                                                 // Display the User's details
+                                                echo ''.$row['pphoto'].'';
+                                                echo '<br>';
                                                 echo '<h7>Name: '.$row['fname'].' '.$row['lname'].'</h7>';
                                                 echo '<br>';
                                                 echo '<h7>Email: '.$row['email'].'</h7>';

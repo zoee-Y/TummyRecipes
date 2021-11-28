@@ -84,6 +84,7 @@ function authenticateUser() {
                 $_SESSION["lname"] = $lname;
                 $_SESSION["desc"] = $row["description"];
                 $_SESSION["user"] = $row;
+                $_SESSION["pphoto"] = $row["pphoto"];
                 $_SESSION["loggedIn"] = true;
                 
                 //echo $_SESSION["loggedIn"] . " | " . $_SESSION["email"] . " | " . $_SESSION["member"];

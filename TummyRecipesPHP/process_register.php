@@ -1,5 +1,6 @@
 <?php
-$fname = $lname = $description = $email = $errorMsg = "";
+$fname = $lname = $description = $pphoto = $email = $errorMsg = "";
+$pphoto = NULL;
 $success = true;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -25,6 +26,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if (!empty($_POST["description"]))
     {
         $description = sanitize_input($_POST["description"]);
+    }
+    
+    // Profile Photo
+    if (empty($_FILES["pphoto"]["name"]))
+    {
+        $pphoto = NULL;
+    }
+    else
+    {
+        $tempPhoto = explode(".", $_FILES["pphoto"]["name"]);
+        $photoExt = strtolower(end($tempPhoto));
+        
+        $photoType = $_FILES["pphoto"]["type"];
+        
+        $validPhotoExts = array("jpg","png","jpeg");
+        if ($_FILES["pphoto"]["size"] <= 2000000) 
+        {
+            if (($photoType == "image/gif") || ($photoType == "image/jpeg") || ($photoType == "image/jpg") || ($photoType == "image/pjpeg") || ($photoType == "image/x-png") || ($photoType == "image/png")
+                && (in_array($photoExt, $validPhotoExts))) 
+            {
+                $sanitizePhoto = trim(addslashes($_FILES["pphoto"]["name"]));
+                $photoFilename = preg_replace("/\s+/", "_", $sanitizePhoto);
+
+                $photoDirectory = "images/";
+
+                $pphoto = $photoDirectory . basename($photoFilename);
+
+                if (!move_uploaded_file($_FILES["pphoto"]["tmp_name"], $pphoto)) 
+                {
+                    $errorMsg .= "Failed to move uploaded file.</p>";
+                    $success = false;
+                }
+            }
+            else 
+            {
+                $errorMsg .= "Wrong file format";
+                $success = false;
+            }
+        } 
+        else 
+        {
+            $errorMsg .= "File size exceeded";
+            $success = false;
+        }
     }
     
     // Email
@@ -87,7 +132,7 @@ function sanitize_input($data)
 */
 function saveMemberToDB()
 {
-    global $fname, $lname, $description, $email, $pwd_hashed, $errorMsg, $success;
+    global $fname, $lname, $description, $pphoto, $email, $pwd_hashed, $errorMsg, $success;
     
     // Create database connection.
     $config = parse_ini_file('../../private/db-config.ini');
@@ -103,10 +148,10 @@ function saveMemberToDB()
     else
     {
         // Prepare the statement:
-        $stmt = $conn->prepare("INSERT INTO tummy_recipes_members (fname, lname, description, email, password) VALUES (?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO tummy_recipes_members (fname, lname, description, pphoto, email, password) VALUES (?, ?, ?, ?, ?, ?)");
         
         // Bind & execute the query statement:
-        $stmt->bind_param("sssss", $fname, $lname, $description, $email, $pwd_hashed);
+        $stmt->bind_param("ssssss", $fname, $lname, $description, $pphoto, $email, $pwd_hashed);
         if (!$stmt->execute())
         {
             $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
