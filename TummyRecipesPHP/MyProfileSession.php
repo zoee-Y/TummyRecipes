@@ -29,15 +29,6 @@
             <div class="container">
                 <div class="row-profile">
                         <div class="profile-sidebar">
-                            <!-- SIDEBAR USERPIC: Temporarily comment to test db image -->
-                            <!--<figure>                                                                          
-                                <img class="profilepic" 
-                                 src="images/profile pic.jpg"
-                                 />                         
-                            </figure>
-                            -->
-                            <!-- END SIDEBAR USERPIC -->
-                            <!-- SIDEBAR USER TITLE -->
                             <div class="profile-usertitle">
                                 <?php
                                     // Connecting to the DB
@@ -51,7 +42,7 @@
                                     }
                                     
                                     // Create The DB Query
-                                    $query_profile = "SELECT fname, lname, description, email FROM tummy_recipes_members WHERE member_id = '{$_SESSION['member']}' ";
+                                    $query_profile = "SELECT fname, lname, description, pphoto, email FROM tummy_recipes_members WHERE member_id = '{$_SESSION['member']}' ";
                                                                        
                                     // Prepare the Query
                                     $pquery = $conn->query($query_profile);
@@ -62,9 +53,17 @@
                                         {
                                             if (isset($_SESSION["member"]))
                                             {
+                                                if ($row['pphoto'] == true)
+                                                {
+                                                    echo "<h7><img src='".$row['pphoto']."' alt='profilephoto' height='200px' width='200px'/></h7>";
+                                                    echo '<br>';
+                                                }
+                                                else
+                                                {
+                                                    echo '<figure><img class="profilepic"src="images/profile pic.jpg"/></figure>';
+                                                }
+                                                
                                                 // Display the User's details
-                                                echo '<img src="images/'.$row['pphoto'].'" height="200px" width="200px"/>';
-                                                echo '<br>';
                                                 echo '<h7>Name: '.$row['fname'].' '.$row['lname'].'</h7>';
                                                 echo '<br>';
                                                 echo '<h7>Email: '.$row['email'].'</h7>';
@@ -77,6 +76,7 @@
                                     }
                                     else 
                                     {
+                                        echo '<figure><img class="profilepic"src="images/profile pic.jpg"/></figure>';
                                         echo "<h7>Name: </h7>";
                                         echo "<br>";
                                         echo "<h7>Email: </h7>";
