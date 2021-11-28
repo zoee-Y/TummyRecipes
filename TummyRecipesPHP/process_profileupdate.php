@@ -102,7 +102,7 @@
                     updateMemberToDB();
                     echo "<h2>You have successfully updateed your Profile!</h2>";
                     echo "<h4>Thank you. ", $fname . " " . $lname . ".</h4>";
-                    header('Refresh: 2; URL = MyProfileSession.php');
+                    header('Refresh: 1.5; URL = MyProfileSession.php');
                 }
                 else
                 {
