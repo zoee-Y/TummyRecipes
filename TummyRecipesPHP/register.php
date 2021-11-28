@@ -12,7 +12,7 @@ include "head.inc.php";
             For existing members, please go to the
             <a href="login.php">Login page</a>.
         </p>
-            <form action="process_register.php" method="post">
+            <form action="process_register.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="fname">First Name:</label>
                     <input class="form-control" type="text" id="fname" 

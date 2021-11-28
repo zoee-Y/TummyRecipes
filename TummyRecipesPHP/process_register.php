@@ -181,7 +181,6 @@ function saveMemberToDB()
             if ($success)
             {
                 saveMemberToDB();
-                echo $pphoto;
                 echo "<h2>Your registration is successful!</h2>";
                 echo "<h4>Thank you for signing up. ", $fname . " " . $lname . ".</h4>";
                 echo "<a href='login.php' class='btn btn-success'>Log-in</a>";
