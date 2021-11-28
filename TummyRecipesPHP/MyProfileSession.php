@@ -55,42 +55,51 @@
                                             {
                                                 if ($row['pphoto'] == true)
                                                 {
-                                                    echo "<h7><img src='".$row['pphoto']."' alt='profilephoto' height='200px' width='230px'/></h7>";
+                                                    echo '<p align=center>';
+                                                    echo "<h7><img src='".$row['pphoto']."' alt='profilephoto' height='250px' width='280px'/></h7>";
                                                     echo '<br>';
+                                                    echo '</p>';
                                                 }
                                                 else
                                                 {
-                                                    echo '<figure><img class="profilepic"src="images/profile pic.jpg"/></figure>';
+                                                    echo '<p align=center>';
+                                                    echo '<figure><img class="profilepic" src="images/profile pic.jpg" align="center"/></figure>';
+                                                    echo '</p>';
                                                 }
                                                 
                                                 // Display the User's details
+                                                echo '<p align=center>';
                                                 echo '<h7>Name: '.$row['fname'].' '.$row['lname'].'</h7>';
                                                 echo '<br>';
                                                 echo '<h7>Email: '.$row['email'].'</h7>';
                                                 echo '<br>';
                                                 echo '<h7>Description: '.$row['description'].'</h7>';
                                                 echo '<br>';
+                                                echo '</p>';
                                             }
                                             
                                         }
                                     }
                                     else 
                                     {
-                                        echo '<figure><img class="profilepic"src="images/profile pic.jpg"/></figure>';
+                                        echo '<p align=center>';
+                                        echo '<figure><img class="profilepic"src="images/profile pic.jpg" align="center"/></figure>';
                                         echo "<h7>Name: </h7>";
                                         echo "<br>";
                                         echo "<h7>Email: </h7>";
                                         echo "<br>";
                                         echo "<h7>Description: </h7>";
                                         echo '<br>';
+                                        echo '</p>';
                                     }
                                     $conn->close();
                                 ?>
                             </div>
                             <!-- END SIDEBAR USER TITLE -->
-                            <a class="edit-profile" href="MyProfileinfo.php">
-                                <br><h7>Edit Profile</h7>
-                            </a>
+                            <p align="center">
+                                <a class="edit-profile" href="MyProfileinfo.php">
+                                <br><h4>Edit Profile</h4></a>
+                            </p>
                         </div>
                 </div>
             </div>
