@@ -151,49 +151,11 @@
                             $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
                             $success = false;
                         }
-                        //readMemberFromDB();
                         $update_profile->close();
                     }
-                    //readMemberFromDB();
                     $conn->close();
                 }
 
-                /*
-                * Helper function to read the new member data from the DB
-                */
-                function readMemberFromDB()
-                {
-                    global $fname, $lname, $description, $pphoto, $errorMsg, $success;
-
-                    // Create database connection.
-                    $config = parse_ini_file('../../private/db-config.ini');
-                    $conn = new mysqli($config['servername'], $config['username'], 
-                            $config['password'], $config['dbname']);
-
-                    // Check connection
-                    if ($conn->connect_error)
-                    {
-                        $errorMsg = "Connection failed: " . $conn->connect_error;
-                        $success = false;
-                    }
-                    else
-                    {
-                        // Creating the Query:
-                        $read_profile = $conn->prepare("SELECT * FROM tummy_recipes_members WHERE member_id=?");
-
-                        // Bind & execute the query statement:
-                        $read_profile->bind_param("i", $_GET["member_id"]);
-                        $read_profile->execute();
-                        $read_result = $read_profile->get_result();
-                        if ($read_result->num_rows > 0)
-                        {
-                            $row = $read_result->fetch_assoc();
-                        }
-                        $read_profile->close();
-                    }
-
-                    $conn->close();
-                }
             ?>
         </main>
         <br>
