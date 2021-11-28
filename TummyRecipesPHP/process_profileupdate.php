@@ -102,7 +102,7 @@
                     updateMemberToDB();
                     echo "<h2>You have successfully updateed your Profile!</h2>";
                     echo "<h4>Thank you. ", $fname . " " . $lname . ".</h4>";
-                    header('Refresh: 1.5; URL = MyProfileSession.php');
+                    header('Refresh: 2; URL = MyProfileSession.php');
                 }
                 else
                 {
@@ -143,12 +143,7 @@
                     {
                         // Creating the Query:
                         $update_profile = $conn->prepare("UPDATE tummy_recipes_members SET fname=?, lname=?, description=?, pphoto=? WHERE member_id='{$_SESSION['member']}'");
-
-                        $fname = $row['fname'];
-                        $lname = $row['lfname'];
-                        $description = $row['description'];
-                        $pphoto = $row['pphoto'];
-
+                        
                         // Bind & execute the query statement:
                         $update_profile->bind_param("ssss", $fname, $lname, $description, $pphoto);
                         if (!$update_profile->execute())
@@ -156,10 +151,10 @@
                             $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
                             $success = false;
                         }
+                        //readMemberFromDB();
                         $update_profile->close();
                     }
-                    readMemberFromDB();
-
+                    //readMemberFromDB();
                     $conn->close();
                 }
 
@@ -184,14 +179,15 @@
                     else
                     {
                         // Creating the Query:
-                        $read_profile = $conn->prepare("UPDATE tummy_recipes_members SET fname=?, lname=?, description=?, pphoto=? WHERE member_id='{$_SESSION['member']}'");
+                        $read_profile = $conn->prepare("SELECT * FROM tummy_recipes_members WHERE member_id=?");
 
                         // Bind & execute the query statement:
-                        $read_profile->bind_param("i", $row["'{$_SESSION['member']}'"]);
-                        if (!$read_profile->execute())
+                        $read_profile->bind_param("i", $_GET["member_id"]);
+                        $read_profile->execute();
+                        $read_result = $read_profile->get_result();
+                        if ($read_result->num_rows > 0)
                         {
-                            $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
-                            $success = false;
+                            $row = $read_result->fetch_assoc();
                         }
                         $read_profile->close();
                     }
