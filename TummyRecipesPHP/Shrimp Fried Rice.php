@@ -58,7 +58,16 @@
                 <br>
                 <br>
             </div>
+            
+            <?php
+            include "Display_Comment_Shrimp_Fried_Rice.php";
+            ?>
+            
         </main>
+        
+        <?php
+        include "Comment_Shrimp_Fried_Rice.php";
+        ?>
         
         <?php
         include "footer.inc.php";

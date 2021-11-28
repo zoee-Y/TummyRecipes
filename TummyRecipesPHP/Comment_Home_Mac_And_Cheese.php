@@ -48,7 +48,7 @@
         else
         {
             // Prepare the statement:
-            $stmt = $conn->prepare("INSERT INTO tummy_recipes_comment_cauliflower (message) VALUES (?)");
+            $stmt = $conn->prepare("INSERT INTO tummy_recipes_comment_mac_and_cheese (message) VALUES (?)");
 
             // Bind & execute the query statement:
             $stmt->bind_param("s",$message);

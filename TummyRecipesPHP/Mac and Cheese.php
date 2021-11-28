@@ -64,7 +64,16 @@
                 <br>
                 <br>
             </div>
+            
+            <?php
+            include "Display_Comment_Mac_And_Cheese.php";
+            ?>
+            
         </main>
+        
+        <?php
+        include "Comment_Mac_And_Cheese.php";
+        ?>
         
         <?php
         include "footer.inc.php";

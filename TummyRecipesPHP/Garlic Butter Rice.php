@@ -53,7 +53,16 @@
                 <br>
                 <br>
             </div>
+            
+            <?php
+            include "Display_Comment_Garlic_Butter_Rice.php";
+            ?>
+            
         </main>
+        
+        <?php
+        include "Comment_Garlic_Butter_Rice.php";
+        ?>
         
         <?php
         include "footer.inc.php";

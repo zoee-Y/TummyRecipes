@@ -63,7 +63,16 @@
                 <br>
                 <br>
             </div>
+            
+            <?php
+            include "Display_Comment_Lasagna.php";
+            ?>
+            
         </main>
+        
+        <?php
+        include "Comment_Lasagna.php";
+        ?>
         
         <?php
         include "footer.inc.php";

@@ -65,7 +65,16 @@
                 <br>
                 <br>
             </div>
+            
+            <?php
+            include "Display_Comment_Chicken_Skillet";
+            ?>
+            
         </main>
+        
+        <?php
+        include "Comment_Chicken_Skillet";
+        ?>
         
         <?php
         include "footer.inc.php";

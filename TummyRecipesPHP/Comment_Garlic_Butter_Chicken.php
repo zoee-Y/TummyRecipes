@@ -5,7 +5,7 @@
 
 
 
-<form  method="post" action ="Comment_Home_Cauliflower.php" >
+<form  method="post" action ="Comment_Home_Garlic_Butter_Chicken.php" >
     <div class="form-group">
         <label for="message">Comment:</label> 
         <input class="form-control" type="text" id="message" 

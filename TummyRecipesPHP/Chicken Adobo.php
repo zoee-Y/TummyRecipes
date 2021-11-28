@@ -57,7 +57,16 @@
                 <br>
                 <br>
             </div>
+            
+            <?php
+            include "Display_Comment_Chicken_Adobo.php";
+            ?>
+            
         </main>
+        
+        <?php
+        include "Comment_Chicken_Adobo.php";
+        ?>
         
         <?php
         include "footer.inc.php";

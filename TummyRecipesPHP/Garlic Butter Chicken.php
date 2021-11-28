@@ -54,7 +54,16 @@
                 <br>
                 <br>
             </div>
+            
+            <?php
+            include "Display_Comment_Garlic_Chicken.php";
+            ?>
+            
         </main>
+        
+        <?php
+        include "Comment_Garlic_Chicken.php";
+        ?>
         
         <?php
         include "footer.inc.php";
