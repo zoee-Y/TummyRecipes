@@ -31,8 +31,8 @@ include "head.inc.php";
             </div>
             <div class="form-group">
                 <label for="description">Update Bio:</label>
-                <input class="form-control" type="text" id="description" maxlength="200"
-                       name="description" placeholder="Update Bio">
+                <textarea class="form-control" type="text" id="description" maxlength="500"
+                          name="description" placeholder="Update Bio (Max 500 characters)"></textarea>
             </div>
             <div class="form-group">
                 <label for="pphoto">Update Profile Photo:</label>

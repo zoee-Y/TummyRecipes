@@ -25,8 +25,8 @@ include "head.inc.php";
             </div>
             <div class="form-group">
                 <label for="description">Short Bio:</label>
-                <input class="form-control" type="text" id="description" maxlength="200"
-                       name="description" placeholder="Enter Short Bio">
+                <textarea class="form-control" type="text" id="description" maxlength="500"
+                          name="description" placeholder="Enter Short Bio (Max 500 Charactes)"></textarea>
             </div>
             <div class="form-group">
                 <label for="pphoto">Upload a Profile Photo:</label>
