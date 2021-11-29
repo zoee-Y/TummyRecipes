@@ -95,7 +95,7 @@
                                     $conn->close();
                                 ?>
                             </div>
-                            <!-- Edit/Delete Profile -->
+                            <!-- Edit Profile -->
                             <p align="center">
                                 <a class="edit-profile" href="MyProfileinfo.php">
                                 <br><h4>Edit Profile</h4></a>
