@@ -1,6 +1,9 @@
 var modalparent = document.getElementsByClassName("modal1");
 var btnmodal = document.getElementsByClassName("button1");
 var closespan = document.getElementsByClassName("close1");
+var delmodalp = document.getElementsByClassName("delmodal1");
+var deldanger = document.getElementsByClassName("btn-danger");
+var delclose = document.getElementsByClassName("delclose1");
 
 function setDataIndex() {
 
@@ -26,9 +29,34 @@ for (i = 0; i < btnmodal.length; i++)
 
 }
 
+function setDangerIndex() {
+
+    for (i = 0; i < deldanger.length; i++)
+    {
+        deldanger[i].setAttribute('data-del', i);
+        delmodalp[i].setAttribute('data-del', i);
+        delclose[i].setAttribute('data-del', i);
+    }
+}
+
+for (i = 0; i < deldanger.length; i++)
+{
+    deldanger[i].onclick = function() {
+        var ElemIndex = this.getAttribute('data-del');
+        delmodalp[ElemIndex].style.display = "block";
+    };
+
+    delclose[i].onclick = function() {
+        var ElemIndex = this.getAttribute('data-del');
+        delmodalp[ElemIndex].style.display = "none";
+    };
+
+}
+
 window.onload = function() {
 
     setDataIndex();
+    setDangerIndex();
 };
 
 window.onclick = function(event) {
@@ -38,5 +66,9 @@ window.onclick = function(event) {
 
     if (event.target === modal) {
         modal.style.display = "none";
+    }
+    
+    if (event.target === delmodalp[event.target.getAttribute('data-del')]) {
+        delmodalp[event.target.getAttribute('data-del')].style.display = "none";
     }
 };

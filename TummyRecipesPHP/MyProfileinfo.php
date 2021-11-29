@@ -44,9 +44,18 @@ include "head.inc.php";
                 <button class="btn btn-secondary" type="reset">Reset</button>
             </div>
         </form>
-        <form action="process_delete.php" method="post" enctype="multipart/form-data">
-            <button class="btn btn-danger" onclick="return confirm('Are you sure?');" type="submit">Delete Profile</button>
-        </form>
+        <button class="btn btn-danger">Delete Profile</button>
+        <div class="modal delmodal1">
+            <div id="delmodal-delcontent1">
+                <span class="close delclose1">&times;</span>
+                <h4 style="color:black;"><br><b>This is Sad. :(</b></h4>
+                <h4 style="color:black;"><b>Are you sure you want to delete your profile?</b></h4>
+                <h4 style="color:black;"><b>Even though it's sad, we respect your decision.</b></h4>
+                <form action="process_delete.php" method="post" enctype="multipart/form-data">
+                    <button class="btn btn-primary" type="submit">Delete Profile</button>
+                </form>
+            </div>
+        </div>
     </main>   
 
     <!--Footer-->

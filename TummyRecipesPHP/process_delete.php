@@ -21,9 +21,11 @@
                     removeMemberFromDB();
                     session_unset();
                     session_destroy();
-                    echo "<h2>We're sad to see you go.</h2>";
+                    echo "<p align='center'>";
+                    echo "<h4>We're sad to see you go.</h4>";
                     echo "<h4>Thank you for believing in Tummy Recipes!</h4>";
                     echo "<h4>See you on the flip side!</h4>";
+                    echo "</p>";
                     header('Refresh: 2; URL = index.php');
                 }
                 else
