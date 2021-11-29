@@ -63,7 +63,7 @@
                                                 else
                                                 {
                                                     echo '<p align=center>';
-                                                    echo '<figure><img class="profilepic" src="images/profile pic.jpg" align="center"/></figure>';
+                                                    echo '<img class="profilepic" src="images/profile pic.jpg"/>';
                                                     echo '</p>';
                                                 }
                                                 
@@ -83,7 +83,7 @@
                                     else 
                                     {
                                         echo '<p align=center>';
-                                        echo '<figure><img class="profilepic"src="images/profile pic.jpg" align="center"/></figure>';
+                                        echo '<img class="profilepic"src="images/profile pic.jpg/>';
                                         echo "<h7>Name: </h7>";
                                         echo "<br>";
                                         echo "<h7>Email: </h7>";
