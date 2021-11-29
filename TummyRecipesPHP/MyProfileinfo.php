@@ -45,7 +45,7 @@ include "head.inc.php";
             </div>
         </form>
         <form action="process_delete.php" method="post" enctype="multipart/form-data">
-            <button class="btn btn-danger" type="submit">Delete Profile</button>
+            <button class="btn btn-danger" onclick="return confirm('Are you sure?');" type="submit">Delete Profile</button>
         </form>
     </main>   
 

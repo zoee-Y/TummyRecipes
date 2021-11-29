@@ -39,7 +39,7 @@
                 */
                 function removeMemberFromDB()
                 {
-                    global $fname, $lname, $description, $pphoto, $email, $pwd_hashed, $errorMsg, $success;
+                    global $errorMsg, $success;
 
                     // Create database connection.
                     $config = parse_ini_file('../../private/db-config.ini');
