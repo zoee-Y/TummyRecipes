@@ -43,9 +43,10 @@ include "head.inc.php";
                 <button class="btn btn-primary" type="submit">Submit</button>
                 <button class="btn btn-secondary" type="reset">Reset</button>
             </div>
-            </form>
-        </div>
-        </div>
+        </form>
+        <form action="process_delete.php" method="post" enctype="multipart/form-data">
+            <button class="btn btn-danger" type="submit">Delete Profile</button>
+        </form>
     </main>   
 
     <!--Footer-->
