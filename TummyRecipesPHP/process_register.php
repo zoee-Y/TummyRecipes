@@ -78,15 +78,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         $errorMsg .= "Email is required.<br>";
         $success = false;
     }
-    elseif (!empty($_POST["email"]))
-    {
-        checkEmailExists();
-        $errorMsg .= "Email Already Exists. Please use a different email.";
-        $success = false;
-    }
+    //elseif (!empty($_POST["email"]))
+    //{
+        // Check if email already exists in Database
+    //    checkEmailExists();
+    //}
     else
     {
+        // Sanitize email
         $email = sanitize_input($_POST["email"]);
+        
+        // Check if email already exists in Database
+        checkEmailExists();
         
         // Additional check to make sure e-mail address is well-formed.
         if (!filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -138,7 +141,7 @@ function sanitize_input($data)
 */
 function checkEmailExists()
 {
-    global $email, $errorMsg, $success;
+    global $member, $email, $errorMsg, $success;
     
     // Create database connection.
     $config = parse_ini_file('../../private/db-config.ini');
@@ -158,15 +161,16 @@ function checkEmailExists()
         
         // Bind & execute the query statement:
         $stmt->bind_param("s", $email);
-        if (!$stmt->execute())
+        $stmt->execute();
+        $stmt->store_result()->num_rows;
+        
+        // check if rows exists
+        if ($stmt->num_rows > 0)
         {
-            $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+            $errorMsg .= "Email already exists in the system. Please use another email.";
             $success = false;
         }
-        else
-        {
-            return(bool) $stmt->get_result()->fetch_row[0];
-        }
+        
         $stmt->close();
     }
     
