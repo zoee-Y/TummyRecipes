@@ -132,7 +132,7 @@ function sanitize_input($data)
 }
 
 /*
-* Helper function to write the member data to the DB
+* Helper function to check if there is an existing email in the DB
 */
 function checkEmailExists()
 {
