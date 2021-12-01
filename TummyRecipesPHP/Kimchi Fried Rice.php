@@ -21,12 +21,17 @@
         <main class="container">
             <br>
             <h1 style="text-align: center;"><b>Kimchi Fried Rice</b></h1>
+            <h5 style="text-align: center;">Created by Flora See</h5>
+            
             <div class="Kimchi Fried Rice">
                 <a>
                     <p style="text-align: center;"><img src="images/Kimchi Fried Rice.jpg" 
                                                         style="border-radius: 50%; width: 300px;"
                                                         alt="Kimchi Fried Rice"></p>  
                 </a>
+                <p style="font-size:25px"><b><u>Duration</u></b></p>
+                <h5>1 hour </h5>
+                
                 <p style="font-size: 25px"><b><u>Ingredients</u></b></p>
                 <h5>- 1 1/2 cups jasmine rice </h5>
                 <h5>- 1 cup kimchi, coarsely chopped and 2 tablespoons juices reserved</h5>

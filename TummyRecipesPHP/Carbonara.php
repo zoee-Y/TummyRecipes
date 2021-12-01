@@ -21,12 +21,17 @@
         <main class="container">
             <br>
             <h1 style="text-align: center;"><b>Carbonara</b></h1>
+            <h5 style="text-align: center;">Created by John Tan</h5>
+            
             <div class="Carbonara">
                 <a>
                     <p style="text-align: center;"><img src="images/Carbonara.jpg" 
                                                         style="border-radius: 50%; width: 300px;"
                                                         alt="Carbonara"></p>  
                 </a>
+                
+                <p style="font-size:25px"><b><u>Duration</u></b></p>
+                <h5>1 hours, 20 minutes </h5>
           
                 <p style="font-size: 25px"><b><u>Ingredients</u></b></p>
                 <h5>- Salt</h5>

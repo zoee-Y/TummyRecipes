@@ -21,12 +21,18 @@
         <main class="container">
             <br>
             <h1 style="text-align: center;"><b>Garlic Butter Chicken</b></h1>
+            <h5 style="text-align: center;">Created by John Tan</h5>
+            
             <div class="Garlic Butter Chicken">
                 <a>
                     <p style="text-align: center;"><img src="images/Garlic Butter Chicken.jpg" 
                                                         style="border-radius: 50%; width: 300px;" 
                                                         alt="Garlic Butter Chicken"></p>  
                 </a>
+                
+                <p style="font-size:25px"><b><u>Duration</u></b></p>
+                <h5>2 hours, 10 minutes </h5>
+                
                 <p style="font-size: 25px"><b><u>Ingredients</u></b></p>
                 <h5>- 4 (16-ounces) boneless skinless chicken breasts </h5>
                 <h5>- salt and fresh ground pepper</h5>

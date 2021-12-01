@@ -21,12 +21,17 @@
         <main class="container">
             <br>
             <h1 style="text-align: center;"><b>Shrimp Fried Rice</b></h1>
+            <h5 style="text-align: center;">Created by Jackson Gee</h5>
+            
             <div class="Shrimp Fried Rice">
                 <a>
                     <p style="text-align: center;"><img src="images/Shrimp Fried Rice.jpg" 
                                                         style="border-radius: 50%; width: 300px;"
                                                         alt="Shrimp Fried Rice"></p>  
                 </a>
+                <p style="font-size:25px"><b><u>Duration</u></b></p>
+                <h5> 45 minutes </h5>
+                
                 <p style="font-size: 25px"><b><u>Ingredients</u></b></p>
                 <h5>- 3 tablespoons soy sauce </h5>
                 <h5>- 1 tablespoons sesame oil</h5>

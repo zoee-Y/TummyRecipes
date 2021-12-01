@@ -21,12 +21,17 @@
         <main class="container">
             <br>
             <h1 style="text-align: center;"><b>Lasagna</b></h1>
+            <h5 style="text-align: center;">Created by Cynthia Lee</h5>
+            
             <div class="Lasagna">
                 <a>
                     <p style="text-align: center;"><img src="images/Lasagna.jpg" 
                                                         style="border-radius: 50%; width: 300px;"
                                                         alt="Lagsana"></p>  
                 </a>
+                <p style="font-size:25px"><b><u>Duration</u></b></p>
+                <h5>1 hours, 15 minutes </h5>
+                
                 <p style="font-size: 25px"><b><u>Ingredients</u></b></p>
                 <h5>- 1 pound sweet Italian sausage</h5>
                 <h5>- 1 pound lean ground beef</h5>
