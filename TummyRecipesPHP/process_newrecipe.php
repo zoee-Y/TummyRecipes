@@ -70,7 +70,7 @@
             }
             //if both hours and minutes are 0
             else if ($_POST["hours"] == 0 and $_POST["minutes"] == 0) {
-                $errorMsg .= "Time taken must be at least 1 minute.<br>";
+                $errorMsg .= "Time taken is required.<br>";
                 $success = false;
             }
             else if ($_POST["hours"] > 24 or $_POST["minutes"] > 59) {
@@ -149,7 +149,13 @@
             echo "<div id='processOutputContainer'>";
             echo "<h2>Successfully created new recipe!</h2>";
             echo "<p>View your recipe here</p>";
-            echo "<p>(button goes to recipe details page of newly created recipe)</p>";
+            
+            $_SESSION["rTitle"] = "";
+            $_SESSION["hours"] = "";
+            $_SESSION["minutes"] = "";
+            $_SESSION["ingredients"] = "";
+            $_SESSION["steps"] = "";
+            
             echo "<a href='#' class='btn btn-success'>View recipe</a>";
             echo "</div>";
             echo "</main>";
@@ -159,8 +165,14 @@
             echo "<h2>Oops!</h2>";
             echo "<h4>The following errors were detected:</h4>";
             echo "<p>" . $errorMsg . "</p>";
-            echo "<p>(button goes back to create new recipe form, i will try and see if can fill up with previously entered details)</p>";
-            echo "<a href='#' class='btn btn-danger'>Return to recipe</a>";
+            
+            $_SESSION["rTitle"] = $rTitle;
+            $_SESSION["hours"] = $hours;
+            $_SESSION["minutes"] = $minutes;
+            $_SESSION["ingredients"] = $ingredients;
+            $_SESSION["steps"] = $steps;
+            
+            echo "<a href='newrecipe.php' class='btn btn-danger'>Go back</a>";
             echo "</div>";
             echo "</main>";
         }

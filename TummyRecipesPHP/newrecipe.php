@@ -68,28 +68,81 @@
             <form action="process_newrecipe.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="rTitle">Recipe Title:</label>
-                    <input class="form-control" type="text" id="rTitle" name="rTitle" required placeholder="Enter recipe title">
+                    <?php
+                    if (!empty($_SESSION["rTitle"]) || $_SESSION["rTitle"] != "") {
+                        echo '<input class="form-control" type="text" id="rTitle" name="rTitle" required value="'. $_SESSION["rTitle"] . '">';
+                    }
+                    else {
+                        echo '<input class="form-control" type="text" id="rTitle" name="rTitle" required placeholder="Enter recipe title">';
+                    }
+                
+                    ?>
                 </div>
                 <div class="form-group">
                     <p>Total time taken</p>
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
                             <label for="hours">Hours:</label>
-                            <input class="form-control" type="number" id="hours" max="24" name="hours" required value="0">
+                            <?php
+                                if (!empty($_SESSION["hours"]) || $_SESSION["hours"] != "") {
+                                    echo '<input class="form-control" type="number" id="hours" max="24" name="hours" required value="' . $_SESSION["hours"] . '">';
+                                }
+                                else {
+                                    echo '<input class="form-control" type="number" id="hours" max="24" name="hours" required value="0">';
+                                }
+                            ?>
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <label for="minutes">Minutes:</label>
-                            <input class="form-control" type="number" id="minutes" max="59" name="minutes" required value="0">
-                            </div>
+                            <?php
+                                if (!empty($_SESSION["minutes"]) || $_SESSION["minutes"] != "") {
+                                    echo '<input class="form-control" type="number" id="minutes" max="59" name="minutes" required value="' . $_SESSION["minutes"] . '">';
+                                }
+                                else {
+                                    echo '<input class="form-control" type="number" id="minutes" max="59" name="minutes" required value="0">';
+                                }
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="ingredients">Ingredients: (separated by enter/return key)</label>
-                    <textarea class="form-control" type="text" id="ingredients" name="ingredients" required placeholder="1 cup milk ..."></textarea>
+                    <?php
+                        if (!empty($_SESSION["ingredients"]) || $_SESSION["ingredients"] != "") {
+                            $uns = unserialize($_SESSION["ingredients"]);
+                            
+                            echo '<textarea class="form-control" type="text" id="ingredients" name="ingredients" required>'; 
+                                    
+                            for ($i = 0; $i < count($uns); $i++) {
+                                echo "$uns[$i]\n";
+                            }
+                            
+                            echo '</textarea>';
+                        }
+                        else {
+                            echo '<textarea class="form-control" type="text" id="ingredients" name="ingredients" required placeholder="1 cup milk ..."></textarea>';
+                        }
+                    ?>
                 </div>
                 <div class="form-group">
                     <label for="step">Steps: (separated by enter/return key)</label>
-                    <textarea class="form-control" type="text" id="steps" name="steps" required placeholder="1. Add flour to mixing bowl ..."></textarea>
+                    <?php
+                        
+                        if (!empty($_SESSION["steps"]) || $_SESSION["steps"] != "") {
+                            $unsS = unserialize($_SESSION["steps"]);
+                            
+                            echo '<textarea class="form-control" type="text" id="steps" name="steps" required>'; 
+                                    
+                            for ($i = 0; $i < count($unsS); $i++) {
+                                echo "$unsS[$i]\n";
+                            }
+                            
+                            echo '</textarea>';
+                        }
+                        else {
+                            echo '<textarea class="form-control" type="text" id="steps" name="steps" required placeholder="1 cup milk ..."></textarea>';
+                        }
+                    ?>
                 </div>
                 <div class="form-group">
                     <label for="imgThumbnail">Upload a thumbnail for your recipe:<br></label>
