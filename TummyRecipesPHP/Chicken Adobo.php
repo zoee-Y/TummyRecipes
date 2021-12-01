@@ -72,5 +72,5 @@
         include "footer.inc.php";
         ?>
         
-    </body>
+    </body> 
 </html>

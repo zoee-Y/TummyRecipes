@@ -1,92 +1,22 @@
 <?php
 
-    session_start();
-    
-    $message = $errorMsg = "";
-    $success = true;
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['commentSubmit']))
-    {
-        // validate if email is empty
-        if (empty($_POST["message"]))
-        {
-            $errorMsg .= "Comment is required.<br>";
-            $success = false;
-        }
-        else
-        {
-            $message = ($_POST["message"]);
-            $uid = ($_POST["uid"]);
-            $date = ($_POST["date"]);
-        }
-
-
-
-        // If no error, authenticate user!
-        if (empty($errorMsg))
-        {
-            setComments();
-
-        }
-    }
-
-    function setComments()
-    {
-        global $message, $errorMsg, $success;
-
-        // Create database connection.
-        $config = parse_ini_file('../../private/db-config.ini');
-        $conn = new mysqli($config['servername'], $config['username'],
+$config = parse_ini_file('../../private/db-config.ini');
+$conn = new mysqli($config['servername'], $config['username'],
         $config['password'], $config['dbname']);
 
-        // Check connection
-        if ($conn->connect_error)
-        {
-            $errorMsg = "Connection failed: " . $conn->connect_error;
-            $success = false;
-        }
-        else
-        {
-            // Prepare the statement:
-            $stmt = $conn->prepare("INSERT INTO tummy_recipes_comment_lasagna (message) VALUES (?)");
-
-            // Bind & execute the query statement:
-            $stmt->bind_param("s",$message);
-            if (!$stmt->execute())
-            {
-                $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
-                $success = false;
-            }
-            $stmt->close();
-        }
-
-        $conn->close();
-    }
-
-?>
-
-
-
-
-
-
-<html>
+// Check connection
+if ($conn->connect_error) {
+    echo "Connection failed: " . $conn->connect_error;
+    $success = false;
+} else {
     
-        <?php
-        include "head.inc.php";
-        ?>
-    <body>
-        <?php
-        include "session.inc.php";
-        ?>
-        <main class="container">
-            <br>
-            <h2>Thank you for your comment. It is much appreciated.</h2>
-            <a href="welcome.php" class="btn btn-success">Return to Home</a>
-        </main>
-        <br>
-        <?php
-        include "footer.inc.php";
-        ?>
-    </body>
-</html>
+    $result =  $conn->query("SELECT * FROM tummy_recipes_comment_lasagna");
+    
+}
+
+while ($row = $result->fetch_assoc()) {
+    echo "<div>";
+    echo "<textarea readonly>'" . $row['message'] . "' </textarea>";
+    echo "</div>";
+}
+?>

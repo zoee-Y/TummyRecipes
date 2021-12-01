@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     $success = false;
 } else {
     
-    $result =  $conn->query("SELECT * FROM tummy_recipes_comment_");
+    $result =  $conn->query("SELECT * FROM tummy_recipes_comment_chicken_adobo");
     
 }
 

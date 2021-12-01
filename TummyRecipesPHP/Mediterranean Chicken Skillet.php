@@ -45,7 +45,7 @@
                 <h5>- Chopped fresh flat-leaf parsley for garnish</h5>
                 <br>
                 <br>
-                <h3><b><u>Instructions</u></b></h3>
+                <p style="font-size: 25px"><b><u>Instructions</u></b></p>
                 <h5>1. Combine chicken, lemon juice, garlic, rosemary, oregano, fennel seeds and 
                     2 tablespoons oil in a large zip-top plastic bag. Seal the bag; refrigerate for 25 to 30 minutes.</h5>
                 <h5>2. Remove the chicken from the marinade and pat dry (discard marinade). 

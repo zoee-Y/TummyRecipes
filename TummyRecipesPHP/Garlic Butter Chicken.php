@@ -56,13 +56,13 @@
             </div>
             
             <?php
-            include "Display_Comment_Garlic_Chicken.php";
+            include "Display_Comment_Garlic_Butter_Chicken.php";
             ?>
             
         </main>
         
         <?php
-        include "Comment_Garlic_Chicken.php";
+        include "Comment_Garlic_Butter_Chicken.php";
         ?>
         
         <?php
