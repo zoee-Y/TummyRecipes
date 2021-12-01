@@ -28,7 +28,7 @@
                         <h3 class="about"><br>The Tummy Team</h3>
                         <br><br>
                         <figure>
-                            <img class="aboutusimg" src="images/sampleimg1.jpeg" 
+                            <img class="aboutusimg" src="images/TeamPhoto1.png" 
                                  alt="AboutUs" name="TheTeam">
                         </figure>
                         <p style="font-size: 20px;">
