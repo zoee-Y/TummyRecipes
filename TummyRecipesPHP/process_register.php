@@ -78,11 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         $errorMsg .= "Email is required.<br>";
         $success = false;
     }
-    //elseif (!empty($_POST["email"]))
-    //{
-        // Check if email already exists in Database
-    //    checkEmailExists();
-    //}
     else
     {
         // Sanitize email
