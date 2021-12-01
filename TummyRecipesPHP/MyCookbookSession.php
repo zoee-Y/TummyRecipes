@@ -54,7 +54,7 @@
                                 echo "<img src='".$row["imgThumbnail"]."' style='border-radius: 50%; width: 200px;' alt='".$row["rTitle"]."'>"; 
                                 echo "</p>";
                                 echo "</figure>";
-                                echo "<h6>".$row["rTitle"]."</h6>";
+                                echo "<h4>".$row["rTitle"]."</h4>";
                                 echo "</a>";
                                 echo "</article>";
                                 echo "</div>";
@@ -63,7 +63,9 @@
                     }
                     else {
                         echo "<h4>You have Not Uploaded Any Recipes Yet! Share your recipes Now!</h4>";
-                        echo "<a href='newrecipe.php' class='btn btn-success'>Add New Recipe...</a>";
+                        echo "<p align='center'>";
+                        echo "<h4><a href='newrecipe.php' class='btn btn-success'>Add New Recipe!</a></h4>";
+                        echo "</p>";
                         exit();
                     }
                     $query_reps->close();
