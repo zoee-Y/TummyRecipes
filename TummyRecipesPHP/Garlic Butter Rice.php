@@ -21,12 +21,18 @@
         <main class="container">
             <br>
             <h1 style="text-align: center;"><b>Garlic Butter Rice</b></h1>
+            <h5 style="text-align: center;">Created by Geraldine Lim</h5>
+            
             <div class="Garlic Butter Rice">
                 <a>
                     <p style="text-align: center;"><img src="images/Garlic Butter Rice.jpg" 
                                                         style="border-radius: 50%; width: 300px;" 
                                                         alt="Garlic Butter Rice"></p>  
                 </a>
+                
+                <p style="font-size:25px"><b><u>Duration</u></b></p>
+                <h5> 30 minutes </h5>
+                
                 <p style="font-size: 25px"><b><u>Ingredients</u></b></p>
                 <h5>- 4 tablespoons (2oz. | 60g) butter, divided</h5>
                 <h5>- 5 cloves garlic, minced</h5>

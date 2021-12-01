@@ -21,13 +21,16 @@
         <main class="container">
             <br>
             <h1 style="text-align: center;"><b>Mac and Cheese</b></h1>
+            <h5 style="text-align: center;">Created by Cynthia Lee</h5>
+            
             <div class="Mac and Cheese">
                 <a>
                     <p style="text-align: center;"><img src="images/Mac and Cheese.jpg" 
                                                         style="border-radius: 50%; width: 300px;"
                                                         alt="Mac and Cheese"></p>  
                 </a>
-               
+               <p style="font-size:25px"><b><u>Duration</u></b></p>
+                <h5>1 hours, 45 minutes </h5>
                 
                 <p style="font-size: 25px"><b><u>Ingredients</u></b></p>
                 <h5>- 250g / 8 oz macaroni</h5>

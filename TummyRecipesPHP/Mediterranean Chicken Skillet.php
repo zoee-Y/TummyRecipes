@@ -21,12 +21,17 @@
         <main class="container">
             <br>
             <h1 style="text-align: center;"><b>Mediterranean Chicken Skillet</b></h1>
+            <h5 style="text-align: center;">Created by Jackson Gee</h5>
+            
             <div class="Mediterranean Chicken Skillet">
                 <a>
                     <p style="text-align: center;"><img src="images/Mediterranean Chicken Skillet.jpg" 
                                                         style="border-radius: 50%; width: 300px;"
                                                         alt="Mediterranean Chicken Skillet"></p>  
                 </a>
+                <p style="font-size:25px"><b><u>Duration</u></b></p>
+                <h5>2 hours, 45 minutes </h5>
+                
                 <p style="font-size: 25px"><b><u>Ingredients</u></b></p>
                 <h5>- 4 (6 ounce) bone-in, skin-on chicken thighs </h5>
                 <h5>- 1/4 cup fresh lemon juice, plus more for serving</h5>

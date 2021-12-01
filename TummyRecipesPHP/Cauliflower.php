@@ -21,12 +21,17 @@
         <main class="container">
             <br>
             <h1 style="text-align: center;"><b>Cauliflower Risotto</b></h1>
+            <h5 style="text-align: center;">Created by Josephine Lee</h5>
             <div class="cauliflower">
                 <a>
                     <p style="text-align: center;"><img src="images/cauliflower.jpg" 
                                                         style="border-radius: 50%; width: 300px;" 
                                                         alt="Cauli"></p>
                 </a>
+                
+                 <p style="font-size:25px"><b><u>Duration</u></b></p>
+                <h5>2 hours, 5 minutes </h5>
+                
                 <p style="font-size: 25px"><b><u>Ingredients</u></b></p>
                 <h5>- 2 heads cauliflower, broken into florets</h5>
                 <h5>- 2 tablespoons extra-virgin olive oil</h5>

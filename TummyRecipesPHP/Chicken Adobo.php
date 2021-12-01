@@ -21,12 +21,18 @@
         <main class="container">
             <br>
             <h1 style="text-align: center;"><b>Chicken Adobo</b></h1>
+            <h5 style="text-align: center;">Created by Flora See</h5>
+            
             <div class="Chicken Adobo">
                 <a>
                     <p style="text-align: center;"><img src="images/Chicken Adobo.jpg" 
                                                         style="border-radius: 50%; width: 300px;" 
                                                         alt="Chicken Adobo"></p>  
                 </a>
+                
+                 <p style="font-size:25px"><b><u>Duration</u></b></p>
+                <h5>3 hours, 45 minutes </h5>
+                
                 <p style="font-size: 25px"><b><u>Ingredients</u></b></p>
                 <h5>- 1 tablespoon (15ml) canola oil or other neutral oil</h5>
                 <h5>- 4 bone-in, skin-on chicken legs, separated into thighs and drumsticks (about 2 1/2 pounds; 1.15kg)</h5>
