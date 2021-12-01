@@ -1,0 +1,145 @@
+<?php
+    session_start();
+?>
+
+<!doctype html>
+
+<html lang="en">
+    
+    <!-- Head -->
+    <?php
+    include "head.inc.php";
+    ?>
+    
+    <body>
+        
+        <!-- Navbar-->
+        <?php
+        include "nav.inc.php";
+        ?>
+
+        <main class="container">
+            <br>
+            
+            <?php
+                
+                if ((!empty($_SESSION["viewRtitle"]) || $_SESSION["viewRtitle"] != "")
+                        && (!empty($_SESSION["viewRemail"]) || $_SESSION["viewRemail"] != "")) {
+                    $config = parse_ini_file('../../private/db-config.ini');
+                    $conn = new mysqli($config['servername'], $config['username'],
+                            $config['password'], $config['dbname']);
+
+                    // Check connection
+                    if ($conn->connect_error) {
+                        $errorMsg = "Connection failed: " . $conn->connect_error;
+                        $success = false;
+                    } else {
+                        $email = $_SESSION["viewRemail"];
+                        $title = $_SESSION["viewRtitle"];
+                        
+                        $stmt =  $conn->prepare("SELECT * FROM tummy_recipes_recipes WHERE email = ? AND rTitle = ? ORDER BY recipe_id DESC LIMIT 1");
+                        $stmt->bind_param("ss", $email, $title);
+                        
+                        if (!$stmt->execute()) {
+                            $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+                            $success = false;
+                        }
+                        else {
+                            $result = $stmt->get_result();
+                            while ($row = $result->fetch_assoc()) {
+                                $hours = $row["hours"];
+                                $minutes = $row["minutes"];
+                                $ingredients = $row["ingredients"];
+                                $steps = $row["steps"];
+                                $imgThumbnail = $row["imgThumbnail"];
+                            }
+                        }
+                        $stmt->close();
+                    }
+                    $conn->close();
+                }
+                else {
+                    echo "<h2>Oops!</h2>";
+                    echo "<p>An error has occured, please try again!</p>";
+                    echo "<a href='recipe.php'>Go to Recipe...</a>";
+                    exit();
+                }
+                
+                if ($success == false) {
+                    echo "<h2>Oops!</h2>";
+                    echo "<h4>The following errors were detected:</h4>";
+                    echo "<p>" . $errorMsg . "</p>";
+                    echo "<a href='recipe.php'>Go to Recipe...</a>";
+                    exit();
+                }
+                
+            ?>
+            
+            <h1 style="text-align: center;"><b><?php echo $title?></b></h1>
+            <div>
+                <a>
+                    <p style="text-align: center;">
+                        <img src="<?php echo $imgThumbnail?>" 
+                            style="border-radius: 50%; width: 300px;"
+                            alt="<?php echo $title?>">
+                    </p>  
+                </a>
+          
+                <p style="font-size: 25px"><b><u>Duration</u></b></p>
+                <h5>
+                    <?php
+                    if ($hours > 0) {
+                        echo "$hours hours";
+                        if ($minutes > 0) {
+                            echo ", $minutes minutes";
+                        }
+                    }
+                    else if ($minutes > 0) {
+                        echo "$minutes minutes";
+                    }
+                    ?>
+                </h5>
+                <br>
+                <br>
+                <p style="font-size: 25px"><b><u>Ingredients</u></b></p>
+                <?php
+                    $uns = unserialize($ingredients);
+
+                    for ($i = 0; $i < count($uns); $i++) {
+                        echo "<h5>$uns[$i]</h5>";
+                    }
+                
+                ?>
+                <br>
+                <br>
+                <p style="font-size: 25px"><b><u>Instructions</u></b></p>
+                <?php
+                    $unsS = unserialize($steps);
+
+                    for ($i = 0; $i < count($unsS); $i++) {
+                        echo "<h5>$unsS[$i]</h5>";
+                    }
+                
+                ?>
+                <br>
+                <br>
+            </div>
+            <?php
+            include "Display_Comment_Carbonara.php";
+            ?>
+            
+        </main>
+        
+        
+        <?php
+        include "Comment_Carbonara.php";
+        ?>
+        
+        
+        
+        <?php
+        include "footer.inc.php";
+        ?>
+        
+    </body>
+</html>

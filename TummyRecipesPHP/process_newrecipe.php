@@ -150,13 +150,18 @@
             echo "<h2>Successfully created new recipe!</h2>";
             echo "<p>View your recipe here</p>";
             
+            //for go back to recipe use
             $_SESSION["rTitle"] = "";
             $_SESSION["hours"] = "";
             $_SESSION["minutes"] = "";
             $_SESSION["ingredients"] = "";
             $_SESSION["steps"] = "";
             
-            echo "<a href='#' class='btn btn-success'>View recipe</a>";
+            //for view recipe use
+            $_SESSION["viewRtitle"] = $rTitle;
+            $_SESSION["viewRemail"] = $_SESSION["email"];
+            
+            echo "<a href='recipedetails.php' class='btn btn-success'>View recipe</a>";
             echo "</div>";
             echo "</main>";
         } else {
@@ -166,11 +171,16 @@
             echo "<h4>The following errors were detected:</h4>";
             echo "<p>" . $errorMsg . "</p>";
             
+            //for go back to recipe use
             $_SESSION["rTitle"] = $rTitle;
             $_SESSION["hours"] = $hours;
             $_SESSION["minutes"] = $minutes;
             $_SESSION["ingredients"] = $ingredients;
             $_SESSION["steps"] = $steps;
+            
+            //for view recipe use
+            $_SESSION["viewRtitle"] = "";
+            $_SESSION["viewRemail"] = "";
             
             echo "<a href='newrecipe.php' class='btn btn-danger'>Go back</a>";
             echo "</div>";
