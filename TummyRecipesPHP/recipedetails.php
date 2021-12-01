@@ -75,6 +75,59 @@
                     }
                     $conn->close();
                 }
+                
+                elseif (isset($row["recipe_id"]))
+                {
+                    echo "<h1 style='text-align: center;'>" . $row['rTitle'] . "</h1>";
+                    echo "<h5 style='text-align: center;'> ", $fname . " " . $lname . "</h5>";
+                    echo "<div>";
+                    echo "<a>";
+                    echo "<p style='text-align: center;'>";
+                    echo "<img src='" . $imgThumbnail . "' style='border-radius: 50%; width: 300px;' alt='" . $title . "'>";
+                    echo '</p>';
+                    echo '</a>';
+                    echo "<p style='font-size: 25px'>";
+                    echo "<b><u>Duration</u></b>";
+                    echo "</p>";
+                    echo "<h5>";
+                    if ($hours > 0) {
+                        echo "$hours hours";
+                        if ($minutes > 0) {
+                            echo ", $minutes minutes";
+                        }
+                    }
+                    else if ($minutes > 0) {
+                        echo "$minutes minutes";
+                    }
+                    echo "</h5>";
+                    echo "<br>";
+                    echo "<br>";
+                    echo "<p style='font-size: 25px'>";
+                    echo "<b><u>Ingredients</u></b>";
+                    echo "</p>";
+                    $uns = unserialize($ingredients);
+
+                    for ($i = 0; $i < count($uns); $i++) {
+                        echo "<h5>$uns[$i]</h5>";
+                    }
+                    echo "<br>";
+                    echo "<br>";
+                    echo "<p style='font-size: 25px'>";
+                    echo "<b><u>Instructions</u></b>";
+                    echo "</p>";
+                    $unsS = unserialize($steps);
+
+                    for ($i = 0; $i < count($unsS); $i++) {
+                        echo "<h5>$unsS[$i]</h5>";
+                    }
+                    echo "<br>";
+                    echo "<br>";
+                    include "Display_Comment_Carbonara.php";
+                    echo "</div>";
+                    
+                    
+                }
+                
                 else {
                     echo "<h2>Oops!</h2>";
                     echo "<p>An error has occured, please try again!</p>";

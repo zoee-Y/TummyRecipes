@@ -156,6 +156,7 @@
             $_SESSION["minutes"] = "";
             $_SESSION["ingredients"] = "";
             $_SESSION["steps"] = "";
+            $_SESSION["recipe"] = $row["recipe_id"];
             
             //for view recipe use
             $_SESSION["viewRtitle"] = $rTitle;
