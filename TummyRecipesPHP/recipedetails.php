@@ -65,7 +65,7 @@
                     exit();
                 }
                 
-                if ($success == false) {
+                if ($success === false) {
                     echo "<h2>Oops!</h2>";
                     echo "<h4>The following errors were detected:</h4>";
                     echo "<p>" . $errorMsg . "</p>";
