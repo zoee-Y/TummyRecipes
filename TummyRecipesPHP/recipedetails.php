@@ -38,7 +38,10 @@
                         $title = $_SESSION["viewRtitle"];
                         
                         $stmt =  $conn->prepare("SELECT * FROM tummy_recipes_recipes WHERE email = ? AND rTitle = ? ORDER BY recipe_id DESC LIMIT 1");
+                        $stmt2 = $conn->prepare("SELECT fname, lname FROM tummy_recipes_members WHERE email = ? ORDER BY member_id DESC");
+                        
                         $stmt->bind_param("ss", $email, $title);
+                        $stmt2->bind_param("s", $email);
                         
                         if (!$stmt->execute()) {
                             $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
@@ -55,6 +58,20 @@
                             }
                         }
                         $stmt->close();
+                        
+                        if (!$stmt2->execute()) {
+                            $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+                            $success = false;
+                        }
+                        else {
+                            $result = $stmt2->get_result();
+                            while ($row = $result->fetch_assoc()) {
+                                $fname = $row["fname"];
+                                $lname = $row["lname"];
+                            }
+                        }
+                        $stmt2->close();
+                        
                     }
                     $conn->close();
                 }
@@ -76,6 +93,7 @@
             ?>
             
             <h1 style="text-align: center;"><b><?php echo $title?></b></h1>
+            <h5 style="text-align: center;">Created by <?php echo "$fname $lname"?></h5>
             <div>
                 <a>
                     <p style="text-align: center;">
@@ -84,7 +102,7 @@
                             alt="<?php echo $title?>">
                     </p>  
                 </a>
-          
+                
                 <p style="font-size: 25px"><b><u>Duration</u></b></p>
                 <h5>
                     <?php

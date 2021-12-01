@@ -79,7 +79,7 @@
                     <label for="rTitle">Recipe Title:</label>
                     <?php
                     if (!empty($_SESSION["rTitle"]) || $_SESSION["rTitle"] != "") { ?>
-                        <input class="form-control" type="text" id="rTitle" name="rTitle" required value=" <?php echo $_SESSION["rTitle"]?> ">
+                        <input class="form-control" type="text" id="rTitle" name="rTitle" required value="<?php echo $_SESSION["rTitle"]?>">
                     <?php }
                     else { ?>
                         <input class="form-control" type="text" id="rTitle" name="rTitle" required placeholder="Enter recipe title">
@@ -92,7 +92,7 @@
                             <label for="hours">Hours:</label>
                             <?php
                                 if (!empty($_SESSION["hours"]) || $_SESSION["hours"] != "") { ?>
-                                    <input class="form-control" type="number" id="hours" max="24" name="hours" required value=" <?php echo $_SESSION["hours"]?> ">
+                                    <input class="form-control" type="number" id="hours" max="24" name="hours" required value="<?php echo $_SESSION["hours"]?>">
                                 <?php }
                                 else { ?>
                                     <input class="form-control" type="number" id="hours" max="24" name="hours" required value="0">
@@ -102,7 +102,7 @@
                             <label for="minutes">Minutes:</label>
                             <?php
                                 if (!empty($_SESSION["minutes"]) || $_SESSION["minutes"] != "") { ?>
-                                    <input class="form-control" type="number" id="minutes" max="59" name="minutes" required value=" <?php echo $_SESSION["minutes"]?> ">;
+                                    <input class="form-control" type="number" id="minutes" max="59" name="minutes" required value="<?php echo $_SESSION["minutes"]?>">;
                                 <?php }
                                 else { ?>
                                     <input class="form-control" type="number" id="minutes" max="59" name="minutes" required value="0">
