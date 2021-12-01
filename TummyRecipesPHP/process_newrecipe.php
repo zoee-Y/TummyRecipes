@@ -203,7 +203,6 @@
                 $errorMsg = "Connection failed: " . $conn->connect_error;
                 $success = false;
             } else {
-                //using test email
                 $email = $_SESSION["email"];
                 
                 $stmt = $conn->prepare("INSERT INTO tummy_recipes_recipes (email, rTitle, hours, minutes, ingredients, steps, imgThumbnail) VALUES (?, ?, ?, ?, ?, ?, ?)");

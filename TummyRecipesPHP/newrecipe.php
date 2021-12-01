@@ -65,6 +65,15 @@
             
             ?>
             
+            <?php
+            if (!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] === false) {
+                echo "<h2>This page is not meant to run directly.</h2>";
+                echo "<p>Log in in order to post recipes!</p>";
+                echo "<a href='login.php'>Go to Login page...</a>";
+                exit();
+            }
+            ?>
+            
             <form action="process_newrecipe.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="rTitle">Recipe Title:</label>
