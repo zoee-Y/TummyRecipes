@@ -136,7 +136,7 @@
         } else {
             echo "<h2>This page is not meant to run directly.</h2>";
             echo "<p>You can register at the link below:</p>";
-            echo "<a href='register.php'>Go to Sign Up page...</a>";
+            echo "<a href='register.php' class='btn btn-danger'>Go to Sign Up page...</a>";
             exit();
         }
         
