@@ -61,7 +61,7 @@
                 else {
                     echo "<h2>Oops!</h2>";
                     echo "<p>An error has occured, please try again!</p>";
-                    echo "<a href='recipe.php'>Go to Recipe...</a>";
+                    echo "<a href='recipe.php' class='btn btn-danger'>Go to Recipe...</a>";
                     exit();
                 }
                 
@@ -69,7 +69,7 @@
                     echo "<h2>Oops!</h2>";
                     echo "<h4>The following errors were detected:</h4>";
                     echo "<p>" . $errorMsg . "</p>";
-                    echo "<a href='recipe.php'>Go to Recipe...</a>";
+                    echo "<a href='recipe.php' class='btn btn-danger'>Go to Recipe...</a>";
                     exit();
                 }
                 

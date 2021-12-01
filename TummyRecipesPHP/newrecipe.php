@@ -69,7 +69,7 @@
             if (!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] === false) {
                 echo "<h2>This page is not meant to run directly.</h2>";
                 echo "<p>Log in in order to post recipes!</p>";
-                echo "<a href='login.php'>Go to Login page...</a>";
+                echo "<a href='login.php' class='btn btn-danger'>Go to Login page...</a>";
                 exit();
             }
             ?>
