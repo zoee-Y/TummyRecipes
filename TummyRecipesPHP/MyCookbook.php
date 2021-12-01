@@ -18,7 +18,7 @@
         <!--Header-->
         <header class="jumbotron text-center">    
             <h1 class="display-4">My Cookbook</h1>
-            <h4>This is where you save our secrets!</h4>
+            <h4>This is where you save your secrets!</h4>
         </header>
         
         <main>

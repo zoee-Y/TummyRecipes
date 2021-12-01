@@ -16,7 +16,7 @@
         <!--Header-->
         <header class="jumbotron text-center">    
             <h1 class="display-4">My Profile</h1>
-            <h4>This is where you keep your secrets!</h4>
+            
         </header>
         
         <main> 
