@@ -78,6 +78,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         $errorMsg .= "Email is required.<br>";
         $success = false;
     }
+    elseif (!empty($_POST["email"]))
+    {
+        checkEmailExists();
+        $errorMsg .= "Email Already Exists. Please use a different email.";
+        $success = false;
+    }
     else
     {
         $email = sanitize_input($_POST["email"]);
@@ -125,6 +131,46 @@ function sanitize_input($data)
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
+}
+
+/*
+* Helper function to write the member data to the DB
+*/
+function checkEmailExists()
+{
+    global $email, $errorMsg, $success;
+    
+    // Create database connection.
+    $config = parse_ini_file('../../private/db-config.ini');
+    $conn = new mysqli($config['servername'], $config['username'], 
+            $config['password'], $config['dbname']);
+    
+    // Check connection
+    if ($conn->connect_error)
+    {
+        $errorMsg = "Connection failed: " . $conn->connect_error;
+        $success = false;
+    }
+    else
+    {
+        // Prepare the statement:
+        $stmt = $conn->prepare("SELECT * FROM tummy_recipes_members WHERE email=? ");
+        
+        // Bind & execute the query statement:
+        $stmt->bind_param("s", $email);
+        if (!$stmt->execute())
+        {
+            $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+            $success = false;
+        }
+        else
+        {
+            return(bool) $stmt->get_result()->fetch_row[0];
+        }
+        $stmt->close();
+    }
+    
+    $conn->close();
 }
 
 /*
