@@ -76,8 +76,11 @@
                     $conn->close();
                 }
                 
-                elseif (isset($row["recipe_id"]))
+                elseif (isset($row['recipe_id']))
                 {
+                    $_SESSION['viewRtitle'] = "";
+                    $_SESSION['viewRemail'] = $_SESSION['email'];
+                    
                     echo "<h1 style='text-align: center;'>" . $row['rTitle'] . "</h1>";
                     echo "<h5 style='text-align: center;'> ", $fname . " " . $lname . "</h5>";
                     echo "<div>";
@@ -131,7 +134,7 @@
                 else {
                     echo "<h2>Oops!</h2>";
                     echo "<p>An error has occured, please try again!</p>";
-                    echo "<a href='recipe.php' class='btn btn-danger'>Go to Recipe...</a>";
+                    echo "<a href='MyCookbookSession.php' class='btn btn-danger'>Go to MyCookbook</a>";
                     exit();
                 }
                 
