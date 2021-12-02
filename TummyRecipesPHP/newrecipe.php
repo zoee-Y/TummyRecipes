@@ -92,20 +92,20 @@
                             <label for="hours">Hours:</label>
                             <?php
                                 if (!empty($_SESSION["hours"]) || $_SESSION["hours"] != "") { ?>
-                                    <input class="form-control" type="number" id="hours" max="24" name="hours" required value="<?php echo $_SESSION["hours"]?>">
+                                    <input class="form-control" type="number" id="hours" min="0" max="24" name="hours" required value="<?php echo $_SESSION["hours"]?>">
                                 <?php }
                                 else { ?>
-                                    <input class="form-control" type="number" id="hours" max="24" name="hours" required value="0">
+                                    <input class="form-control" type="number" id="hours" min="0" max="24" name="hours" required value="0">
                                 <?php } ?>
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <label for="minutes">Minutes:</label>
                             <?php
                                 if (!empty($_SESSION["minutes"]) || $_SESSION["minutes"] != "") { ?>
-                                    <input class="form-control" type="number" id="minutes" max="59" name="minutes" required value="<?php echo $_SESSION["minutes"]?>">;
+                                    <input class="form-control" type="number" id="minutes" min="0" max="59" name="minutes" required value="<?php echo $_SESSION["minutes"]?>">;
                                 <?php }
                                 else { ?>
-                                    <input class="form-control" type="number" id="minutes" max="59" name="minutes" required value="0">
+                                    <input class="form-control" type="number" id="minutes" min="0" max="59" name="minutes" required value="0">
                                 <?php } ?>
                         </div>
                     </div>
