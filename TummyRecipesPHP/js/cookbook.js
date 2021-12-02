@@ -1,5 +1,4 @@
-
-$(winwdow).on("click", function(){
+$(document).ready(function(){
   $(".recipeInfo").click(function(){
     $(".recipeTog").toggle();
   });
