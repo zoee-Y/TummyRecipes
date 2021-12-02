@@ -57,19 +57,18 @@
                             // echo "<a href ='MyCookbookSession.php#".$row['recipe_id'].";'>";
                             echo "<button class='recipeInfo'>";
                             echo "<figure>";
-                            echo "<p style='text-align: center;'>";
+                            echo "<p class='recipeTog' style='text-align: center;'>";
                             echo "<img src='".$row["imgThumbnail"]."' style='border-radius: 50%; width: 200px;' alt='".$row["rTitle"]."'>";
                             echo "<h4 style='text-align: center;'>" . $row['rTitle'] . "</h4>";
                             echo "</p>";
                             echo "</figure>";
                             echo "</button>";
-                            echo "<p class='recipeTog'>";
-                            echo "<p style='font-size: 15px'>";
+                            echo "<p class='recipeTog' style='font-size: 15px'>";
                             echo "<h4>";
                             echo "<b><u>Duration</u></b>";
                             echo "</p>";
                             echo "</h4>";
-                            echo "<h6>";
+                            echo "<p class='recipeTog'>";
                             if ($hours > 0) {
                                 echo "<h6>". $hours ." hour(s)";
                                 if ($minutes > 0) {
@@ -79,14 +78,15 @@
                             else if ($minutes > 0) {
                                 echo "$minutes minutes";
                             }
-                            echo "</h6>";
+                            echo "</p>";
                             echo "<br>";
                             echo "<br>";
-                            echo "<p style='font-size: 15px'>";
+                            echo "<p class='recipeTog' style='font-size: 15px'>";
                             echo "<h4>";
                             echo "<b><u>Ingredients</u></b>";
                             echo "</h4>";
                             echo "</p>";
+                            echo "<p class='recipeTog'>";
                             echo "<h6>";
                             $uns = unserialize($ingredients);
 
@@ -94,14 +94,15 @@
                                 echo "<h6>$uns[$i]</h6>";
                             }
                             echo "</h6>";
+                            echo "</p>";
                             echo "<br>";
                             echo "<br>";
-                            echo "<p style='font-size: 15px'>";
-                            echo "<p style='font-size: 15px'>";
+                            echo "<p class='recipeTog' style='font-size: 15px'>";
                             echo "<h4>";
                             echo "<b><u>Instructions</u></b>";
                             echo "</h4>";
                             echo "</p>";
+                            echo "<p class='recipeTog'>";
                             echo "<h6>";
                             $unsS = unserialize($steps);
 
@@ -120,9 +121,9 @@
                     }
                     else {
                         echo "<h4>You have Not Uploaded Any Recipes Yet! Share your recipes Now!</h4>";
-                        echo "<p align='center'>";
+                        //echo "<p align='center'>";
                         // echo "<h4><a href='newrecipe.php' class='btn btn-success'>Add New Recipe!</a></h4>";
-                        echo "</p>";
+                        //echo "</p>";
                         // exit();
                     }
                     $query_reps->close();
@@ -136,8 +137,8 @@
                     <br><h4>Add More Recipes</h4></a>
                 </p>
             </div>
-
-        </main> 
+        </main>
+        
         <!--Footer-->
         <?php
            include "footer.inc.php";

@@ -37,7 +37,7 @@
         src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         crossorigin="anonymous">
     </script>
-
+    
     <!--Bootstrap JS-->
     <script defer
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
