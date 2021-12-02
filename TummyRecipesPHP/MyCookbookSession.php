@@ -38,7 +38,7 @@
                     $success = false;
                 } else {
                     
-                    $query_recipe = "SELECT * FROM tummy_recipes_recipes WHERE email='{$_SESSION['viewRemail']}' ";
+                    $query_recipe = "SELECT * FROM tummy_recipes_recipes WHERE email='{$_SESSION['email']}' ";
                     $query_reps = mysqli_query($conn, $query_recipe);
                     $result_recipes = mysqli_num_rows($query_reps);
                     
