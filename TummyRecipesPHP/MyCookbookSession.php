@@ -46,6 +46,7 @@
                         while ($row = mysqli_fetch_assoc($query_reps)) {
                             
                             $imgThumb = $row['imgThumbnail'];
+                            $hours = $row['hours'];
                             $minutes = $row['minutes'];
                             $ingredients = $row['ingredients'];
                             $steps = $row['steps'];
@@ -54,22 +55,25 @@
                             echo "<div class='row-sm'>";
                             echo "<article class='col-sm'>";
                             // echo "<a href ='MyCookbookSession.php#".$row['recipe_id'].";'>";
+                            echo "<button class='recipeInfo'>";
                             echo "<figure>";
                             echo "<p style='text-align: center;'>";
                             echo "<img src='".$row["imgThumbnail"]."' style='border-radius: 50%; width: 200px;' alt='".$row["rTitle"]."'>";
                             echo "<h4 style='text-align: center;'>" . $row['rTitle'] . "</h4>";
                             echo "</p>";
                             echo "</figure>";
+                            echo "</button>";
+                            echo "<p class='recipeTog'>";
                             echo "<p style='font-size: 15px'>";
                             echo "<h4>";
                             echo "<b><u>Duration</u></b>";
                             echo "</p>";
                             echo "</h4>";
                             echo "<h6>";
-                            if ($row["imgThumbnail"] > 0) {
-                                echo " ". $imgThumb ." hours.</h4>";
+                            if ($hours > 0) {
+                                echo "<h6>". $hours ." hour(s)";
                                 if ($minutes > 0) {
-                                    echo ", $minutes minutes";
+                                    echo " ". $minutes ." minutes.</h6>";
                                 }
                             }
                             else if ($minutes > 0) {
@@ -105,6 +109,7 @@
                                 echo "<h6>$unsS[$i]</h6>";
                             }
                             echo "</h6>";
+                            echo "</p>";
                             echo "<br>";
                             echo "<br>";
                             //include "Display_Comment_Carbonara.php";
