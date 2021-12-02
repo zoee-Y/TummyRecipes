@@ -33,10 +33,6 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous">
     </script>
-    <script defer
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-        crossorigin="anonymous">
-    </script>
     
     <!--Bootstrap JS-->
     <script defer
