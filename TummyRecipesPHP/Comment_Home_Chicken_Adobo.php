@@ -82,7 +82,7 @@
         <main class="container">
             <br>
             <h2>Thank you for your comment. It is much appreciated.</h2>
-            <a href="welcome.php" class="btn btn-success">Return to Home</a>
+            <a href="Chicken Adobo.php" class="btn btn-success">Return</a>
         </main>
         <br>
         <?php
