@@ -54,16 +54,15 @@
                             
                             echo "<div class='row justify-content-around'>";
                             echo "<div class='row-sm'>";
+                            echo "<div id='recipeInfo'>";
                             echo "<article class='col-sm'>";
                             echo "<figure>";
                             
                             // Thumbnail and Recipe Title as Button
-                            echo "<div class='recipeInfo'>";
                             echo "<p class='recipeTog' style='text-align: center;'>";
                             echo "<img src='". $imgThumb ."' style='border-radius: 50%; width: 200px;' alt='".$row["rTitle"]."'>";
                             echo "<h4 style='text-align: center;'>". $foodTitle ."</h4>";
                             echo "</p>";
-                            echo "</div>";
                             echo "</figure>";
                             
                             // Duration Output
@@ -104,8 +103,10 @@
                                 echo "<h6><p class='recipeTog'>". $unsS[$i] ."</p></h6>";
                             }
                             echo "<br>";
-                            echo "<br>";
                             echo "</article>";
+                            echo "</div>";
+                            echo "<br>";
+                            echo "<br>";
                             echo "</div>";
                             echo "</div>";
                         }

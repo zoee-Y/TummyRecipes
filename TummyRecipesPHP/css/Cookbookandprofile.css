@@ -31,3 +31,9 @@ img.profilepic{
     border-width: 1px;
 }
 
+#recipeInfo
+{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
