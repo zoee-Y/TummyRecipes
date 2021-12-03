@@ -58,12 +58,12 @@
                             echo "<figure>";
                             
                             // Thumbnail and Recipe Title as Button
-                            echo "<button class='recipeInfo'>";
+                            echo "<div class='recipeInfo'>";
                             echo "<p class='recipeTog' style='text-align: center;'>";
                             echo "<img src='". $imgThumb ."' style='border-radius: 50%; width: 200px;' alt='".$row["rTitle"]."'>";
                             echo "<h4 style='text-align: center;'>". $foodTitle ."</h4>";
                             echo "</p>";
-                            echo "</button>";
+                            echo "</div>";
                             echo "</figure>";
                             
                             // Duration Output
