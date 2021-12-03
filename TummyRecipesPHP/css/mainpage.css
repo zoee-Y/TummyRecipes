@@ -60,23 +60,6 @@ h5
     line-height: 30px;
 }
 
-
-h6
-{
-    font-family: "Ink Free", Georgia, Arial;
-    font-weight: bold;
-    color: black;
-    text-align: left;
-}
-
-h7
-{
-    font-family: "Ink Free", Georgia, Arial;
-    font-weight: bold;
-    color: black;
-    text-align: left;
-}
-
 #latest p
 {
     padding: 20px;
